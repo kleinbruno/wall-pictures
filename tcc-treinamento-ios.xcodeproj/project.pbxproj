@@ -118,7 +118,6 @@
 			isa = PBXGroup;
 			children = (
 				4A526DD122BE700C00773FBD /* Modules */,
-				2777F86822BE6C8B00ACFAFA /* Login */,
 				27BB5E4222BE5A76009F57A3 /* Models */,
 				27BB5E3F22BE59F8009F57A3 /* API */,
 				27BB5E3E22BE59ED009F57A3 /* Components */,
@@ -177,9 +176,10 @@
 			isa = PBXGroup;
 			children = (
 				4A526DD422BE707400773FBD /* Home */,
-				4A526DD522BE70AC00773FBD /* TryOut */,
-				4A526DD322BE704C00773FBD /* MyWalls */,
+				2777F86822BE6C8B00ACFAFA /* Login */,
 				4A526DD222BE703200773FBD /* MyPictures */,
+				4A526DD322BE704C00773FBD /* MyWalls */,
+				4A526DD522BE70AC00773FBD /* TryOut */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
