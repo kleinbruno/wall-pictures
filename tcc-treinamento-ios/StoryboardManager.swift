@@ -9,9 +9,9 @@
 import Foundation
 import UIKit
 
-class InitialRoot {
+class StoryboardManager {
     
-    static func updateRootViewController(){
+    static func updateViewController(){
 //        let status = UserDefaults.standard.bool(forKey: "status")
         var root : UIViewController?
         
