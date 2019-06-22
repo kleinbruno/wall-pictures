@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2777F86B22BE6D1000ACFAFA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2777F86A22BE6D1000ACFAFA /* LoginViewController.swift */; };
+		2777F86F22BE896300ACFAFA /* AuthMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2777F86E22BE896300ACFAFA /* AuthMaker.swift */; };
+		2777F87122BE8C5400ACFAFA /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2777F87022BE8C5400ACFAFA /* Result.swift */; };
+		2777F87322BE92EB00ACFAFA /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2777F87222BE92EB00ACFAFA /* SignUpViewController.swift */; };
 		27BB5E2D22BE5279009F57A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BB5E2C22BE5279009F57A3 /* AppDelegate.swift */; };
 		27BB5E2F22BE5279009F57A3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BB5E2E22BE5279009F57A3 /* ViewController.swift */; };
 		27BB5E3222BE5279009F57A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27BB5E3022BE5279009F57A3 /* Main.storyboard */; };
@@ -25,6 +28,9 @@
 
 /* Begin PBXFileReference section */
 		2777F86A22BE6D1000ACFAFA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		2777F86E22BE896300ACFAFA /* AuthMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthMaker.swift; sourceTree = "<group>"; };
+		2777F87022BE8C5400ACFAFA /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		2777F87222BE92EB00ACFAFA /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		27BB5E2922BE5279009F57A3 /* tcc-treinamento-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tcc-treinamento-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		27BB5E2C22BE5279009F57A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27BB5E2E22BE5279009F57A3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -69,10 +75,25 @@
 			isa = PBXGroup;
 			children = (
 				4A526DE122BE85DF00773FBD /* Sections */,
-				2777F86A22BE6D1000ACFAFA /* LoginViewController.swift */,
 				4A526DDC22BE726000773FBD /* Login.storyboard */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		2777F86C22BE880700ACFAFA /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				2777F86A22BE6D1000ACFAFA /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		2777F86D22BE881200ACFAFA /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				2777F87222BE92EB00ACFAFA /* SignUpViewController.swift */,
+			);
+			path = SignUp;
 			sourceTree = "<group>";
 		};
 		27BB5E2022BE5279009F57A3 = {
@@ -122,6 +143,8 @@
 		27BB5E3F22BE59F8009F57A3 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				2777F86E22BE896300ACFAFA /* AuthMaker.swift */,
+				2777F87022BE8C5400ACFAFA /* Result.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -220,6 +243,8 @@
 		4A526DE122BE85DF00773FBD /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				2777F86D22BE881200ACFAFA /* SignUp */,
+				2777F86C22BE880700ACFAFA /* Login */,
 			);
 			path = Sections;
 			sourceTree = "<group>";
@@ -352,9 +377,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2777F86F22BE896300ACFAFA /* AuthMaker.swift in Sources */,
 				27BB5E2F22BE5279009F57A3 /* ViewController.swift in Sources */,
+				2777F87322BE92EB00ACFAFA /* SignUpViewController.swift in Sources */,
 				27BB5E2D22BE5279009F57A3 /* AppDelegate.swift in Sources */,
 				27BB5E4622BE5B1E009F57A3 /* UIViewExtensions.swift in Sources */,
+				2777F87122BE8C5400ACFAFA /* Result.swift in Sources */,
 				2777F86B22BE6D1000ACFAFA /* LoginViewController.swift in Sources */,
 				27BB5E4422BE5ABF009F57A3 /* GradientView.swift in Sources */,
 			);
