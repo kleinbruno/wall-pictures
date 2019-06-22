@@ -22,7 +22,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func onPressLogin(_ sender: UIButton) {
-        self.email?.text(in: 3)
+//        self.email?.text(in: 3)
     }
     
     func onLogin() {
