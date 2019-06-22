@@ -9,22 +9,20 @@
 import Foundation
 import UIKit
 
-class Switcher {
+class InitialRoot {
     
-    static func updateRootVC(){
-        
+    static func updateRootViewController(){
 //        let status = UserDefaults.standard.bool(forKey: "status")
         var root : UIViewController?
         
         if(true){
             root = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "homeviewcontroller") as! ViewController
         }else{
-//            root = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "loginvc") as! LoginVC
+            root = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "loginviewcontroller") as! LoginViewController
         }
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.window?.rootViewController = root
-        
     }
     
 }
