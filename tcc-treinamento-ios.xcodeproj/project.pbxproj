@@ -13,6 +13,8 @@
 		27BB5E3422BE527C009F57A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27BB5E3322BE527C009F57A3 /* Assets.xcassets */; };
 		27BB5E3722BE527C009F57A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27BB5E3522BE527C009F57A3 /* LaunchScreen.storyboard */; };
 		7A599981ECE159588DB6F5D1 /* Pods_tcc_treinamento_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79990C3ACB70F21CE477D5A6 /* Pods_tcc_treinamento_ios.framework */; };
+		27BB5E4422BE5ABF009F57A3 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BB5E4322BE5ABF009F57A3 /* GradientView.swift */; };
+		27BB5E4622BE5B1E009F57A3 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BB5E4522BE5B1E009F57A3 /* UIViewExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		57460143793D8A7B7B51C722 /* Pods-tcc-treinamento-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tcc-treinamento-ios.debug.xcconfig"; path = "Target Support Files/Pods-tcc-treinamento-ios/Pods-tcc-treinamento-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		607FC50DF8EB003F2B6BACC5 /* Pods-tcc-treinamento-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tcc-treinamento-ios.release.xcconfig"; path = "Target Support Files/Pods-tcc-treinamento-ios/Pods-tcc-treinamento-ios.release.xcconfig"; sourceTree = "<group>"; };
 		79990C3ACB70F21CE477D5A6 /* Pods_tcc_treinamento_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tcc_treinamento_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		27BB5E4322BE5ABF009F57A3 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		27BB5E4522BE5B1E009F57A3 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,11 @@
 		27BB5E2B22BE5279009F57A3 /* tcc-treinamento-ios */ = {
 			isa = PBXGroup;
 			children = (
+				27BB5E4222BE5A76009F57A3 /* Models */,
+				27BB5E3F22BE59F8009F57A3 /* API */,
+				27BB5E3E22BE59ED009F57A3 /* Components */,
+				27BB5E4122BE5A6B009F57A3 /* Extensions */,
+				27BB5E4022BE5A01009F57A3 /* CustomViews */,
 				27BB5E2C22BE5279009F57A3 /* AppDelegate.swift */,
 				27BB5E2E22BE5279009F57A3 /* ViewController.swift */,
 				27BB5E3022BE5279009F57A3 /* Main.storyboard */,
@@ -86,6 +95,43 @@
 				79990C3ACB70F21CE477D5A6 /* Pods_tcc_treinamento_ios.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		27BB5E3E22BE59ED009F57A3 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		27BB5E3F22BE59F8009F57A3 /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		27BB5E4022BE5A01009F57A3 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				27BB5E4322BE5ABF009F57A3 /* GradientView.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		27BB5E4122BE5A6B009F57A3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				27BB5E4522BE5B1E009F57A3 /* UIViewExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		27BB5E4222BE5A76009F57A3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,6 +251,8 @@
 			files = (
 				27BB5E2F22BE5279009F57A3 /* ViewController.swift in Sources */,
 				27BB5E2D22BE5279009F57A3 /* AppDelegate.swift in Sources */,
+				27BB5E4622BE5B1E009F57A3 /* UIViewExtensions.swift in Sources */,
+				27BB5E4422BE5ABF009F57A3 /* GradientView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
