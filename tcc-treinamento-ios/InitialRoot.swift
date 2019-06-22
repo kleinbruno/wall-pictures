@@ -15,7 +15,7 @@ class InitialRoot {
 //        let status = UserDefaults.standard.bool(forKey: "status")
         var root : UIViewController?
         
-        if(true){
+        if(false){
             root = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "homeviewcontroller") as! ViewController
         }else{
             root = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "loginviewcontroller") as! LoginViewController

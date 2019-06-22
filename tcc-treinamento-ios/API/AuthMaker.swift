@@ -23,7 +23,8 @@ class AuthMaker {
         
         Auth.auth().createUser(withEmail: email, password: password) { (authResult, error) in
             if let error = error {
-                print(error)
+                print(error.localizedDescription)
+                onFailed(.invalidEmail)
             }
             
             if let authResult = authResult {
@@ -37,7 +38,8 @@ class AuthMaker {
         Auth.auth().signIn(withEmail: email, password: password) { (authResult, error) in
             
             if let error = error {
-                print(error)
+                print(error.localizedDescription)
+                onFailed(.invalidEmail)
             }
             
             if let authResult = authResult {

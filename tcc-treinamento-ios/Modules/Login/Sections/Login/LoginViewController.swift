@@ -8,31 +8,43 @@
 
 import UIKit
 
-import Firebase
-
 class LoginViewController: UIViewController {
     
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var errorMessage: UILabel!
+
+    private let authMaker = AuthMaker()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+    }
+    
+    @IBAction func onPressGoSignUp(_ sender: UIButton) {
+        if let signUpViewController = storyboard?.instantiateViewController(withIdentifier: "signupviewcontroller") as? SignUpViewController {
+            self.show(signUpViewController, sender: nil)
+//            self.navigationController?.pushViewController(signUpViewController, animated: true)
+        }
     }
     
     @IBAction func onPressLogin(_ sender: UIButton) {
         if let email = self.email?.text, let password = self.password?.text {
-            onLogin(email: email, password: password)
-        }
-    }
-    
-    func onLogin(email: String, password: String) {
-        Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
-            if let error = error {
+            self.authMaker.onLogin(email: email, password: password, onSuccess: { (user) in
+                
+                user.user.getIDToken(completion: { (token, _) in
+                    UserDefaults.standard.set(token, forKey: "userToken")
+                })
+                
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                if let homeViewController = storyboard.instantiateViewController(withIdentifier: "homeviewcontroller") as? ViewController {
+                    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                    appDelegate.window?.rootViewController = homeViewController
+                }
+                
+            }) { (error) in
                 print(error)
-            } else {
-                print(user ?? "not uset")
+                print("ERROOOOOOOOOOOO")
+                self.errorMessage.text = "Invalid email or password"
             }
         }
     }
