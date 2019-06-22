@@ -16,13 +16,24 @@ class StoryboardManager {
         var root : UIViewController?
         
         if(true){
-            root = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "homeviewcontroller") as! ViewController
+            root = AppStoryboard.Main.instance.instantiateViewController(withIdentifier: "homeviewcontroller") as! ViewController
         }else{
-            root = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "loginviewcontroller") as! LoginViewController
+            root = AppStoryboard.Login.instance.instantiateViewController(withIdentifier: "loginviewcontroller") as! LoginViewController
         }
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.window?.rootViewController = root
     }
+}
+
+enum AppStoryboard: String {
+    case Main = "Main"
+    case Login = "Login"
+    case MyPictures = "MyPictures"
+    case MyWalls = "MyWalls"
+    case TryOut = "TryOut"
     
+    var instance: UIStoryboard {
+        return UIStoryboard(name: self.rawValue, bundle: Bundle.main)
+    }
 }
