@@ -11,29 +11,17 @@ import UIKit
 
 class StoryboardManager {
     
-    static func updateViewController(){
+    static func updateViewController() {
 //        let status = UserDefaults.standard.bool(forKey: "status")
         var root : UIViewController?
         
-        if(true){
-            root = AppStoryboard.Main.instance.instantiateViewController(withIdentifier: "homeviewcontroller") as! ViewController
-        }else{
-            root = AppStoryboard.Login.instance.instantiateViewController(withIdentifier: "loginviewcontroller") as! LoginViewController
+        if(true) {
+            root = ViewController.instantiate(fromAppStoryboard: .Main)
+        } else {
+            root = LoginViewController.instantiate(fromAppStoryboard: .Login)
         }
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.window?.rootViewController = root
-    }
-}
-
-enum AppStoryboard: String {
-    case Main = "Main"
-    case Login = "Login"
-    case MyPictures = "MyPictures"
-    case MyWalls = "MyWalls"
-    case TryOut = "TryOut"
-    
-    var instance: UIStoryboard {
-        return UIStoryboard(name: self.rawValue, bundle: Bundle.main)
     }
 }
