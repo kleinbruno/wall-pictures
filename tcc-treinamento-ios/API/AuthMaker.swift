@@ -11,7 +11,7 @@ import Foundation
 import Firebase
 
 enum AuthError: Error {
-    case a
+    case invalidEmail
 }
 
 typealias SuccessCallback<AuthDataResult> = (AuthDataResult) -> Void
@@ -46,3 +46,4 @@ class AuthMaker {
         }
     }
 }
+
