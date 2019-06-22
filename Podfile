@@ -8,4 +8,5 @@ target 'tcc-treinamento-ios' do
   # Pods for tcc-treinamento-ios
   pod 'Nuke'
   pod 'Firebase/Core'
+  pod 'Firebase/Auth'
 end
