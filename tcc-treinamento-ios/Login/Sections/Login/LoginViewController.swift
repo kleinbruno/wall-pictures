@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  LoginViewController.swift
 //  tcc-treinamento-ios
 //
 //  Created by Luan Winck on 22/06/19.
@@ -10,22 +10,19 @@ import UIKit
 
 import Firebase
 
-class ViewController: UIViewController {
+class LoginViewController: UIViewController {
+    
+    @IBOutlet weak var email: UITextInput!
+    @IBOutlet weak var password: UITextInput!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.onRegister()
+        
     }
     
-    func onRegister() {
-        Auth.auth().createUser(withEmail: "luanwinck23@gmail.com", password: "teste123") { (authResult, error) in
-            if let error = error {
-                print(error)
-            } else {
-                print(authResult ?? "no register")
-            }
-        }
+    @IBAction func onPressLogin(_ sender: UIButton) {
+        self.email.
     }
     
     func onLogin() {
@@ -37,7 +34,4 @@ class ViewController: UIViewController {
             }
         }
     }
-
-
 }
-
