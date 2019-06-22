@@ -12,8 +12,8 @@ import Firebase
 
 class LoginViewController: UIViewController {
     
-    @IBOutlet weak var email: UITextInput!
-    @IBOutlet weak var password: UITextInput!
+    @IBOutlet weak var email: UITextField!
+    @IBOutlet weak var password: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,11 +22,13 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func onPressLogin(_ sender: UIButton) {
-        self.email?.text(in: 3)
+        if let email = self.email?.text, let password = self.password?.text {
+            onLogin(email: email, password: password)
+        }
     }
     
-    func onLogin() {
-        Auth.auth().signIn(withEmail: "luanwinck23@gmail.com", password: "teste123") { (user, error) in
+    func onLogin(email: String, password: String) {
+        Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
             if let error = error {
                 print(error)
             } else {

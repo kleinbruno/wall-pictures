@@ -14,38 +14,35 @@ enum AuthError: Error {
     case a
 }
 
-//typealias Result<T> = AuthResult<AuthDataResult, AuthError>
-//typealias CompletionCallback<T: AuthResult<AuthDataResult, AuthError>> = (Result<Any>) -> Void
-//
-//class AuthMaker {
-//    func onRegister(email: String, password: String, completion: @escaping CompletionCallback<AuthResult>) {
-//        Auth.auth().createUser(withEmail: <#T##String#>, password: <#T##String#>) { (<#AuthDataResult?#>, <#Error?#>) in
-//            <#code#>
-//        }
-//
-//        Auth.auth().signIn(withEmail: "", password: "") { (data, err) in
-//            if let authData = data {
-//                completion(authData, nil)
-//            }
-//        }
-//
-//
-//        Auth.auth().createUser(withEmail: "luanwinck23@gmail.com", password: "teste123") { (authResult, error) in
-//            if let error = error {
-//                print(error)
-//            } else {
-//                print(authResult ?? "no register")
-//            }
-//        }
-//    }
-//
-//    func onLogin() {
-//        Auth.auth().signIn(withEmail: "luanwinck23@gmail.com", password: "teste123") { (user, error) in
-//            if let error = error {
-//                print(error)
-//            } else {
-//                print(user ?? "not uset")
-//            }
-//        }
-//    }
+typealias SuccessCallback<AuthDataResult> = (AuthDataResult) -> Void
+typealias LoginFailCallback<AuthError> = (AuthError) -> Void
+typealias SignUpFailCallback<AuthError> = (AuthError) -> Void
+
+class AuthMaker {
+    func onRegister(email: String, password: String, onSuccess: @escaping SuccessCallback<AuthDataResult>, onFailed: @escaping SignUpFailCallback<AuthError>) {
+        
+        Auth.auth().createUser(withEmail: email, password: password) { (authResult, error) in
+            if let error = error {
+                print(error)
+            }
+            
+            if let authResult = authResult {
+                onSuccess(authResult)
+            }
+        }
+    }
+
+    func onLogin(email: String, password: String, onSuccess: @escaping SuccessCallback<AuthDataResult>, onFailed: @escaping LoginFailCallback<AuthError>) {
+        
+        Auth.auth().signIn(withEmail: email, password: password) { (authResult, error) in
+            
+            if let error = error {
+                print(error)
+            }
+            
+            if let authResult = authResult {
+                onSuccess(authResult)
+            }
+        }
+    }
 }
