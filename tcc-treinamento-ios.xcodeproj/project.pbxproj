@@ -12,9 +12,10 @@
 		27BB5E3222BE5279009F57A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27BB5E3022BE5279009F57A3 /* Main.storyboard */; };
 		27BB5E3422BE527C009F57A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27BB5E3322BE527C009F57A3 /* Assets.xcassets */; };
 		27BB5E3722BE527C009F57A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27BB5E3522BE527C009F57A3 /* LaunchScreen.storyboard */; };
-		7A599981ECE159588DB6F5D1 /* Pods_tcc_treinamento_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79990C3ACB70F21CE477D5A6 /* Pods_tcc_treinamento_ios.framework */; };
 		27BB5E4422BE5ABF009F57A3 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BB5E4322BE5ABF009F57A3 /* GradientView.swift */; };
 		27BB5E4622BE5B1E009F57A3 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BB5E4522BE5B1E009F57A3 /* UIViewExtensions.swift */; };
+		27BB5E4822BE6038009F57A3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27BB5E4722BE6038009F57A3 /* GoogleService-Info.plist */; };
+		7A599981ECE159588DB6F5D1 /* Pods_tcc_treinamento_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79990C3ACB70F21CE477D5A6 /* Pods_tcc_treinamento_ios.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,11 +26,12 @@
 		27BB5E3322BE527C009F57A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27BB5E3622BE527C009F57A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27BB5E3822BE527C009F57A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27BB5E4322BE5ABF009F57A3 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		27BB5E4522BE5B1E009F57A3 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		27BB5E4722BE6038009F57A3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		57460143793D8A7B7B51C722 /* Pods-tcc-treinamento-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tcc-treinamento-ios.debug.xcconfig"; path = "Target Support Files/Pods-tcc-treinamento-ios/Pods-tcc-treinamento-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		607FC50DF8EB003F2B6BACC5 /* Pods-tcc-treinamento-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tcc-treinamento-ios.release.xcconfig"; path = "Target Support Files/Pods-tcc-treinamento-ios/Pods-tcc-treinamento-ios.release.xcconfig"; sourceTree = "<group>"; };
 		79990C3ACB70F21CE477D5A6 /* Pods_tcc_treinamento_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tcc_treinamento_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		27BB5E4322BE5ABF009F57A3 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
-		27BB5E4522BE5B1E009F57A3 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,16 +87,9 @@
 				27BB5E3322BE527C009F57A3 /* Assets.xcassets */,
 				27BB5E3522BE527C009F57A3 /* LaunchScreen.storyboard */,
 				27BB5E3822BE527C009F57A3 /* Info.plist */,
+				27BB5E4722BE6038009F57A3 /* GoogleService-Info.plist */,
 			);
 			path = "tcc-treinamento-ios";
-			sourceTree = "<group>";
-		};
-		5CD74D53F333CE4F350798C7 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				79990C3ACB70F21CE477D5A6 /* Pods_tcc_treinamento_ios.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		27BB5E3E22BE59ED009F57A3 /* Components */ = {
@@ -132,6 +127,14 @@
 			children = (
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		5CD74D53F333CE4F350798C7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				79990C3ACB70F21CE477D5A6 /* Pods_tcc_treinamento_ios.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +198,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27BB5E3722BE527C009F57A3 /* LaunchScreen.storyboard in Resources */,
+				27BB5E4822BE6038009F57A3 /* GoogleService-Info.plist in Resources */,
 				27BB5E3422BE527C009F57A3 /* Assets.xcassets in Resources */,
 				27BB5E3222BE5279009F57A3 /* Main.storyboard in Resources */,
 			);
@@ -400,7 +404,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = X4AW44N7SJ;
+				DEVELOPMENT_TEAM = BF9MAU4YU9;
 				INFOPLIST_FILE = "tcc-treinamento-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -419,7 +423,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = X4AW44N7SJ;
+				DEVELOPMENT_TEAM = BF9MAU4YU9;
 				INFOPLIST_FILE = "tcc-treinamento-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
