@@ -19,6 +19,7 @@
 		27BB5E4422BE5ABF009F57A3 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BB5E4322BE5ABF009F57A3 /* GradientView.swift */; };
 		27BB5E4622BE5B1E009F57A3 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BB5E4522BE5B1E009F57A3 /* UIViewExtensions.swift */; };
 		27BB5E4822BE6038009F57A3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27BB5E4722BE6038009F57A3 /* GoogleService-Info.plist */; };
+		27FA15E322C2F5E40020D169 /* RequestMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FA15E222C2F5E40020D169 /* RequestMaker.swift */; };
 		4A526DD722BE71F900773FBD /* TryOut.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A526DD622BE71F900773FBD /* TryOut.storyboard */; };
 		4A526DD922BE721B00773FBD /* MyWalls.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A526DD822BE721B00773FBD /* MyWalls.storyboard */; };
 		4A526DDB22BE723100773FBD /* MyPictures.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A526DDA22BE723100773FBD /* MyPictures.storyboard */; };
@@ -42,6 +43,7 @@
 		27BB5E4322BE5ABF009F57A3 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		27BB5E4522BE5B1E009F57A3 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		27BB5E4722BE6038009F57A3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		27FA15E222C2F5E40020D169 /* RequestMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestMaker.swift; sourceTree = "<group>"; };
 		4A526DD622BE71F900773FBD /* TryOut.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TryOut.storyboard; sourceTree = "<group>"; };
 		4A526DD822BE721B00773FBD /* MyWalls.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyWalls.storyboard; sourceTree = "<group>"; };
 		4A526DDA22BE723100773FBD /* MyPictures.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPictures.storyboard; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 			children = (
 				2777F86E22BE896300ACFAFA /* AuthMaker.swift */,
 				2777F87022BE8C5400ACFAFA /* Result.swift */,
+				27FA15E222C2F5E40020D169 /* RequestMaker.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -384,6 +387,7 @@
 				27BB5E2F22BE5279009F57A3 /* ViewController.swift in Sources */,
 				2777F87322BE92EB00ACFAFA /* SignUpViewController.swift in Sources */,
 				27BB5E2D22BE5279009F57A3 /* AppDelegate.swift in Sources */,
+				27FA15E322C2F5E40020D169 /* RequestMaker.swift in Sources */,
 				4A526DE322BE9BB500773FBD /* InitialRoot.swift in Sources */,
 				27BB5E4622BE5B1E009F57A3 /* UIViewExtensions.swift in Sources */,
 				2777F87122BE8C5400ACFAFA /* Result.swift in Sources */,

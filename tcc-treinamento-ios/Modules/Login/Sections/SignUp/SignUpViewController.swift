@@ -16,6 +16,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var errorMessage: UILabel!
 
     private let authMaker = AuthMaker()
+    private let requestMaker = RequestMaker()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +30,8 @@ class SignUpViewController: UIViewController {
     @IBAction func onPressSignUp(_ sender: UIButton) {
         if let email = self.email?.text, let password = self.password?.text {
             self.authMaker.onRegister(email: email, password: password, onSuccess: { (user) in
+                
+                self.requestMaker.registerUser(email: email)
                 
                 user.user.getIDToken(completion: { (token, _) in
                     UserDefaults.standard.set(token, forKey: "userToken")
