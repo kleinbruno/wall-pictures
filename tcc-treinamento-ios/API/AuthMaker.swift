@@ -12,6 +12,13 @@ import Firebase
 
 enum AuthError: Error {
     case invalidEmail
+    
+    var message: String {
+        switch self {
+        case .invalidEmail:
+            return "Email inválido"
+        }
+    }
 }
 
 typealias SuccessCallback<AuthDataResult> = (AuthDataResult) -> Void

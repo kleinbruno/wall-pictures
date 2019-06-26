@@ -42,8 +42,7 @@ class SignUpViewController: UIViewController {
                 
             }) { (error) in
                 print(error)
-                print("ERROOOOOOOOOOOO")
-                self.errorMessage.text = "Invalid email or password"
+                self.errorMessage.text = error.message
             }
         }
     }

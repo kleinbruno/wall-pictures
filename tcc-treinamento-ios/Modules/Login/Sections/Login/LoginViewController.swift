@@ -17,7 +17,7 @@ class LoginViewController: UIViewController {
     private let authMaker = AuthMaker()
 
     override func viewDidLoad() {
-        super.viewDidLoad()
+        super.viewDidLoad()  
     }
     
     @IBAction func onPressGoSignUp(_ sender: UIButton) {
@@ -42,9 +42,7 @@ class LoginViewController: UIViewController {
                 }
                 
             }) { (error) in
-                print(error)
-                print("ERROOOOOOOOOOOO")
-                self.errorMessage.text = "Invalid email or password"
+                self.errorMessage.text = error.message
             }
         }
     }
