@@ -22,11 +22,20 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchscreen_background" translatesAutoresizingMaskIntoConstraints="NO" id="upd-XW-fNO">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_white" translatesAutoresizingMaskIntoConstraints="NO" id="Pof-yv-3mE">
+                                <rect key="frame" x="102" y="410.5" width="210" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="QaJ-FA-10P"/>
+                                    <constraint firstAttribute="width" constant="210" id="VPd-pc-suc"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" name="primary"/>
                         <constraints>
+                            <constraint firstItem="Pof-yv-3mE" firstAttribute="centerX" secondItem="upd-XW-fNO" secondAttribute="centerX" id="ApN-zd-102"/>
                             <constraint firstAttribute="bottom" secondItem="upd-XW-fNO" secondAttribute="bottom" id="I1R-CK-cYP"/>
                             <constraint firstAttribute="trailing" secondItem="upd-XW-fNO" secondAttribute="trailing" id="MyZ-Z8-MjS"/>
+                            <constraint firstItem="Pof-yv-3mE" firstAttribute="centerY" secondItem="upd-XW-fNO" secondAttribute="centerY" id="a97-eb-H5t"/>
                             <constraint firstItem="upd-XW-fNO" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="wDQ-R6-9GJ"/>
                             <constraint firstItem="upd-XW-fNO" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="zgs-TG-wf1"/>
                         </constraints>
@@ -40,6 +49,7 @@
     </scenes>
     <resources>
         <image name="launchscreen_background" width="375" height="667"/>
+        <image name="logo_white" width="219" height="96"/>
         <namedColor name="primary">
             <color red="0.63921568627450975" green="0.23529411764705882" blue="0.71764705882352942" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
