@@ -29,7 +29,7 @@
         <!--Login View Controller-->
         <scene sceneID="200-U5-u8Q">
             <objects>
-                <viewController storyboardIdentifier="loginviewcontroller" id="F6S-pv-dP6" customClass="LoginViewController" customModule="tcc_treinamento_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="F6S-pv-dP6" customClass="LoginViewController" customModule="tcc_treinamento_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mFT-IV-uLv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

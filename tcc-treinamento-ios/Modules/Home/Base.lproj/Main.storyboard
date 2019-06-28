@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="XUp-Sw-sgk">
             <objects>
-                <tabBarController storyboardIdentifier="homeviewcontroller" id="7ea-ft-b81" customClass="ViewController" customModule="tcc_treinamento_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="ViewController" id="7ea-ft-b81" customClass="ViewController" customModule="tcc_treinamento_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="IFY-rm-c3D">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
