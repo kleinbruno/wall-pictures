@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		272D05C922C5BF5900EFBE35 /* DesignableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D05C822C5BF5900EFBE35 /* DesignableTextField.swift */; };
 		2777F86B22BE6D1000ACFAFA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2777F86A22BE6D1000ACFAFA /* LoginViewController.swift */; };
 		2777F86F22BE896300ACFAFA /* AuthMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2777F86E22BE896300ACFAFA /* AuthMaker.swift */; };
 		2777F87122BE8C5400ACFAFA /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2777F87022BE8C5400ACFAFA /* Result.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		272D05C822C5BF5900EFBE35 /* DesignableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableTextField.swift; sourceTree = "<group>"; };
 		2777F86A22BE6D1000ACFAFA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2777F86E22BE896300ACFAFA /* AuthMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthMaker.swift; sourceTree = "<group>"; };
 		2777F87022BE8C5400ACFAFA /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				27BB5E4322BE5ABF009F57A3 /* GradientView.swift */,
+				272D05C822C5BF5900EFBE35 /* DesignableTextField.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -387,6 +390,7 @@
 				4A526DE322BE9BB500773FBD /* InitialRoot.swift in Sources */,
 				27BB5E4622BE5B1E009F57A3 /* UIViewExtensions.swift in Sources */,
 				2777F87122BE8C5400ACFAFA /* Result.swift in Sources */,
+				272D05C922C5BF5900EFBE35 /* DesignableTextField.swift in Sources */,
 				2777F86B22BE6D1000ACFAFA /* LoginViewController.swift in Sources */,
 				27BB5E4422BE5ABF009F57A3 /* GradientView.swift in Sources */,
 			);
