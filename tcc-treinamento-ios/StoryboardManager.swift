@@ -15,7 +15,7 @@ class StoryboardManager {
 //        let status = UserDefaults.standard.bool(forKey: "status")
         var root : UIViewController?
         
-        if(true) {
+        if let userEmail = UserDefaults.standard.string(forKey: "userEmail") {
             root = ViewController.instantiate(fromAppStoryboard: .Main)
         } else {
             root = LoginViewController.instantiate(fromAppStoryboard: .Login)
