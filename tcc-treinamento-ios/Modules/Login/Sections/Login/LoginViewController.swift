@@ -109,10 +109,8 @@ class LoginViewController: UIViewController {
 
             self.authMaker.onLogin(email: email, password: password, onSuccess: { (user) in
                 
-                user.user.getIDToken(completion: { (token, _) in
-                    UserDefaults.standard.set(token, forKey: "userToken")
-                })
-                
+                self.setUserDefault(withEmail: user.user.email)
+
                 self.goToHome()
                 
             }) { (error) in
@@ -128,9 +126,7 @@ class LoginViewController: UIViewController {
 
             self.authMaker.onRegister(name: name, email: email, password: password, onSuccess: { (user) in
                 
-                user.user.getIDToken(completion: { (token, _) in
-                    UserDefaults.standard.set(token, forKey: "userToken")
-                })
+                self.setUserDefault(withEmail: user.user.email)
                 
                 self.goToHome()
                 
@@ -139,6 +135,10 @@ class LoginViewController: UIViewController {
                 self.errorMessage.text = error.message
             }
         }
+    }
+    
+    func setUserDefault(withEmail email: String?) {
+        UserDefaults.standard.set(email, forKey: "userEmail")
     }
     
     func goToHome() {
