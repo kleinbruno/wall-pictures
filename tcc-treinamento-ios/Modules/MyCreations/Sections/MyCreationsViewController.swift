@@ -20,8 +20,6 @@ class MyCreationsViewController: UIViewController {
         self.presenter.view = self
         
         self.collectionView.dataSource = self.presenter
-        
-//        CreationsCollectionViewCell.configCell()
     }
     
 }

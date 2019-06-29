@@ -14,11 +14,15 @@ class MyCreationsPresenter: NSObject {
 
 extension MyCreationsPresenter: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return 5
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "creation", for: indexPath)
+        
+        if let creationCell = cell as? CreationsCollectionViewCell {
+            creationCell.configCell()
+        }
         
         return cell
     }
