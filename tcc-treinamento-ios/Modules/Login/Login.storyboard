@@ -50,20 +50,20 @@
                                                     <action selector="onPressLogin:" destination="F6S-pv-dP6" eventType="touchUpInside" id="wF6-ZV-CPn"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UBb-FR-zjR">
+                                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UBb-FR-zjR">
                                                 <rect key="frame" x="80" y="0.0" width="99" height="42"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <state key="normal" title="Cadastro">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="onPressGoSignUp:" destination="F6S-pv-dP6" eventType="touchUpInside" id="guJ-w6-6A2"/>
+                                                    <action selector="onPressSignUp:" destination="F6S-pv-dP6" eventType="touchUpInside" id="dhi-ww-cNc"/>
                                                 </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="b3H-52-B9d">
-                                        <rect key="frame" x="0.0" y="302" width="311" height="105"/>
+                                        <rect key="frame" x="0.0" y="362" width="311" height="105"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-MAIL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U56-T8-hG3" customClass="DesignableUITextField" customModule="tcc_treinamento_ios" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="311" height="40"/>
@@ -140,7 +140,7 @@
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Pj-9K-fx2">
-                                        <rect key="frame" x="0.0" y="457" width="311" height="45"/>
+                                        <rect key="frame" x="0.0" y="517" width="311" height="45"/>
                                         <color key="backgroundColor" red="0.52941176469999995" green="0.22352941179999999" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="mtK-Mp-i0X"/>
@@ -154,19 +154,53 @@
                                                 <real key="value" value="22.5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="onPressAction:" destination="F6S-pv-dP6" eventType="touchUpInside" id="gQB-UK-RfC"/>
+                                        </connections>
                                     </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="NOME" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ENH-UW-OmI" customClass="DesignableUITextField" customModule="tcc_treinamento_ios" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="292" width="311" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="gRZ-OQ-6hJ"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="ic_person"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="b3H-52-B9d" firstAttribute="leading" secondItem="2Cv-3Q-eD5" secondAttribute="leading" id="0vH-gn-2ik"/>
                                     <constraint firstItem="kf3-CC-pMt" firstAttribute="top" secondItem="fWe-TQ-ES8" secondAttribute="bottom" constant="80" id="33e-vS-CU5"/>
-                                    <constraint firstItem="b3H-52-B9d" firstAttribute="top" secondItem="kf3-CC-pMt" secondAttribute="bottom" constant="40" id="7Ib-5D-Z7C"/>
+                                    <constraint firstItem="b3H-52-B9d" firstAttribute="top" secondItem="kf3-CC-pMt" secondAttribute="bottom" priority="999" constant="100" id="7Ib-5D-Z7C"/>
                                     <constraint firstItem="7Pj-9K-fx2" firstAttribute="leading" secondItem="2Cv-3Q-eD5" secondAttribute="leading" id="BqD-lh-tbe"/>
+                                    <constraint firstItem="ENH-UW-OmI" firstAttribute="top" secondItem="kf3-CC-pMt" secondAttribute="bottom" constant="30" id="Dn3-gf-5Th"/>
+                                    <constraint firstItem="b3H-52-B9d" firstAttribute="top" secondItem="kf3-CC-pMt" secondAttribute="bottom" priority="900" constant="40" id="H0I-4A-WlL"/>
                                     <constraint firstAttribute="trailing" secondItem="b3H-52-B9d" secondAttribute="trailing" id="Hs8-kE-vc6"/>
                                     <constraint firstAttribute="trailing" secondItem="7Pj-9K-fx2" secondAttribute="trailing" id="Ifm-9C-qgH"/>
                                     <constraint firstItem="fWe-TQ-ES8" firstAttribute="top" secondItem="2Cv-3Q-eD5" secondAttribute="top" constant="80" id="Pcf-2L-2q1"/>
                                     <constraint firstItem="fWe-TQ-ES8" firstAttribute="centerX" secondItem="2Cv-3Q-eD5" secondAttribute="centerX" id="Qch-bV-vPV"/>
+                                    <constraint firstAttribute="trailing" secondItem="ENH-UW-OmI" secondAttribute="trailing" id="SQ4-2S-21u"/>
                                     <constraint firstItem="7Pj-9K-fx2" firstAttribute="top" secondItem="b3H-52-B9d" secondAttribute="bottom" constant="50" id="n7o-E8-LuX"/>
+                                    <constraint firstItem="ENH-UW-OmI" firstAttribute="leading" secondItem="2Cv-3Q-eD5" secondAttribute="leading" id="uyT-lT-BRC"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -181,9 +215,15 @@
                     </view>
                     <navigationItem key="navigationItem" id="TrW-5y-RLK"/>
                     <connections>
+                        <outlet property="actionButton" destination="7Pj-9K-fx2" id="5Ep-37-UvF"/>
                         <outlet property="email" destination="U56-T8-hG3" id="kxs-E0-HcS"/>
                         <outlet property="errorMessage" destination="P4f-e9-jcE" id="oGv-re-Yp1"/>
+                        <outlet property="inputsMaxConstraint" destination="7Ib-5D-Z7C" id="z4c-h4-Jgy"/>
+                        <outlet property="inputsMinConstraint" destination="H0I-4A-WlL" id="71c-mg-igw"/>
+                        <outlet property="loginButton" destination="kzk-ig-Vqh" id="w7C-ol-bkj"/>
+                        <outlet property="name" destination="ENH-UW-OmI" id="oy4-Nj-3e8"/>
                         <outlet property="password" destination="JEs-30-gyW" id="K9A-7p-iYG"/>
+                        <outlet property="signUpButton" destination="UBb-FR-zjR" id="h3E-gF-P5i"/>
                         <segue destination="R3k-pQ-r6a" kind="show" id="89S-NA-fgl"/>
                     </connections>
                 </viewController>
@@ -287,6 +327,7 @@
     <resources>
         <image name="ic_lock" width="512" height="512"/>
         <image name="ic_mail" width="512" height="512"/>
+        <image name="ic_person" width="512" height="512"/>
         <image name="logo_purple" width="219" height="96"/>
     </resources>
 </document>
