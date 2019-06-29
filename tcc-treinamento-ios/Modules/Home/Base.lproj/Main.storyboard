@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="XUp-Sw-sgk">
             <objects>
-                <tabBarController storyboardIdentifier="homeviewcontroller" id="7ea-ft-b81" customClass="ViewController" customModule="tcc_treinamento_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="ViewController" id="7ea-ft-b81" customClass="ViewController" customModule="tcc_treinamento_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="IFY-rm-c3D">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -28,30 +28,30 @@
             </objects>
             <point key="canvasLocation" x="-835" y="-225"/>
         </scene>
-        <!--MyPictures-->
+        <!--MyCreations-->
         <scene sceneID="tZS-Bl-ghD">
             <objects>
-                <viewControllerPlaceholder storyboardName="MyPictures" id="xcP-Cd-plq" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="MyCreations" id="xcP-Cd-plq" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="NjB-Tb-pFc"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rjz-7x-YqD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-67" y="-356"/>
         </scene>
-        <!--MyWalls-->
+        <!--Create-->
         <scene sceneID="zH9-Lm-hmB">
             <objects>
-                <viewControllerPlaceholder storyboardName="MyWalls" id="73h-Mp-6ay" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Create" id="73h-Mp-6ay" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="Jc8-c0-Nbt"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gO2-83-uji" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-79" y="-225"/>
         </scene>
-        <!--TryOut-->
+        <!--Configurations-->
         <scene sceneID="vg0-Lf-DvJ">
             <objects>
-                <viewControllerPlaceholder storyboardName="TryOut" id="3xg-6m-xoZ" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Configurations" id="3xg-6m-xoZ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="q3d-xA-oN9"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hml-Tk-usH" userLabel="First Responder" sceneMemberID="firstResponder"/>
