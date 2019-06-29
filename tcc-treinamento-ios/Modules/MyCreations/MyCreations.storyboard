@@ -22,15 +22,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bTL-3W-GaN" customClass="GradientView" customModule="tcc_treinamento_ios" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PFu-Zw-OeD">
-                                        <rect key="frame" x="0.0" y="172.5" width="414" height="689.5"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="20"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="JuJ-2R-Szb">
                                         <rect key="frame" x="20" y="102.5" width="374" height="40"/>
                                         <subviews>
@@ -61,6 +52,49 @@
                                             </imageView>
                                         </subviews>
                                     </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PFu-Zw-OeD">
+                                        <rect key="frame" x="0.0" y="172.5" width="414" height="689.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="184" translatesAutoresizingMaskIntoConstraints="NO" id="2Sz-oJ-gg8">
+                                                <rect key="frame" x="20" y="30" width="374" height="20"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PAREDES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RMR-Xt-nOs">
+                                                        <rect key="frame" x="0.0" y="0.0" width="110" height="20"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LRw-MP-34q">
+                                                        <rect key="frame" x="294" y="0.0" width="80" height="20"/>
+                                                        <color key="backgroundColor" name="button_background"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="20" id="mm9-kG-Kle"/>
+                                                            <constraint firstAttribute="width" constant="80" id="x2r-hj-0bs"/>
+                                                        </constraints>
+                                                        <state key="normal" title="  ver todas  ">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="9"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="2Sz-oJ-gg8" secondAttribute="trailing" constant="20" id="Exf-oB-orL"/>
+                                            <constraint firstItem="2Sz-oJ-gg8" firstAttribute="leading" secondItem="PFu-Zw-OeD" secondAttribute="leading" constant="20" id="J9l-4x-o3Z"/>
+                                            <constraint firstItem="2Sz-oJ-gg8" firstAttribute="top" secondItem="PFu-Zw-OeD" secondAttribute="top" constant="30" id="za3-oY-wzg"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -100,6 +134,9 @@
     </scenes>
     <resources>
         <image name="ic_person" width="512" height="512"/>
+        <namedColor name="button_background">
+            <color red="0.61176470588235299" green="0.15294117647058825" blue="0.69019607843137254" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="primary_dark">
             <color red="0.37254901960784315" green="0.10196078431372549" blue="0.41960784313725491" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
