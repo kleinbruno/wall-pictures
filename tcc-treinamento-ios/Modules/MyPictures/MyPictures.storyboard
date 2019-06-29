@@ -6,18 +6,57 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Meus Quadros-->
+        <!--criações-->
         <scene sceneID="cnb-hJ-ekW">
             <objects>
-                <viewController title="Meus Quadros" id="TBp-q8-7sw" sceneMemberID="viewController">
+                <viewController title="criações" id="TBp-q8-7sw" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KKm-c8-5wg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bTL-3W-GaN" customClass="GradientView" customModule="tcc_treinamento_ios" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PFu-Zw-OeD">
+                                        <rect key="frame" x="0.0" y="172.5" width="414" height="689.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="PFu-Zw-OeD" firstAttribute="height" secondItem="bTL-3W-GaN" secondAttribute="height" multiplier="4/5" id="9uz-57-FJ2"/>
+                                    <constraint firstAttribute="trailing" secondItem="PFu-Zw-OeD" secondAttribute="trailing" id="S8v-SR-RWw"/>
+                                    <constraint firstAttribute="bottom" secondItem="PFu-Zw-OeD" secondAttribute="bottom" id="ZhE-Vr-uXj"/>
+                                    <constraint firstItem="PFu-Zw-OeD" firstAttribute="leading" secondItem="bTL-3W-GaN" secondAttribute="leading" id="fLl-0m-LOR"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                        <color key="value" name="primary_dark"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                        <color key="value" name="secondary_dark"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="horizontalMode" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dQo-9v-piF" firstAttribute="bottom" secondItem="bTL-3W-GaN" secondAttribute="bottom" id="Gw9-tH-fEj"/>
+                            <constraint firstItem="bTL-3W-GaN" firstAttribute="top" secondItem="KKm-c8-5wg" secondAttribute="top" id="YS8-l5-fJY"/>
+                            <constraint firstItem="bTL-3W-GaN" firstAttribute="leading" secondItem="KKm-c8-5wg" secondAttribute="leading" id="hSr-2T-Nt2"/>
+                            <constraint firstAttribute="trailing" secondItem="bTL-3W-GaN" secondAttribute="trailing" id="lsz-Vc-QYx"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="dQo-9v-piF"/>
                     </view>
                 </viewController>
@@ -26,4 +65,12 @@
             <point key="canvasLocation" x="12" y="143"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="primary_dark">
+            <color red="0.37254901960784315" green="0.10196078431372549" blue="0.41960784313725491" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="secondary_dark">
+            <color red="0.34509803921568627" green="0.2196078431372549" blue="0.58039215686274515" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
