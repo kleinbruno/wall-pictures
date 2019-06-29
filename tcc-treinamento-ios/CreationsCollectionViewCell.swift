@@ -13,6 +13,7 @@ class CreationsCollectionViewCell: UICollectionViewCell {
     
     func configCell() {
         DispatchQueue.main.async {
+            //pegar imagens do firebase
             self.imageView.loadImage(from: "https://s3.amazonaws.com/assets.mockflow.com/app/wireframepro/company/C73f66fcea4ec476cb83a7527d49aa1ca/projects/M949561e8e6eb08470f7dd8aa9e039eae1560387191030/images/M7bdc47993667eefe2e4e7cd4eadbf2f21561600985788")
         }
     }

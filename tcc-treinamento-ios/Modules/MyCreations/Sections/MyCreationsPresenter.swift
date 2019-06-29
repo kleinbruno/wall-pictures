@@ -14,7 +14,7 @@ class MyCreationsPresenter: NSObject {
 
 extension MyCreationsPresenter: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return 5 //pegar o .length das paredes/quadros q o user tem
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
