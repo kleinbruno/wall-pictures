@@ -20,9 +20,9 @@
 		27BB5E4422BE5ABF009F57A3 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BB5E4322BE5ABF009F57A3 /* GradientView.swift */; };
 		27BB5E4622BE5B1E009F57A3 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BB5E4522BE5B1E009F57A3 /* UIViewExtensions.swift */; };
 		27BB5E4822BE6038009F57A3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27BB5E4722BE6038009F57A3 /* GoogleService-Info.plist */; };
-		4A526DD722BE71F900773FBD /* TryOut.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A526DD622BE71F900773FBD /* TryOut.storyboard */; };
-		4A526DD922BE721B00773FBD /* MyWalls.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A526DD822BE721B00773FBD /* MyWalls.storyboard */; };
-		4A526DDB22BE723100773FBD /* MyPictures.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A526DDA22BE723100773FBD /* MyPictures.storyboard */; };
+		4A526DD722BE71F900773FBD /* Configurations.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A526DD622BE71F900773FBD /* Configurations.storyboard */; };
+		4A526DD922BE721B00773FBD /* Create.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A526DD822BE721B00773FBD /* Create.storyboard */; };
+		4A526DDB22BE723100773FBD /* MyCreations.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A526DDA22BE723100773FBD /* MyCreations.storyboard */; };
 		4A526DDD22BE726000773FBD /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A526DDC22BE726000773FBD /* Login.storyboard */; };
 		4A526DE322BE9BB500773FBD /* StoryboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A526DE222BE9BB500773FBD /* StoryboardManager.swift */; };
 		4A526DE522BEB3CE00773FBD /* AppStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A526DE422BEB3CE00773FBD /* AppStoryboard.swift */; };
@@ -46,9 +46,9 @@
 		27BB5E4322BE5ABF009F57A3 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		27BB5E4522BE5B1E009F57A3 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		27BB5E4722BE6038009F57A3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		4A526DD622BE71F900773FBD /* TryOut.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TryOut.storyboard; sourceTree = "<group>"; };
-		4A526DD822BE721B00773FBD /* MyWalls.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyWalls.storyboard; sourceTree = "<group>"; };
-		4A526DDA22BE723100773FBD /* MyPictures.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPictures.storyboard; sourceTree = "<group>"; };
+		4A526DD622BE71F900773FBD /* Configurations.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Configurations.storyboard; sourceTree = "<group>"; };
+		4A526DD822BE721B00773FBD /* Create.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Create.storyboard; sourceTree = "<group>"; };
+		4A526DDA22BE723100773FBD /* MyCreations.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyCreations.storyboard; sourceTree = "<group>"; };
 		4A526DDC22BE726000773FBD /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		4A526DE222BE9BB500773FBD /* StoryboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardManager.swift; sourceTree = "<group>"; };
 		4A526DE422BEB3CE00773FBD /* AppStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoryboard.swift; sourceTree = "<group>"; };
@@ -188,29 +188,29 @@
 			children = (
 				4A526DD422BE707400773FBD /* Home */,
 				2777F86822BE6C8B00ACFAFA /* Login */,
-				4A526DD222BE703200773FBD /* MyPictures */,
-				4A526DD322BE704C00773FBD /* MyWalls */,
-				4A526DD522BE70AC00773FBD /* TryOut */,
+				4A526DD222BE703200773FBD /* MyCreations */,
+				4A526DD322BE704C00773FBD /* Create */,
+				4A526DD522BE70AC00773FBD /* Configurations */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
 		};
-		4A526DD222BE703200773FBD /* MyPictures */ = {
+		4A526DD222BE703200773FBD /* MyCreations */ = {
 			isa = PBXGroup;
 			children = (
 				4A526DE022BE729700773FBD /* Sections */,
-				4A526DDA22BE723100773FBD /* MyPictures.storyboard */,
+				4A526DDA22BE723100773FBD /* MyCreations.storyboard */,
 			);
-			path = MyPictures;
+			path = MyCreations;
 			sourceTree = "<group>";
 		};
-		4A526DD322BE704C00773FBD /* MyWalls */ = {
+		4A526DD322BE704C00773FBD /* Create */ = {
 			isa = PBXGroup;
 			children = (
 				4A526DDF22BE728D00773FBD /* Sections */,
-				4A526DD822BE721B00773FBD /* MyWalls.storyboard */,
+				4A526DD822BE721B00773FBD /* Create.storyboard */,
 			);
-			path = MyWalls;
+			path = Create;
 			sourceTree = "<group>";
 		};
 		4A526DD422BE707400773FBD /* Home */ = {
@@ -222,13 +222,13 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		4A526DD522BE70AC00773FBD /* TryOut */ = {
+		4A526DD522BE70AC00773FBD /* Configurations */ = {
 			isa = PBXGroup;
 			children = (
 				4A526DDE22BE728000773FBD /* Sections */,
-				4A526DD622BE71F900773FBD /* TryOut.storyboard */,
+				4A526DD622BE71F900773FBD /* Configurations.storyboard */,
 			);
-			path = TryOut;
+			path = Configurations;
 			sourceTree = "<group>";
 		};
 		4A526DDE22BE728000773FBD /* Sections */ = {
@@ -332,9 +332,9 @@
 				4A526DDD22BE726000773FBD /* Login.storyboard in Resources */,
 				27BB5E3722BE527C009F57A3 /* LaunchScreen.storyboard in Resources */,
 				27BB5E4822BE6038009F57A3 /* GoogleService-Info.plist in Resources */,
-				4A526DDB22BE723100773FBD /* MyPictures.storyboard in Resources */,
-				4A526DD922BE721B00773FBD /* MyWalls.storyboard in Resources */,
-				4A526DD722BE71F900773FBD /* TryOut.storyboard in Resources */,
+				4A526DDB22BE723100773FBD /* MyCreations.storyboard in Resources */,
+				4A526DD922BE721B00773FBD /* Create.storyboard in Resources */,
+				4A526DD722BE71F900773FBD /* Configurations.storyboard in Resources */,
 				27BB5E3422BE527C009F57A3 /* Assets.xcassets in Resources */,
 				27BB5E3222BE5279009F57A3 /* Main.storyboard in Resources */,
 			);
