@@ -27,7 +27,18 @@ class LoginViewController: UIViewController {
     private let authMaker = AuthMaker()
 
     override func viewDidLoad() {
-        super.viewDidLoad()  
+        super.viewDidLoad()
+        
+        self.configInitialLayout()
+    }
+    
+    func configInitialLayout() {
+        self.inputsMaxConstraint.priority = UILayoutPriority(rawValue: 900)
+        
+        self.inputsMinConstraint.priority =
+            UILayoutPriority(rawValue: 999)
+        
+        self.name.alpha = 0
     }
     
     @IBAction func onPressAction(_ sender: UIButton) {
@@ -43,13 +54,13 @@ class LoginViewController: UIViewController {
             
             self.inputsMinConstraint.priority =
                 UILayoutPriority(rawValue: 900)
-            
+                        
             UIView.animate(withDuration: 1, animations: {
                 self.signUpButton.alpha = 1
                 self.loginButton.alpha = 0.5
                 self.name.alpha = 1
+                self.actionButton.setTitle("Cadastrar", for: UIControl.State.init())
                 
-//                self.actionButton.setTitle("Cadastrar", for: UIControl.State)
                 self.view.layoutIfNeeded()
 
             })
@@ -71,6 +82,7 @@ class LoginViewController: UIViewController {
                 self.loginButton.alpha = 1
                 self.signUpButton.alpha = 0.5
                 self.name.alpha = 0
+                self.actionButton.setTitle("Entrar", for: UIControl.State.init())
                 
                 self.view.layoutIfNeeded()
             })

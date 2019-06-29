@@ -125,13 +125,6 @@
                                             <constraint firstItem="JEs-30-gyW" firstAttribute="leading" secondItem="b3H-52-B9d" secondAttribute="leading" id="lRY-WU-f1F"/>
                                         </constraints>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="P4f-e9-jcE">
-                                        <rect key="frame" x="167" y="0.0" width="0.0" height="0.0"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_purple" translatesAutoresizingMaskIntoConstraints="NO" id="fWe-TQ-ES8">
                                         <rect key="frame" x="72.5" y="80" width="166" height="60"/>
                                         <constraints>
@@ -217,7 +210,6 @@
                     <connections>
                         <outlet property="actionButton" destination="7Pj-9K-fx2" id="5Ep-37-UvF"/>
                         <outlet property="email" destination="U56-T8-hG3" id="kxs-E0-HcS"/>
-                        <outlet property="errorMessage" destination="P4f-e9-jcE" id="oGv-re-Yp1"/>
                         <outlet property="inputsMaxConstraint" destination="7Ib-5D-Z7C" id="z4c-h4-Jgy"/>
                         <outlet property="inputsMinConstraint" destination="H0I-4A-WlL" id="71c-mg-igw"/>
                         <outlet property="loginButton" destination="kzk-ig-Vqh" id="w7C-ol-bkj"/>
