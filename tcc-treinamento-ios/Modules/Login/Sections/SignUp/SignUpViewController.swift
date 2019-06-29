@@ -25,26 +25,5 @@ class SignUpViewController: UIViewController {
     @IBAction func onPressGoLogin(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
-    
-    @IBAction func onPressSignUp(_ sender: UIButton) {
-        if let email = self.email?.text, let password = self.password?.text {
-            self.authMaker.onRegister(email: email, password: password, onSuccess: { (user) in
-                
-                user.user.getIDToken(completion: { (token, _) in
-                    UserDefaults.standard.set(token, forKey: "userToken")
-                })
-                
-                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                if let homeViewController = storyboard.instantiateViewController(withIdentifier: "homeviewcontroller") as? ViewController {
-                    let appDelegate = UIApplication.shared.delegate as! AppDelegate
-                    appDelegate.window?.rootViewController = homeViewController
-                }
-                
-            }) { (error) in
-                print(error)
-                self.errorMessage.text = error.message
-            }
-        }
-    }
 
 }

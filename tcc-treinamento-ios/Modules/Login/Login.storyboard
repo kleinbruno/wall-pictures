@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -37,14 +38,14 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Cv-3Q-eD5">
                                 <rect key="frame" x="32" y="64" width="311" height="603"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="kf3-CC-pMt">
-                                        <rect key="frame" x="-7" y="220" width="179" height="42"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="kf3-CC-pMt">
+                                        <rect key="frame" x="0.0" y="220" width="179" height="42"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kzk-ig-Vqh">
                                                 <rect key="frame" x="0.0" y="0.0" width="60" height="42"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <state key="normal" title="Login">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="titleColor" name="secondary"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="onPressLogin:" destination="F6S-pv-dP6" eventType="touchUpInside" id="wF6-ZV-CPn"/>
@@ -54,7 +55,7 @@
                                                 <rect key="frame" x="80" y="0.0" width="99" height="42"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <state key="normal" title="Cadastro">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="titleColor" name="secondary"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="onPressSignUp:" destination="F6S-pv-dP6" eventType="touchUpInside" id="dhi-ww-cNc"/>
@@ -132,7 +133,7 @@
                                             <constraint firstAttribute="height" constant="60" id="NmO-Ji-tiL"/>
                                         </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Pj-9K-fx2">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Pj-9K-fx2" customClass="GradientButton" customModule="tcc_treinamento_ios" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="517" width="311" height="45"/>
                                         <color key="backgroundColor" red="0.52941176469999995" green="0.22352941179999999" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -145,6 +146,13 @@
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="22.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="horizontalMode" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                                <color key="value" name="primary_dark"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                                <color key="value" name="secondary_dark"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
@@ -178,11 +186,23 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="sWv-bf-EUH">
+                                        <rect key="frame" x="145.5" y="529.5" width="20" height="20"/>
+                                        <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </activityIndicatorView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VQa-o4-Sik">
+                                        <rect key="frame" x="0.0" y="475" width="0.0" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.95967918634414673" green="0.15986886620521545" blue="0.02985171414911747" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="b3H-52-B9d" firstAttribute="leading" secondItem="2Cv-3Q-eD5" secondAttribute="leading" id="0vH-gn-2ik"/>
+                                    <constraint firstItem="VQa-o4-Sik" firstAttribute="leading" secondItem="2Cv-3Q-eD5" secondAttribute="leading" id="2iM-PK-ecb"/>
                                     <constraint firstItem="kf3-CC-pMt" firstAttribute="top" secondItem="fWe-TQ-ES8" secondAttribute="bottom" constant="80" id="33e-vS-CU5"/>
+                                    <constraint firstItem="VQa-o4-Sik" firstAttribute="top" secondItem="b3H-52-B9d" secondAttribute="bottom" constant="8" id="3Vg-mu-VcM"/>
                                     <constraint firstItem="b3H-52-B9d" firstAttribute="top" secondItem="kf3-CC-pMt" secondAttribute="bottom" priority="999" constant="100" id="7Ib-5D-Z7C"/>
                                     <constraint firstItem="7Pj-9K-fx2" firstAttribute="leading" secondItem="2Cv-3Q-eD5" secondAttribute="leading" id="BqD-lh-tbe"/>
                                     <constraint firstItem="ENH-UW-OmI" firstAttribute="top" secondItem="kf3-CC-pMt" secondAttribute="bottom" constant="30" id="Dn3-gf-5Th"/>
@@ -192,7 +212,10 @@
                                     <constraint firstItem="fWe-TQ-ES8" firstAttribute="top" secondItem="2Cv-3Q-eD5" secondAttribute="top" constant="80" id="Pcf-2L-2q1"/>
                                     <constraint firstItem="fWe-TQ-ES8" firstAttribute="centerX" secondItem="2Cv-3Q-eD5" secondAttribute="centerX" id="Qch-bV-vPV"/>
                                     <constraint firstAttribute="trailing" secondItem="ENH-UW-OmI" secondAttribute="trailing" id="SQ4-2S-21u"/>
+                                    <constraint firstItem="sWv-bf-EUH" firstAttribute="centerY" secondItem="7Pj-9K-fx2" secondAttribute="centerY" id="efc-dB-uAN"/>
+                                    <constraint firstItem="kf3-CC-pMt" firstAttribute="leading" secondItem="2Cv-3Q-eD5" secondAttribute="leading" id="f7E-Au-gD0"/>
                                     <constraint firstItem="7Pj-9K-fx2" firstAttribute="top" secondItem="b3H-52-B9d" secondAttribute="bottom" constant="50" id="n7o-E8-LuX"/>
+                                    <constraint firstItem="sWv-bf-EUH" firstAttribute="centerX" secondItem="2Cv-3Q-eD5" secondAttribute="centerX" id="tJg-n1-wWs"/>
                                     <constraint firstItem="ENH-UW-OmI" firstAttribute="leading" secondItem="2Cv-3Q-eD5" secondAttribute="leading" id="uyT-lT-BRC"/>
                                 </constraints>
                             </view>
@@ -210,8 +233,10 @@
                     <connections>
                         <outlet property="actionButton" destination="7Pj-9K-fx2" id="5Ep-37-UvF"/>
                         <outlet property="email" destination="U56-T8-hG3" id="kxs-E0-HcS"/>
+                        <outlet property="errorMessage" destination="VQa-o4-Sik" id="gb9-2y-kms"/>
                         <outlet property="inputsMaxConstraint" destination="7Ib-5D-Z7C" id="z4c-h4-Jgy"/>
                         <outlet property="inputsMinConstraint" destination="H0I-4A-WlL" id="71c-mg-igw"/>
+                        <outlet property="loader" destination="sWv-bf-EUH" id="LRj-Gt-DXH"/>
                         <outlet property="loginButton" destination="kzk-ig-Vqh" id="w7C-ol-bkj"/>
                         <outlet property="name" destination="ENH-UW-OmI" id="oy4-Nj-3e8"/>
                         <outlet property="password" destination="JEs-30-gyW" id="K9A-7p-iYG"/>
@@ -321,5 +346,14 @@
         <image name="ic_mail" width="512" height="512"/>
         <image name="ic_person" width="512" height="512"/>
         <image name="logo_purple" width="219" height="96"/>
+        <namedColor name="primary_dark">
+            <color red="0.37254901960784315" green="0.10196078431372549" blue="0.41960784313725491" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="secondary">
+            <color red="0.16470588235294117" green="0.20784313725490197" blue="0.49803921568627452" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="secondary_dark">
+            <color red="0.34509803921568627" green="0.2196078431372549" blue="0.58039215686274515" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>
