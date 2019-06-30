@@ -162,6 +162,42 @@
                                                             </button>
                                                         </subviews>
                                                     </stackView>
+                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="S1N-qN-GH2">
+                                                        <rect key="frame" x="0.0" y="52" width="414" height="241"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="7Eb-ut-DQj">
+                                                            <size key="itemSize" width="230" height="201"/>
+                                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="10"/>
+                                                        </collectionViewFlowLayout>
+                                                        <cells>
+                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" reuseIdentifier="pictures" id="gZq-Xg-5nB" customClass="PicturesCollectionViewCell" customModule="tcc_treinamento_ios" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="15" width="230" height="201"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="230" height="201"/>
+                                                                    <autoresizingMask key="autoresizingMask"/>
+                                                                    <subviews>
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fake_wall" translatesAutoresizingMaskIntoConstraints="NO" id="g9I-c1-eoB">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="230" height="201"/>
+                                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </imageView>
+                                                                    </subviews>
+                                                                </view>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="bottom" secondItem="g9I-c1-eoB" secondAttribute="bottom" id="Jkt-1U-Dg5"/>
+                                                                    <constraint firstItem="g9I-c1-eoB" firstAttribute="top" secondItem="gZq-Xg-5nB" secondAttribute="top" id="MIp-Ox-CKO"/>
+                                                                    <constraint firstItem="g9I-c1-eoB" firstAttribute="leading" secondItem="gZq-Xg-5nB" secondAttribute="leading" id="ZC7-qC-Hcu"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="g9I-c1-eoB" secondAttribute="trailing" id="dB0-YR-Awt"/>
+                                                                </constraints>
+                                                                <connections>
+                                                                    <outlet property="imageView" destination="g9I-c1-eoB" id="dsa-MY-SMd"/>
+                                                                </connections>
+                                                            </collectionViewCell>
+                                                        </cells>
+                                                    </collectionView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -220,6 +256,7 @@
                         <viewLayoutGuide key="safeArea" id="dQo-9v-piF"/>
                     </view>
                     <connections>
+                        <outlet property="pictureCollectionView" destination="S1N-qN-GH2" id="kyI-4j-2gp"/>
                         <outlet property="wallCollectionView" destination="0As-6Q-PYB" id="Zr5-bs-TOZ"/>
                     </connections>
                 </viewController>

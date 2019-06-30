@@ -1,5 +1,5 @@
 //
-//  MyCreationsPresenter.swift
+//  File.swift
 //  tcc-treinamento-ios
 //
 //  Created by Bruno Klein on 29/06/19.
@@ -8,19 +8,19 @@
 
 import UIKit
 
-class WallsPresenter: NSObject {
+class PicturesPresenter: NSObject {
     weak var view: AnyObject?
 }
 
-extension WallsPresenter: UICollectionViewDataSource {
+extension PicturesPresenter: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 5 //pegar o .length das paredes/quadros q o user tem
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "walls", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "pictures", for: indexPath)
         
-        if let creationCell = cell as? WallsCollectionViewCell {
+        if let creationCell = cell as? PicturesCollectionViewCell {
             creationCell.configCell()
         }
         

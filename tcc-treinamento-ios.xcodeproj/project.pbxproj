@@ -23,6 +23,8 @@
 		4A4B62CE22C7EDB8008BABE9 /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4B62CD22C7EDB8008BABE9 /* UIImageViewExtensions.swift */; };
 		4A4B62D222C804F8008BABE9 /* WallsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4B62D122C804F8008BABE9 /* WallsPresenter.swift */; };
 		4A4B62E022C84350008BABE9 /* MyCreationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4B62DF22C84350008BABE9 /* MyCreationsViewController.swift */; };
+		4A4B62E222C84561008BABE9 /* PicturesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4B62E122C84561008BABE9 /* PicturesCollectionViewCell.swift */; };
+		4A4B62E422C846ED008BABE9 /* PicturesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4B62E322C846ED008BABE9 /* PicturesPresenter.swift */; };
 		4A526DD722BE71F900773FBD /* Configurations.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A526DD622BE71F900773FBD /* Configurations.storyboard */; };
 		4A526DD922BE721B00773FBD /* Create.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A526DD822BE721B00773FBD /* Create.storyboard */; };
 		4A526DDB22BE723100773FBD /* MyCreations.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A526DDA22BE723100773FBD /* MyCreations.storyboard */; };
@@ -52,6 +54,8 @@
 		4A4B62CD22C7EDB8008BABE9 /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
 		4A4B62D122C804F8008BABE9 /* WallsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallsPresenter.swift; sourceTree = "<group>"; };
 		4A4B62DF22C84350008BABE9 /* MyCreationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCreationsViewController.swift; sourceTree = "<group>"; };
+		4A4B62E122C84561008BABE9 /* PicturesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicturesCollectionViewCell.swift; sourceTree = "<group>"; };
+		4A4B62E322C846ED008BABE9 /* PicturesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PicturesPresenter.swift; path = "tcc-treinamento-ios/Modules/MyCreations/Sections/picture/PicturesPresenter.swift"; sourceTree = SOURCE_ROOT; };
 		4A526DD622BE71F900773FBD /* Configurations.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Configurations.storyboard; sourceTree = "<group>"; };
 		4A526DD822BE721B00773FBD /* Create.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Create.storyboard; sourceTree = "<group>"; };
 		4A526DDA22BE723100773FBD /* MyCreations.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyCreations.storyboard; sourceTree = "<group>"; };
@@ -152,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				4A4B62CB22C7EA76008BABE9 /* WallsCollectionViewCell.swift */,
+				4A4B62E122C84561008BABE9 /* PicturesCollectionViewCell.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -201,6 +206,7 @@
 		4A4B62D622C8394E008BABE9 /* pictures */ = {
 			isa = PBXGroup;
 			children = (
+				4A4B62E322C846ED008BABE9 /* PicturesPresenter.swift */,
 			);
 			path = pictures;
 			sourceTree = "<group>";
@@ -416,6 +422,7 @@
 			files = (
 				4A526DE522BEB3CE00773FBD /* AppStoryboard.swift in Sources */,
 				4A526DE722BEBEDD00773FBD /* UIViewControllerExtensions.swift in Sources */,
+				4A4B62E222C84561008BABE9 /* PicturesCollectionViewCell.swift in Sources */,
 				2777F86F22BE896300ACFAFA /* AuthMaker.swift in Sources */,
 				27BB5E2F22BE5279009F57A3 /* ViewController.swift in Sources */,
 				2777F87322BE92EB00ACFAFA /* SignUpViewController.swift in Sources */,
@@ -424,6 +431,7 @@
 				4A4B62CE22C7EDB8008BABE9 /* UIImageViewExtensions.swift in Sources */,
 				4A4B62D222C804F8008BABE9 /* WallsPresenter.swift in Sources */,
 				4A526DE322BE9BB500773FBD /* StoryboardManager.swift in Sources */,
+				4A4B62E422C846ED008BABE9 /* PicturesPresenter.swift in Sources */,
 				27BB5E4622BE5B1E009F57A3 /* UIViewExtensions.swift in Sources */,
 				2777F87122BE8C5400ACFAFA /* Result.swift in Sources */,
 				4A4B62CC22C7EA76008BABE9 /* WallsCollectionViewCell.swift in Sources */,

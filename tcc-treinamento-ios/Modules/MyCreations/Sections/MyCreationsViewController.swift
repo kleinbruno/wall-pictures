@@ -11,15 +11,19 @@ import UIKit
 class MyCreationsViewController: UIViewController {
     
     @IBOutlet weak var wallCollectionView: UICollectionView!
+    @IBOutlet weak var pictureCollectionView: UICollectionView!
     
-    private let presenter = WallsPresenter()
+    private let wallsPresenter = WallsPresenter()
+    private let picturesPresenter = PicturesPresenter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.presenter.view = self
+        self.wallsPresenter.view = self
+        self.picturesPresenter.view = self
         
-        self.wallCollectionView.dataSource = self.presenter
+        self.wallCollectionView.dataSource = self.wallsPresenter
+        self.pictureCollectionView.dataSource = self.picturesPresenter
     }
     
 }
