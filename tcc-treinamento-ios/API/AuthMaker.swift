@@ -40,6 +40,8 @@ typealias LoginFailCallback<AuthError> = (AuthError) -> Void
 typealias SignUpFailCallback<AuthError> = (AuthError) -> Void
 
 class AuthMaker {
+    let requestMaker = RequestMaker()
+    
     func onRegister(name: String, email: String, password: String, onSuccess: @escaping SuccessCallback<AuthDataResult>, onFailed: @escaping SignUpFailCallback<AuthError>) {
         
         if (name.isEmpty || email.isEmpty || password.isEmpty) {
@@ -54,6 +56,10 @@ class AuthMaker {
             }
             
             if let authResult = authResult {
+                let userUID = authResult.user.uid
+                
+                self.setUserDefaults(withUID: userUID)
+                self.requestMaker.registerUser(withUID: userUID, withName: name, withEmail: email)
                 onSuccess(authResult)
             }
         }
@@ -69,8 +75,13 @@ class AuthMaker {
             }
             
             if let authResult = authResult {
+                self.setUserDefaults(withUID: authResult.user.uid)
                 onSuccess(authResult)
             }
         }
+    }
+    
+    private func setUserDefaults(withUID UID: String?) {
+        UserDefaults.standard.set(UID, forKey: "userUID")
     }
 }

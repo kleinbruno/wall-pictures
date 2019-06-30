@@ -27,10 +27,12 @@ typealias SuccessRequestCallback<NSDictionary> = (NSDictionary) -> Void
 //typealias SignUpFailCallback<AuthError> = (AuthError) -> Void
 
 class RequestMaker {
-    let db = Firestore.firestore()
+    lazy var db = Firestore.firestore()
+    
+    let userUID = UserDefaults.standard.string(forKey: "userUID")
 
     func fetchData(email: String, password: String, onSuccess: @escaping SuccessRequestCallback<NSDictionary>, onFailed: @escaping SignUpFailCallback<RequestError>) {
-        
+
         self.db.collection("pictures").getDocuments() { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
@@ -42,30 +44,41 @@ class RequestMaker {
                 }
             }
         }
-        
+
     }
     
+    func addPicture(withImage image: String) {
+        if let userUID = UserDefaults.standard.string(forKey: "userUID") {
+            self.db.collection("users").document(userUID).collection("pictures").document().setData([
+                "image": image,
+                ])
+        }
+    }
+
     func fetchPictures() {
-        if let userEmail = UserDefaults.standard.string(forKey: "userEmail") {
-            self.db.collection("users").whereField("email", isGreaterThanOrEqualTo: userEmail).getDocuments() { (querySnapshot, err) in
+        if let userUID = UserDefaults.standard.string(forKey: "userUID") {
+            self.db.collection("users").document(userUID).collection("pictures").getDocuments { (querySnapshot, err) in
                 if let err = err {
                     print("Error getting documents: \(err)")
                 } else {
-                    for document in querySnapshot!.documents {
-                        print("\(document.documentID) => \(document.data())")
-                    }
+                    print("USER PICTURES!!!!!!!!!!!")
+                    
+                    let pictures = Pictures.init(querySnapshot: querySnapshot)
+                    
+                    print(pictures)
+                    
+                   
                 }
             }
+            
         }
     }
-    
-    func registerUser(email: String) {
-        self.db.collection("users").addDocument(data: ["email" : email])
-    }
-    
-    func onLogin(email: String, password: String, onSuccess: @escaping SuccessCallback<AuthDataResult>, onFailed: @escaping LoginFailCallback<RequestError>) {
-        
-//        charactersDb = Firestore.firestore().collection("users").document(deviceId).collection("characters")
+
+    func registerUser(withUID UID: String, withName name: String, withEmail email: String) {
+        self.db.collection("users").document(UID).setData([
+            "name": name,
+            "email": email,
+            ])
     }
 }
 

@@ -8,8 +8,6 @@
 
 import UIKit
 
-import Firebase
-
 class LoginViewController: UIViewController {
     
     @IBOutlet weak var name: UITextField!
@@ -32,8 +30,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let db = Firestore.firestore()
-//
+
 //        var ref: DocumentReference? = nil
 //        ref = db.collection("users").document("lA6GMorYJH3m13uD3OLs").collection("pictures").addDocument(data: [
 //            "name": "arteloza",
@@ -146,8 +143,6 @@ class LoginViewController: UIViewController {
 
             self.authMaker.onLogin(email: email, password: password, onSuccess: { (user) in
                 
-                self.setUserDefault(withEmail: user.user.email)
-
                 self.goToHome()
                 
             }) { (error) in
@@ -163,8 +158,6 @@ class LoginViewController: UIViewController {
 
             self.authMaker.onRegister(name: name, email: email, password: password, onSuccess: { (user) in
                 
-                self.setUserDefault(withEmail: user.user.email)
-                
                 self.goToHome()
                 
             }) { (error) in
@@ -172,10 +165,6 @@ class LoginViewController: UIViewController {
                 self.errorMessage.text = error.message
             }
         }
-    }
-    
-    func setUserDefault(withEmail email: String?) {
-        UserDefaults.standard.set(email, forKey: "userEmail")
     }
     
     func goToHome() {
