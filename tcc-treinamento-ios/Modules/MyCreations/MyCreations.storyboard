@@ -14,7 +14,7 @@
         <!--criações-->
         <scene sceneID="cnb-hJ-ekW">
             <objects>
-                <viewController storyboardIdentifier="MyCreationsViewController" title="criações" id="TBp-q8-7sw" customClass="WallsViewController" customModule="tcc_treinamento_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MyCreationsViewController" title="criações" id="TBp-q8-7sw" customClass="MyCreationsViewController" customModule="tcc_treinamento_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KKm-c8-5wg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -220,7 +220,7 @@
                         <viewLayoutGuide key="safeArea" id="dQo-9v-piF"/>
                     </view>
                     <connections>
-                        <outlet property="collectionView" destination="0As-6Q-PYB" id="Pyp-ha-PX9"/>
+                        <outlet property="wallCollectionView" destination="0As-6Q-PYB" id="Zr5-bs-TOZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yby-hh-b9y" userLabel="First Responder" sceneMemberID="firstResponder"/>
