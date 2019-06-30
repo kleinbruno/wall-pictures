@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		272D05C922C5BF5900EFBE35 /* DesignableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D05C822C5BF5900EFBE35 /* DesignableTextField.swift */; };
+		2765D89D22C9452A00898C92 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2765D89C22C9452A00898C92 /* User.swift */; };
 		2777F86B22BE6D1000ACFAFA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2777F86A22BE6D1000ACFAFA /* LoginViewController.swift */; };
 		2777F86F22BE896300ACFAFA /* AuthMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2777F86E22BE896300ACFAFA /* AuthMaker.swift */; };
 		2777F87122BE8C5400ACFAFA /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2777F87022BE8C5400ACFAFA /* Result.swift */; };
@@ -32,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		272D05C822C5BF5900EFBE35 /* DesignableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableTextField.swift; sourceTree = "<group>"; };
+		2765D89C22C9452A00898C92 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		2777F86A22BE6D1000ACFAFA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2777F86E22BE896300ACFAFA /* AuthMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthMaker.swift; sourceTree = "<group>"; };
 		2777F87022BE8C5400ACFAFA /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 		27BB5E4222BE5A76009F57A3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2765D89C22C9452A00898C92 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -387,7 +390,8 @@
 				27BB5E2F22BE5279009F57A3 /* ViewController.swift in Sources */,
 				27BB5E2D22BE5279009F57A3 /* AppDelegate.swift in Sources */,
 				27FA15E322C2F5E40020D169 /* RequestMaker.swift in Sources */,
-				4A526DE322BE9BB500773FBD /* InitialRoot.swift in Sources */,
+				2765D89D22C9452A00898C92 /* User.swift in Sources */,
+				4A526DE322BE9BB500773FBD /* StoryboardManager.swift in Sources */,
 				4A526DE322BE9BB500773FBD /* StoryboardManager.swift in Sources */,
 				27BB5E4622BE5B1E009F57A3 /* UIViewExtensions.swift in Sources */,
 				2777F87122BE8C5400ACFAFA /* Result.swift in Sources */,

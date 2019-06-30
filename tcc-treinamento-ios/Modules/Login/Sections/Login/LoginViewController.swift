@@ -65,15 +65,7 @@ class LoginViewController: UIViewController {
 //            }
 //        }
         
-        db.collection("users").whereField("email", isGreaterThanOrEqualTo: "luanwinck23@gmail.com").getDocuments() { (querySnapshot, err) in
-            if let err = err {
-                print("Error getting documents: \(err)")
-            } else {
-                for document in querySnapshot!.documents {
-                    print("\(document.documentID) => \(document.data())")
-                }
-            }
-        }
+
             
         self.configInitialLayout()
     }

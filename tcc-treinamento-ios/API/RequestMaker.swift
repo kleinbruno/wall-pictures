@@ -11,17 +11,17 @@ import Foundation
 import Firebase
 
 enum RequestError: Error {
-    case invalidEmail
+    case requestFailed
     
     var message: String {
         switch self {
-        case .invalidEmail:
-            return "Email inválido"
+        case .requestFailed:
+            return "Falha em obter os dados"
         }
     }
 }
 
-//
+typealias RequestResult<T> = Result<T, RequestError>
 typealias SuccessRequestCallback<NSDictionary> = (NSDictionary) -> Void
 //typealias LoginFailCallback<AuthError> = (AuthError) -> Void
 //typealias SignUpFailCallback<AuthError> = (AuthError) -> Void
@@ -43,6 +43,20 @@ class RequestMaker {
             }
         }
         
+    }
+    
+    func fetchPictures() {
+        if let userEmail = UserDefaults.standard.string(forKey: "userEmail") {
+            self.db.collection("users").whereField("email", isGreaterThanOrEqualTo: userEmail).getDocuments() { (querySnapshot, err) in
+                if let err = err {
+                    print("Error getting documents: \(err)")
+                } else {
+                    for document in querySnapshot!.documents {
+                        print("\(document.documentID) => \(document.data())")
+                    }
+                }
+            }
+        }
     }
     
     func registerUser(email: String) {
