@@ -14,7 +14,7 @@
         <!--criações-->
         <scene sceneID="cnb-hJ-ekW">
             <objects>
-                <viewController storyboardIdentifier="MyCreationsViewController" title="criações" id="TBp-q8-7sw" customClass="MyCreationsViewController" customModule="tcc_treinamento_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MyCreationsViewController" title="criações" id="TBp-q8-7sw" customClass="WallsViewController" customModule="tcc_treinamento_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KKm-c8-5wg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -95,7 +95,7 @@
                                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="10"/>
                                                         </collectionViewFlowLayout>
                                                         <cells>
-                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" reuseIdentifier="creation" id="uzX-wJ-25K" customClass="CreationsCollectionViewCell" customModule="tcc_treinamento_ios" customModuleProvider="target">
+                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" reuseIdentifier="walls" id="uzX-wJ-25K" customClass="WallsCollectionViewCell" customModule="tcc_treinamento_ios" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="15" width="230" height="201"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">

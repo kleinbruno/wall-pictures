@@ -8,19 +8,19 @@
 
 import UIKit
 
-class MyCreationsPresenter: NSObject {
+class WallsPresenter: NSObject {
     weak var view: AnyObject?
 }
 
-extension MyCreationsPresenter: UICollectionViewDataSource {
+extension WallsPresenter: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 5 //pegar o .length das paredes/quadros q o user tem
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "creation", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "walls", for: indexPath)
         
-        if let creationCell = cell as? CreationsCollectionViewCell {
+        if let creationCell = cell as? WallsCollectionViewCell {
             creationCell.configCell()
         }
         
