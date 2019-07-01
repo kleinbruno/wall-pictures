@@ -9,7 +9,7 @@
 import UIKit
 
 class WallsPresenter: NSObject {
-    weak var view: AnyObject?
+    weak var view: MyCreationsViewController?
 }
 
 extension WallsPresenter: UICollectionViewDataSource {

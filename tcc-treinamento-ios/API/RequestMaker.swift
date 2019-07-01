@@ -21,31 +21,13 @@ enum RequestError: Error {
     }
 }
 
-typealias RequestResult<T> = Result<T, RequestError>
-typealias SuccessRequestCallback<NSDictionary> = (NSDictionary) -> Void
-//typealias LoginFailCallback<AuthError> = (AuthError) -> Void
-//typealias SignUpFailCallback<AuthError> = (AuthError) -> Void
+typealias RequestFailCallback<RequestError> = (RequestError) -> Void
+typealias RequestResultCallback<T> = (T) -> Void
 
 class RequestMaker {
     lazy var db = Firestore.firestore()
     
     let userUID = UserDefaults.standard.string(forKey: "userUID")
-
-    func fetchData(email: String, password: String, onSuccess: @escaping SuccessRequestCallback<NSDictionary>, onFailed: @escaping SignUpFailCallback<RequestError>) {
-
-        self.db.collection("pictures").getDocuments() { (querySnapshot, err) in
-            if let err = err {
-                print("Error getting documents: \(err)")
-            } else {
-                for document in querySnapshot!.documents {
-//                    onSuccess(document.data())
-
-                    print("\(document.documentID) => \(document.data())")
-                }
-            }
-        }
-
-    }
     
     func addPicture(withImage image: String) {
         if let userUID = UserDefaults.standard.string(forKey: "userUID") {
@@ -55,19 +37,16 @@ class RequestMaker {
         }
     }
 
-    func fetchPictures() {
+    func fetchPictures(onSuccess: @escaping RequestResultCallback<Pictures>, onFailed: @escaping RequestFailCallback<RequestError>) {
         if let userUID = UserDefaults.standard.string(forKey: "userUID") {
             self.db.collection("users").document(userUID).collection("pictures").getDocuments { (querySnapshot, err) in
                 if let err = err {
                     print("Error getting documents: \(err)")
+                    onFailed(.requestFailed)
                 } else {
-                    print("USER PICTURES!!!!!!!!!!!")
-                    
                     let pictures = Pictures.init(querySnapshot: querySnapshot)
                     
-                    print(pictures)
-                    
-                   
+                    onSuccess(pictures)
                 }
             }
             
