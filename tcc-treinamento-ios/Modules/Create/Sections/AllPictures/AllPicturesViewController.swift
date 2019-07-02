@@ -1,5 +1,5 @@
 //
-//  AllPicturesViewController.swift
+//  AllPicturesPresenter.swift
 //  tcc-treinamento-ios
 //
 //  Created by Bruno Klein on 01/07/19.
@@ -8,30 +8,18 @@
 
 import UIKit
 
-class AllPicturesPresenter: NSObject {
-    weak var view: AnyObject?
-}
-
-extension AllPicturesPresenter: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 30 //pegar o .length das paredes/quadros q o user tem
-    }
+class AllPicturesViewController: UIViewController {
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "allPictures", for: indexPath)
-        
-        if let creationCell = cell as? AllPicturesCollectionViewCell {
-            creationCell.configCell()
-        }
-        
-        return cell
-    }
+    @IBOutlet weak var allPicturesCollectionView: UICollectionView!
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let padding: CGFloat =  24
-        let collectionViewSize = collectionView.frame.size.width - padding
+    private let allPicturesPresenter = AllPicturesPresenter()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
-        return CGSize(width: collectionViewSize/3, height: collectionViewSize/3)
+        self.allPicturesPresenter.view = self
+        
+        self.allPicturesCollectionView.dataSource = self.allPicturesPresenter
     }
     
 }
