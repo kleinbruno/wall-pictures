@@ -33,8 +33,8 @@
 		4A526DE522BEB3CE00773FBD /* AppStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A526DE422BEB3CE00773FBD /* AppStoryboard.swift */; };
 		4A526DE722BEBEDD00773FBD /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A526DE622BEBEDD00773FBD /* UIViewControllerExtensions.swift */; };
 		4A8B263722CAD7EE007628F7 /* AllPicturesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8B263622CAD7EE007628F7 /* AllPicturesCollectionViewCell.swift */; };
-		4A8B263A22CAD9E1007628F7 /* AllPicturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8B263922CAD9E1007628F7 /* AllPicturesViewController.swift */; };
-		4A8B263C22CADA1C007628F7 /* AllPicturesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8B263B22CADA1C007628F7 /* AllPicturesPresenter.swift */; };
+		4A8B263A22CAD9E1007628F7 /* AllPicturesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8B263922CAD9E1007628F7 /* AllPicturesPresenter.swift */; };
+		4A8B263C22CADA1C007628F7 /* AllPicturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8B263B22CADA1C007628F7 /* AllPicturesViewController.swift */; };
 		7A599981ECE159588DB6F5D1 /* Pods_tcc_treinamento_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79990C3ACB70F21CE477D5A6 /* Pods_tcc_treinamento_ios.framework */; };
 		8A24AAA322C7DC4400BD8534 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A24AAA222C7DC4400BD8534 /* ImagePicker.swift */; };
 		8A24AAA622C7E17800BD8534 /* CreateWallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A24AAA522C7E17800BD8534 /* CreateWallViewController.swift */; };
@@ -70,8 +70,8 @@
 		4A526DE422BEB3CE00773FBD /* AppStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoryboard.swift; sourceTree = "<group>"; };
 		4A526DE622BEBEDD00773FBD /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		4A8B263622CAD7EE007628F7 /* AllPicturesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPicturesCollectionViewCell.swift; sourceTree = "<group>"; };
-		4A8B263922CAD9E1007628F7 /* AllPicturesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPicturesViewController.swift; sourceTree = "<group>"; };
-		4A8B263B22CADA1C007628F7 /* AllPicturesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPicturesPresenter.swift; sourceTree = "<group>"; };
+		4A8B263922CAD9E1007628F7 /* AllPicturesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPicturesPresenter.swift; sourceTree = "<group>"; };
+		4A8B263B22CADA1C007628F7 /* AllPicturesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPicturesViewController.swift; sourceTree = "<group>"; };
 		57460143793D8A7B7B51C722 /* Pods-tcc-treinamento-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tcc-treinamento-ios.debug.xcconfig"; path = "Target Support Files/Pods-tcc-treinamento-ios/Pods-tcc-treinamento-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		607FC50DF8EB003F2B6BACC5 /* Pods-tcc-treinamento-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tcc-treinamento-ios.release.xcconfig"; path = "Target Support Files/Pods-tcc-treinamento-ios/Pods-tcc-treinamento-ios.release.xcconfig"; sourceTree = "<group>"; };
 		79990C3ACB70F21CE477D5A6 /* Pods_tcc_treinamento_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tcc_treinamento_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -293,8 +293,8 @@
 		4A8B263822CAD970007628F7 /* AllPictures */ = {
 			isa = PBXGroup;
 			children = (
-				4A8B263922CAD9E1007628F7 /* AllPicturesViewController.swift */,
-				4A8B263B22CADA1C007628F7 /* AllPicturesPresenter.swift */,
+				4A8B263922CAD9E1007628F7 /* AllPicturesPresenter.swift */,
+				4A8B263B22CADA1C007628F7 /* AllPicturesViewController.swift */,
 			);
 			path = AllPictures;
 			sourceTree = "<group>";
@@ -455,13 +455,13 @@
 				27BB5E2D22BE5279009F57A3 /* AppDelegate.swift in Sources */,
 				4A4B62E022C84350008BABE9 /* MyCreationsViewController.swift in Sources */,
 				4A4B62CE22C7EDB8008BABE9 /* UIImageViewExtensions.swift in Sources */,
-				4A8B263A22CAD9E1007628F7 /* AllPicturesViewController.swift in Sources */,
+				4A8B263A22CAD9E1007628F7 /* AllPicturesPresenter.swift in Sources */,
 				4A4B62D222C804F8008BABE9 /* WallsPresenter.swift in Sources */,
 				4A526DE322BE9BB500773FBD /* StoryboardManager.swift in Sources */,
 				4A4B62E422C846ED008BABE9 /* PicturesPresenter.swift in Sources */,
 				8A24AAA622C7E17800BD8534 /* CreateWallViewController.swift in Sources */,
 				27BB5E4622BE5B1E009F57A3 /* UIViewExtensions.swift in Sources */,
-				4A8B263C22CADA1C007628F7 /* AllPicturesPresenter.swift in Sources */,
+				4A8B263C22CADA1C007628F7 /* AllPicturesViewController.swift in Sources */,
 				8A24AAA822C8105B00BD8534 /* UIImageExtensions.swift in Sources */,
 				2777F87122BE8C5400ACFAFA /* Result.swift in Sources */,
 				4A4B62CC22C7EA76008BABE9 /* WallsCollectionViewCell.swift in Sources */,
