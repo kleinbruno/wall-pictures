@@ -36,10 +36,10 @@
             </objects>
             <point key="canvasLocation" x="190" y="116"/>
         </scene>
-        <!--View Controller-->
+        <!--All Pictures View Controller-->
         <scene sceneID="oIN-7j-0tv">
             <objects>
-                <viewController id="FTg-UY-oxF" sceneMemberID="viewController">
+                <viewController id="FTg-UY-oxF" customClass="AllPicturesViewController" customModule="tcc_treinamento_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Waa-ov-scx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -57,19 +57,34 @@
                                         <rect key="frame" x="8" y="59" width="398" height="675.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hdO-iO-JC5">
-                                            <size key="itemSize" width="50" height="50"/>
+                                            <size key="itemSize" width="200" height="200"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="3y6-5m-9Eb">
-                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="allPictures" id="3y6-5m-9Eb" customClass="AllPicturesCollectionViewCell" customModule="tcc_treinamento_ios" customModuleProvider="target">
+                                                <rect key="frame" x="99" y="0.0" width="200" height="200"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                                     <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6UJ-mv-ifH">
+                                                            <rect key="frame" x="8" y="52" width="184" height="140"/>
+                                                        </imageView>
+                                                    </subviews>
                                                 </view>
+                                                <color key="backgroundColor" red="0.64705882349999999" green="0.91372549020000005" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="6UJ-mv-ifH" firstAttribute="leading" secondItem="3y6-5m-9Eb" secondAttribute="leadingMargin" id="4vO-L2-Pbe"/>
+                                                    <constraint firstAttribute="trailingMargin" secondItem="6UJ-mv-ifH" secondAttribute="trailing" id="DPr-GQ-u9u"/>
+                                                    <constraint firstItem="6UJ-mv-ifH" firstAttribute="top" secondItem="3y6-5m-9Eb" secondAttribute="topMargin" id="a1g-09-QLt"/>
+                                                    <constraint firstAttribute="bottomMargin" secondItem="6UJ-mv-ifH" secondAttribute="bottom" id="ecA-yn-MEK"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="imageView" destination="6UJ-mv-ifH" id="cYi-ya-bDU"/>
+                                                </connections>
                                             </collectionViewCell>
                                         </cells>
                                     </collectionView>
@@ -123,6 +138,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="25d-en-uv3"/>
                     </view>
+                    <connections>
+                        <outlet property="allPicturesCollectionView" destination="aTf-rv-OcY" id="Ovt-Zq-hfO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aag-Sc-0li" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
