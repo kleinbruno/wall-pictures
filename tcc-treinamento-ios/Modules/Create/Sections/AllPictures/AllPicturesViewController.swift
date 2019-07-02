@@ -20,6 +20,7 @@ class AllPicturesViewController: UIViewController {
         self.allPicturesPresenter.view = self
         
         self.allPicturesCollectionView.dataSource = self.allPicturesPresenter
+        self.allPicturesCollectionView.delegate = self.allPicturesPresenter
     }
     
 }
