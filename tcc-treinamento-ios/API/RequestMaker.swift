@@ -33,7 +33,9 @@ class RequestMaker {
         if let userUID = UserDefaults.standard.string(forKey: "userUID") {
             self.db.collection("users").document(userUID).collection("pictures").document().setData([
                 "image": image,
-                ])
+                ]) { (error) in
+                print(error)
+            }
         }
     }
 

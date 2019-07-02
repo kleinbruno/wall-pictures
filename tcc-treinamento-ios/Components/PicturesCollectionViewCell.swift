@@ -15,7 +15,11 @@ class PicturesCollectionViewCell: UICollectionViewCell {
     func configCell(with picture: Picture) {
         
         DispatchQueue.main.async {
-            self.imageView.loadImage(from: picture.image)
+            if let image = UIImage.fromBase64(picture.image) {
+                self.imageView.image = image
+            } else {
+                self.imageView.loadImage(from: picture.image)
+            }
         }
     }
 }
