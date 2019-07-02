@@ -14,7 +14,7 @@ class AllPicturesPresenter: NSObject {
 
 extension AllPicturesPresenter: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5 //pegar o .length das paredes/quadros q o user tem
+        return 30 //pegar o .length das paredes/quadros q o user tem
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -25,6 +25,13 @@ extension AllPicturesPresenter: UICollectionViewDataSource {
         }
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let padding: CGFloat =  24
+        let collectionViewSize = collectionView.frame.size.width - padding
+        
+        return CGSize(width: collectionViewSize/3, height: collectionViewSize/3)
     }
     
 }
