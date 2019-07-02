@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nIj-tI-GiP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FTg-UY-oxF">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -35,5 +36,105 @@
             </objects>
             <point key="canvasLocation" x="190" y="116"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="oIN-7j-0tv">
+            <objects>
+                <viewController id="FTg-UY-oxF" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Waa-ov-scx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VPB-eP-OQa">
+                                <rect key="frame" x="0.0" y="119.5" width="414" height="742.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QUADROS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rmK-2z-Mp2">
+                                        <rect key="frame" x="24" y="24" width="93" height="25"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aTf-rv-OcY">
+                                        <rect key="frame" x="8" y="59" width="398" height="675.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hdO-iO-JC5">
+                                            <size key="itemSize" width="50" height="50"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="3y6-5m-9Eb">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </view>
+                                            </collectionViewCell>
+                                        </cells>
+                                    </collectionView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="rmK-2z-Mp2" firstAttribute="leading" secondItem="VPB-eP-OQa" secondAttribute="leadingMargin" constant="16" id="2Zn-JU-jLe"/>
+                                    <constraint firstItem="aTf-rv-OcY" firstAttribute="leading" secondItem="VPB-eP-OQa" secondAttribute="leadingMargin" id="7lh-GK-tfn"/>
+                                    <constraint firstItem="rmK-2z-Mp2" firstAttribute="top" secondItem="VPB-eP-OQa" secondAttribute="topMargin" constant="16" id="PcZ-Sm-tSz"/>
+                                    <constraint firstItem="aTf-rv-OcY" firstAttribute="top" secondItem="rmK-2z-Mp2" secondAttribute="bottom" constant="10" id="Sp3-zi-rse"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="aTf-rv-OcY" secondAttribute="trailing" id="fX6-q2-t08"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="aTf-rv-OcY" secondAttribute="bottom" id="g4d-3d-w1W"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KHT-A7-6zp" customClass="GradientView" customModule="tcc_treinamento_ios" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="119.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LqJ-VT-AGO">
+                                        <rect key="frame" x="8" y="61.5" width="41" height="30"/>
+                                        <state key="normal" title="Voltar">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="LqJ-VT-AGO" firstAttribute="leading" secondItem="KHT-A7-6zp" secondAttribute="leadingMargin" id="4J5-8Z-NPa"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="LqJ-VT-AGO" secondAttribute="bottom" constant="20" id="tma-5f-ykx"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                        <color key="value" name="primary_dark"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                        <color key="value" name="secondary_dark"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="horizontalMode" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="VPB-eP-OQa" firstAttribute="leading" secondItem="25d-en-uv3" secondAttribute="leading" id="4md-vF-gXo"/>
+                            <constraint firstItem="VPB-eP-OQa" firstAttribute="top" secondItem="KHT-A7-6zp" secondAttribute="bottom" id="7hU-b6-0PP"/>
+                            <constraint firstItem="25d-en-uv3" firstAttribute="trailing" secondItem="VPB-eP-OQa" secondAttribute="trailing" id="8gN-ep-6kx"/>
+                            <constraint firstItem="KHT-A7-6zp" firstAttribute="top" secondItem="Waa-ov-scx" secondAttribute="top" id="Bwq-8B-p5g"/>
+                            <constraint firstItem="KHT-A7-6zp" firstAttribute="leading" secondItem="25d-en-uv3" secondAttribute="leading" id="Do8-dM-pOY"/>
+                            <constraint firstItem="25d-en-uv3" firstAttribute="bottom" secondItem="VPB-eP-OQa" secondAttribute="bottom" id="JmH-BG-JLf"/>
+                            <constraint firstItem="25d-en-uv3" firstAttribute="trailing" secondItem="KHT-A7-6zp" secondAttribute="trailing" id="QgR-li-esS"/>
+                            <constraint firstItem="KHT-A7-6zp" firstAttribute="height" secondItem="Waa-ov-scx" secondAttribute="height" multiplier="2/15" id="rh8-cP-WEH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="25d-en-uv3"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aag-Sc-0li" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1008.6956521739131" y="115.84821428571428"/>
+        </scene>
     </scenes>
+    <resources>
+        <namedColor name="primary_dark">
+            <color red="0.37254901960784315" green="0.10196078431372549" blue="0.41960784313725491" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="secondary_dark">
+            <color red="0.34509803921568627" green="0.2196078431372549" blue="0.58039215686274515" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
