@@ -103,7 +103,7 @@ class LoginViewController: UIViewController {
             
             self.inputsMinConstraint.priority = UILayoutPriority(rawValue: 900)
                         
-            UIView.animate(withDuration: 1, animations: {
+            UIView.animate(withDuration: 0.5, animations: {
                 self.signUpButton.alpha = 1
                 self.loginButton.alpha = 0.5
                 self.name.alpha = 1
@@ -125,7 +125,7 @@ class LoginViewController: UIViewController {
             
             self.inputsMinConstraint.priority = UILayoutPriority(rawValue: 999)
             
-            UIView.animate(withDuration: 1, animations: {
+            UIView.animate(withDuration: 0.5, animations: {
                 self.loginButton.alpha = 1
                 self.signUpButton.alpha = 0.5
                 self.name.alpha = 0
