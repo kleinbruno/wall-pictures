@@ -26,14 +26,6 @@ extension AllPicturesPresenter: UICollectionViewDataSource {
         
         return cell
     }
-    
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        let padding: CGFloat =  32
-//        let collectionViewSize = collectionView.frame.size.width - padding
-//
-//        return CGSize(width: 500, height: 500)
-//    }
-    
 }
 
 extension AllPicturesPresenter: UICollectionViewDelegateFlowLayout {

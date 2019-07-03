@@ -11,8 +11,11 @@ import UIKit
 class AllPicturesViewController: UIViewController {
     
     @IBOutlet weak var allPicturesCollectionView: UICollectionView!
+    @IBOutlet weak var selectButton: UIButton!
+    @IBOutlet weak var titleLabel: UILabel!
     
     private let allPicturesPresenter = AllPicturesPresenter()
+    public var isSelectMode: Bool! = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,4 +26,17 @@ class AllPicturesViewController: UIViewController {
         self.allPicturesCollectionView.delegate = self.allPicturesPresenter
     }
     
+    @IBAction func selectButtonPress(_ sender: Any) {
+        self.isSelectMode = !self.isSelectMode
+        
+        if (self.isSelectMode) {
+            self.selectButton.setTitle("Cancelar", for: .normal)
+        } else {
+            self.selectButton.setTitle("Selecionar", for: .normal)
+        }
+    }
+    
+    func configScreen() {
+        self.titleLabel.text = "SELECIONAR QUADROS"
+    }
 }
