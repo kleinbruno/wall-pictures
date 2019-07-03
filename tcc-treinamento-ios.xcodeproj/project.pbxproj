@@ -36,6 +36,8 @@
 		8A24AAA322C7DC4400BD8534 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A24AAA222C7DC4400BD8534 /* ImagePicker.swift */; };
 		8A24AAA622C7E17800BD8534 /* CreateWallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A24AAA522C7E17800BD8534 /* CreateWallViewController.swift */; };
 		8A24AAA822C8105B00BD8534 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A24AAA722C8105B00BD8534 /* UIImageExtensions.swift */; };
+		8A74054122CA2CFE00350056 /* TabItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A74054022CA2CFE00350056 /* TabItemView.swift */; };
+		8A74054322CA2E3D00350056 /* TabItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A74054222CA2E3D00350056 /* TabItemView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +74,8 @@
 		8A24AAA222C7DC4400BD8534 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		8A24AAA522C7E17800BD8534 /* CreateWallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateWallViewController.swift; sourceTree = "<group>"; };
 		8A24AAA722C8105B00BD8534 /* UIImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
+		8A74054022CA2CFE00350056 /* TabItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemView.swift; sourceTree = "<group>"; };
+		8A74054222CA2E3D00350056 /* TabItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabItemView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +166,7 @@
 		27BB5E4022BE5A01009F57A3 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				8A74053F22CA2CED00350056 /* TabItemView */,
 				27BB5E4322BE5ABF009F57A3 /* GradientView.swift */,
 				272D05C822C5BF5900EFBE35 /* DesignableTextField.swift */,
 			);
@@ -309,6 +314,15 @@
 			path = Wall;
 			sourceTree = "<group>";
 		};
+		8A74053F22CA2CED00350056 /* TabItemView */ = {
+			isa = PBXGroup;
+			children = (
+				8A74054022CA2CFE00350056 /* TabItemView.swift */,
+				8A74054222CA2E3D00350056 /* TabItemView.xib */,
+			);
+			path = TabItemView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -377,6 +391,7 @@
 				4A526DD722BE71F900773FBD /* Configurations.storyboard in Resources */,
 				27BB5E3422BE527C009F57A3 /* Assets.xcassets in Resources */,
 				27BB5E3222BE5279009F57A3 /* Main.storyboard in Resources */,
+				8A74054322CA2E3D00350056 /* TabItemView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,6 +455,7 @@
 				4A4B62D222C804F8008BABE9 /* WallsPresenter.swift in Sources */,
 				4A526DE322BE9BB500773FBD /* StoryboardManager.swift in Sources */,
 				4A4B62E422C846ED008BABE9 /* PicturesPresenter.swift in Sources */,
+				8A74054122CA2CFE00350056 /* TabItemView.swift in Sources */,
 				8A24AAA622C7E17800BD8534 /* CreateWallViewController.swift in Sources */,
 				27BB5E4622BE5B1E009F57A3 /* UIViewExtensions.swift in Sources */,
 				8A24AAA822C8105B00BD8534 /* UIImageExtensions.swift in Sources */,
