@@ -112,6 +112,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
+                                                    <outlet property="checkIcon" destination="z2Q-tS-YhT" id="2LM-a0-NrK"/>
                                                     <outlet property="imageView" destination="6UJ-mv-ifH" id="cYi-ya-bDU"/>
                                                 </connections>
                                             </collectionViewCell>

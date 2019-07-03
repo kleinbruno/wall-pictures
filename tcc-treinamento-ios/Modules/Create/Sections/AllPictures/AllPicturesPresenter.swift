@@ -24,7 +24,18 @@ extension AllPicturesPresenter: UICollectionViewDataSource {
             creationCell.configCell()
         }
         
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
+        cell.addGestureRecognizer(tap)
+        
         return cell
+    }
+    
+    @objc func handleTap(_ sender: UITapGestureRecognizer) {
+        guard sender.view != nil else { return }
+        
+        if let creationCell = sender.view as? AllPicturesCollectionViewCell {
+            creationCell.isSelected = !creationCell.isSelected
+        }
     }
 }
 

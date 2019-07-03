@@ -11,17 +11,19 @@ import UIKit
 class AllPicturesCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var checkIcon: UIImageView!
     
     func configCell() {
         DispatchQueue.main.async {
             //pegar imagens do firebase
             self.imageView.loadImage(from: "https://s3.amazonaws.com/assets.mockflow.com/app/wireframepro/company/C73f66fcea4ec476cb83a7527d49aa1ca/projects/M949561e8e6eb08470f7dd8aa9e039eae1560387191030/images/M46c2e259fc2d3b1a3c236d22c8c04c311561599549352")
+            self.checkIcon.isHidden = true
         }
     }
     
     override var isSelected: Bool {
-        willSet {
-           
+        didSet {
+           checkIcon.isHidden = self.isSelected ? false : true
         }
     }
     
