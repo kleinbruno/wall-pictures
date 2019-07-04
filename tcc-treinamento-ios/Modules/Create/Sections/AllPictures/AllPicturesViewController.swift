@@ -15,7 +15,7 @@ class AllPicturesViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     
     private let allPicturesPresenter = AllPicturesPresenter()
-    public var isSelectMode: Bool! = false
+    public var isSelectMode: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()

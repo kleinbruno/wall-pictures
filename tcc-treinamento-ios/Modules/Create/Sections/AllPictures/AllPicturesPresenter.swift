@@ -9,7 +9,7 @@
 import UIKit
 
 class AllPicturesPresenter: NSObject {
-    weak var view: AnyObject?
+    weak var view: AllPicturesViewController?
 }
 
 extension AllPicturesPresenter: UICollectionViewDataSource {
@@ -33,7 +33,10 @@ extension AllPicturesPresenter: UICollectionViewDataSource {
     @objc func handleTap(_ sender: UITapGestureRecognizer) {
         guard sender.view != nil else { return }
         
-        if let creationCell = sender.view as? AllPicturesCollectionViewCell {
+        if let creationCell = sender.view as? AllPicturesCollectionViewCell,
+            let view = self.view,
+            view.isSelectMode {
+            
             creationCell.isSelected = !creationCell.isSelected
         }
     }

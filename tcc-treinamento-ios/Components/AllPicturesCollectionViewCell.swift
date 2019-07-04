@@ -23,7 +23,7 @@ class AllPicturesCollectionViewCell: UICollectionViewCell {
     
     override var isSelected: Bool {
         didSet {
-           checkIcon.isHidden = self.isSelected ? false : true
+           checkIcon.isHidden = !self.isSelected
         }
     }
     
