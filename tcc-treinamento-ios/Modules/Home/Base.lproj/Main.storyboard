@@ -20,17 +20,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="euF-u3-4EK">
-                                <rect key="frame" x="0.0" y="44" width="414" height="738"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="782"/>
                             </containerView>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kms-pK-oL5">
-                                <rect key="frame" x="0.0" y="44" width="414" height="738"/>
+                            <view hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kms-pK-oL5">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="782"/>
                                 <subviews>
                                     <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c5f-UB-Lsc">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="738"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="782"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x5P-Nj-kex">
-                                        <rect key="frame" x="80" y="548" width="254" height="50"/>
+                                        <rect key="frame" x="80" y="592" width="254" height="50"/>
                                         <color key="backgroundColor" name="button_background"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="GU3-F0-hzz"/>
@@ -46,7 +46,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Znh-ko-rc2">
-                                        <rect key="frame" x="80" y="628" width="254" height="50"/>
+                                        <rect key="frame" x="80" y="672" width="254" height="50"/>
                                         <color key="backgroundColor" name="button_background"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="28s-Iu-0Gx"/>
@@ -64,7 +64,7 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="c5f-UB-Lsc" firstAttribute="top" secondItem="Kms-pK-oL5" secondAttribute="top" id="7KP-uJ-TbC"/>
+                                    <constraint firstItem="c5f-UB-Lsc" firstAttribute="top" secondItem="Kms-pK-oL5" secondAttribute="top" priority="990" id="7KP-uJ-TbC"/>
                                     <constraint firstItem="Znh-ko-rc2" firstAttribute="leading" secondItem="Kms-pK-oL5" secondAttribute="leading" constant="80" id="9QR-eA-P1t"/>
                                     <constraint firstAttribute="trailing" secondItem="Znh-ko-rc2" secondAttribute="trailing" constant="80" id="Dcz-TV-gcy"/>
                                     <constraint firstItem="Znh-ko-rc2" firstAttribute="top" secondItem="x5P-Nj-kex" secondAttribute="bottom" constant="30" id="FQJ-pB-WIL"/>
@@ -148,9 +148,9 @@
                             <constraint firstItem="euF-u3-4EK" firstAttribute="leading" secondItem="KGW-L1-MQq" secondAttribute="leading" id="Dkf-Qa-93a"/>
                             <constraint firstItem="KGW-L1-MQq" firstAttribute="bottom" secondItem="wAx-vP-0uf" secondAttribute="bottom" id="EPA-hD-EbM"/>
                             <constraint firstItem="wAx-vP-0uf" firstAttribute="leading" secondItem="KGW-L1-MQq" secondAttribute="leading" id="GVI-Ks-VQs"/>
-                            <constraint firstItem="euF-u3-4EK" firstAttribute="top" secondItem="KGW-L1-MQq" secondAttribute="top" id="Kx4-rk-1D4"/>
+                            <constraint firstItem="euF-u3-4EK" firstAttribute="top" secondItem="fXM-Ur-ziL" secondAttribute="top" id="Kx4-rk-1D4"/>
                             <constraint firstItem="KGW-L1-MQq" firstAttribute="trailing" secondItem="wAx-vP-0uf" secondAttribute="trailing" id="Vs0-xq-VRx"/>
-                            <constraint firstItem="Kms-pK-oL5" firstAttribute="top" secondItem="KGW-L1-MQq" secondAttribute="top" id="c0C-2O-NtX"/>
+                            <constraint firstItem="Kms-pK-oL5" firstAttribute="top" secondItem="fXM-Ur-ziL" secondAttribute="top" id="c0C-2O-NtX"/>
                             <constraint firstItem="KGW-L1-MQq" firstAttribute="bottom" secondItem="Kms-pK-oL5" secondAttribute="bottom" constant="80" id="gJG-EP-jEw"/>
                             <constraint firstItem="euF-u3-4EK" firstAttribute="trailing" secondItem="KGW-L1-MQq" secondAttribute="trailing" id="iN2-1Q-N08"/>
                         </constraints>
@@ -159,6 +159,8 @@
                     <connections>
                         <outlet property="addButton" destination="3z0-oi-PGm" id="LiG-L8-khK"/>
                         <outlet property="addModal" destination="Kms-pK-oL5" id="hz9-QW-flH"/>
+                        <outlet property="addModalTopConstraint" destination="7KP-uJ-TbC" id="fE7-23-AgZ"/>
+                        <outlet property="buttonsBottomConstraint" destination="yxG-gh-7bR" id="rW9-yI-dxA"/>
                         <outlet property="configTab" destination="f6e-Dl-60F" id="7SA-H9-ufH"/>
                         <outlet property="contentView" destination="euF-u3-4EK" id="sku-Oc-4U8"/>
                         <outlet property="creationsTab" destination="Z8R-wA-HYD" id="9W9-q6-ZHi"/>
