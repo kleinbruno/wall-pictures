@@ -13,6 +13,7 @@ import Firebase
 enum AuthError: Error {
     case invalidEmailOrPassword
     case fieldEmpty
+    case emailExists
     
     var message: String {
         switch self {
@@ -20,6 +21,8 @@ enum AuthError: Error {
             return "Email ou senha inválidos"
         case .fieldEmpty:
             return "Preencha todos os campos"
+        case .emailExists:
+            return "Email já cadastrado"
         }
     }
 }
@@ -27,10 +30,12 @@ enum AuthError: Error {
 enum ApiError: String {
     case emailExists = "The email address is already in use by another account."
     
-    func getMessage(error: ApiError) -> String {
+    func getMessage(error: String) -> AuthError {
         switch error {
-        case .emailExists:
-            return "Email já cadastrado"
+        case ApiError.emailExists.rawValue:
+            return .emailExists
+        default:
+            return .invalidEmailOrPassword
         }
     }
 }
@@ -51,8 +56,11 @@ class AuthMaker {
         
         Auth.auth().createUser(withEmail: email, password: password) { (authResult, error) in
             if let error = error {
-                print(error.localizedDescription)
-                onFailed(.invalidEmailOrPassword)
+                if error.localizedDescription == ApiError.emailExists.rawValue {
+                   onFailed(.emailExists)
+                } else {
+                    onFailed(.invalidEmailOrPassword)
+                }
             }
             
             if let authResult = authResult {

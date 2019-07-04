@@ -21,6 +21,11 @@ enum RequestError: Error {
     }
 }
 
+enum CollectionImageTypes: String {
+    case pictures
+    case walls
+}
+
 typealias RequestFailCallback<RequestError> = (RequestError) -> Void
 typealias RequestResultCallback<T> = (T) -> Void
 
@@ -28,6 +33,25 @@ class RequestMaker {
     lazy var db = Firestore.firestore()
     
     let userUID = UserDefaults.standard.string(forKey: "userUID")
+    
+    
+    func uploadImage(with image: UIImage?, width: Double, height: Double, into: CollectionImageTypes, onSuccess: @escaping () -> Void, onFail: @escaping () -> Void) {
+        if let userUID = UserDefaults.standard.string(forKey: "userUID"),
+            let base64 = image?.toBase64(format: .jpeg(0.1)) {
+            
+            self.db.collection("users").document(userUID).collection(into.rawValue).document().setData([
+                "image": base64,
+                "width": width,
+                "height": height,
+            ]) { (error) in
+                if error != nil {
+                    onFail()
+                } else {
+                    onSuccess()
+                }
+            }
+        }
+    }
     
     func addPicture(withImage image: String) {
         if let userUID = UserDefaults.standard.string(forKey: "userUID") {
