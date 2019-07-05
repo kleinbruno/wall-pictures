@@ -17,7 +17,7 @@ class TabItemView: UIView {
     
     var selected: Bool = false {
         didSet {
-            let color = selected ? UIColor(named: "primary") : UIColor(named: "secondary")
+            let color = selected ? UIColor(named: "primary") : UIColor(named: "secondary_dark")
             label.textColor = color
             imageView.tintColor = color
         }
