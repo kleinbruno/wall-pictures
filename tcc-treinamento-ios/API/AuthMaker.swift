@@ -89,6 +89,10 @@ class AuthMaker {
         }
     }
     
+    func onLogout() {
+        setUserDefaults(withUID: "")
+    }
+    
     private func setUserDefaults(withUID UID: String?) {
         UserDefaults.standard.set(UID, forKey: "userUID")
     }
