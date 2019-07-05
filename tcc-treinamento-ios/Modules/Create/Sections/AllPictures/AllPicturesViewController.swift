@@ -35,7 +35,7 @@ class AllPicturesViewController: UIViewController {
         self.allPicturesPresenter.view = self
         
         configScreen()
-        
+        self.allPicturesCollectionView.allowsMultipleSelection = true
         self.allPicturesCollectionView.dataSource = self.allPicturesPresenter
         self.allPicturesCollectionView.delegate = self.allPicturesPresenter
     }
@@ -49,6 +49,13 @@ class AllPicturesViewController: UIViewController {
         } else {
             self.selectButton.setTitle("Selecionar", for: .normal)
             self.footerView.isHidden = true
+            
+            if let selectedItems = allPicturesCollectionView.indexPathsForSelectedItems {
+            
+                for indexPath in selectedItems {
+                    allPicturesCollectionView.deselectItem(at: indexPath, animated: true)
+                }
+            }
         }
     }
     
@@ -61,3 +68,12 @@ class AllPicturesViewController: UIViewController {
         self.footerView.isHidden = true
     }
 }
+
+extension AllPicturesViewController {
+
+    func reloadSelectedQuantity() {
+        self.selectedQuantity = allPicturesCollectionView.indexPathsForSelectedItems?.count ?? 0
+    }
+    
+}
+

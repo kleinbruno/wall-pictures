@@ -24,28 +24,17 @@ extension AllPicturesPresenter: UICollectionViewDataSource {
             creationCell.configCell()
         }
         
-        let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
-        cell.addGestureRecognizer(tap)
-        
         return cell
     }
     
-    @objc func handleTap(_ sender: UITapGestureRecognizer) {
-        guard sender.view != nil else { return }
-        
-        if let creationCell = sender.view as? AllPicturesCollectionViewCell,
-            let view = self.view,
-            view.isSelectMode {
-            
-            creationCell.isSelected = !creationCell.isSelected
-            
-            setSelectedItensQuantity(isSelected: creationCell.isSelected)
-        }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.view?.reloadSelectedQuantity()
     }
     
-    func setSelectedItensQuantity(isSelected: Bool) {
-        self.view?.selectedQuantity += isSelected ? 1 : -1
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        self.view?.reloadSelectedQuantity()
     }
+    
 }
 
 extension AllPicturesPresenter: UICollectionViewDelegateFlowLayout {
