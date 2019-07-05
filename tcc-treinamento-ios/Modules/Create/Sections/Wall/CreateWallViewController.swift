@@ -7,25 +7,45 @@
 //
 
 import UIKit
+import ELCImagePickerController
 
 let draggedViewIncreasedScale: CGFloat = 0.1
 let minSize: CGFloat = 40
 let perfectHorizontalPinch: CGFloat = 1000
 let perfectVerticalPinch: CGFloat = 0
 
-class CreateWallViewController: UIViewController {
+class CreateWallViewController: UIViewController, ELCImagePickerControllerDelegate {
+    func elcImagePickerController(_ picker: ELCImagePickerController!, didFinishPickingMediaWithInfo info: [Any]!) {
+        
+    }
+    
+    func elcImagePickerControllerDidCancel(_ picker: ELCImagePickerController!) {
+        
+    }
+    
     var panGestureEnabled = false
     
     var imagePicker: ImagePicker!
+    var picker = ELCImagePickerController()
     
     @IBAction func addView(_ sender: UIButton) {
-        self.imagePicker.present(from: sender)
+//        self.imagePicker.present(from: sender)
+        self.present(self.picker, animated: true, completion: nil)
+
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.imagePicker = ImagePicker(presentationController: self, delegate: self)
     }
+    
+//    override func viewDidAppear(_ animated: Bool) {
+//        
+//        picker.maximumImagesCount = 5
+//        picker.imagePickerDelegate = self
+//        self.present(self.picker, animated: true, completion: nil)
+//
+//    }
     
     func addGestures(to view: UIView) {
         let panGesture = UIPanGestureRecognizer(target: self, action: #selector(handlePan(recognizer:)))
