@@ -23,8 +23,11 @@ extension UIImage {
     }
     
     static func fromBase64(_ base64String: String) -> UIImage? {
-        let data = Data(base64Encoded: base64String)
-        return UIImage(data: data!)
+        if let data = Data(base64Encoded: base64String) {
+            return UIImage(data: data)
+        }
+        
+        return nil
     }
     
     enum ImageFormat {

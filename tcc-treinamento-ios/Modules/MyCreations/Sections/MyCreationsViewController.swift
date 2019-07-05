@@ -15,7 +15,7 @@ class MyCreationsViewController: UIViewController {
     
     private let wallsPresenter = WallsPresenter()
     private let picturesPresenter = PicturesPresenter()
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,6 +24,16 @@ class MyCreationsViewController: UIViewController {
         
         self.wallCollectionView.dataSource = self.wallsPresenter
         self.pictureCollectionView.dataSource = self.picturesPresenter
+        
+        self.picturesPresenter.fetchData()
+        self.wallsPresenter.fetchData()
     }
     
+    func reloadPictures() {
+        self.pictureCollectionView.reloadData()
+    }
+    
+    func reloadWalls() {
+        self.wallCollectionView.reloadData()
+    }
 }
