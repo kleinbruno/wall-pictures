@@ -21,7 +21,11 @@ class AllPicturesViewController: UIViewController {
     public var isSelectMode: Bool = false
     public var selectedQuantity: Int = 0 {
         didSet {
-            footerLabel.text = "\(self.selectedQuantity) itens selecionado(s)"
+            if (self.selectedQuantity == 1) {
+                footerLabel.text = "\(self.selectedQuantity) item selecionado"
+            } else {
+                footerLabel.text = "\(self.selectedQuantity) itens selecionados"
+            }
         }
     }
     
