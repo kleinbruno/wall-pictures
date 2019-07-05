@@ -21,7 +21,9 @@ class AllPicturesViewController: UIViewController {
     public var isSelectMode: Bool = false
     public var selectedQuantity: Int = 0 {
         didSet {
-            if (self.selectedQuantity == 1) {
+            if (self.selectedQuantity == 0) {
+                footerLabel.text = "Nenhum item selecionado"
+            } else if (self.selectedQuantity == 1) {
                 footerLabel.text = "\(self.selectedQuantity) item selecionado"
             } else {
                 footerLabel.text = "\(self.selectedQuantity) itens selecionados"
@@ -46,6 +48,7 @@ class AllPicturesViewController: UIViewController {
         if (self.isSelectMode) {
             self.selectButton.setTitle("Cancelar", for: .normal)
             self.footerView.isHidden = false
+            self.footerLabel.text = "Nenhum item selecionado"
         } else {
             self.selectButton.setTitle("Selecionar", for: .normal)
             self.footerView.isHidden = true
@@ -66,6 +69,17 @@ class AllPicturesViewController: UIViewController {
     func configScreen() {
         self.titleLabel.text = "SELECIONAR QUADROS"
         self.footerView.isHidden = true
+        disableContinueButton()
+    }
+    
+    func disableContinueButton() {
+        self.continueButton.isEnabled = false
+        self.continueButton.alpha = 0.5
+    }
+    
+    func enableContinueButton() {
+        self.continueButton.isEnabled = true
+        self.continueButton.alpha = 1
     }
 }
 
@@ -73,6 +87,11 @@ extension AllPicturesViewController {
 
     func reloadSelectedQuantity() {
         self.selectedQuantity = allPicturesCollectionView.indexPathsForSelectedItems?.count ?? 0
+        if (self.selectedQuantity > 0) {
+            enableContinueButton()
+        } else {
+            disableContinueButton()
+        }
     }
     
 }
