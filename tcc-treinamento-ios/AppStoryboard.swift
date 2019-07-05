@@ -16,6 +16,7 @@ enum AppStoryboard : String {
     case MyCreations
     case Create
     case Configurations
+    case TryOut
     
     var instance : UIStoryboard {
         

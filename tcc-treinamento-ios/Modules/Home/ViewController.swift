@@ -55,6 +55,7 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         self.creationsTab.selected = true
+        self.configAddButton()
     }
     
     override func viewDidLoad() {
@@ -114,6 +115,14 @@ class ViewController: UIViewController {
         
         let tapView = self.getView(ofType: viewType)
         tapView.addGestureRecognizer(tapGesture)
+    }
+    
+    func configAddButton() {
+        self.addButton.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5).cgColor
+        self.addButton.layer.shadowOffset = CGSize(width: 0, height: 2)
+        self.addButton.layer.shadowOpacity = 1.0
+        self.addButton.layer.shadowRadius = 5
+        self.addButton.layer.masksToBounds = false
     }
     
     func getView(ofType item: TabItemEnum) -> TabItemView {
