@@ -30,40 +30,6 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
-//        var ref: DocumentReference? = nil
-//        ref = db.collection("users").document("lA6GMorYJH3m13uD3OLs").collection("pictures").addDocument(data: [
-//            "name": "arteloza",
-//        ]) { err in
-//            if let err = err {
-//                print("Error adding document: \(err)")
-//            } else {
-//                print("Document added with ID: \(ref!.documentID)")
-//            }
-//        }
-        
-//        db.collection("users").document("UhZd9quqjO6GTw5a6smf").collection("pictures").getDocuments() { (querySnapshot, err) in
-//            if let err = err {
-//                print("Error getting documents: \(err)")
-//            } else {
-//                for document in querySnapshot!.documents {
-//                    print("\(document.documentID) => \(document.data())")
-//                }
-//            }
-//        }
-        
-//        db.collection("users").getDocuments() { (querySnapshot, err) in
-//            if let err = err {
-//                print("Error getting documents: \(err)")
-//            } else {
-//                for document in querySnapshot!.documents {
-//                    print("\(document.documentID) => \(document.data())")
-//                }
-//            }
-//        }
-        
-
-            
         self.configInitialLayout()
     }
     
