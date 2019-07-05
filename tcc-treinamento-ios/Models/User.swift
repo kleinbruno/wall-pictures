@@ -8,8 +8,16 @@
 
 import Foundation
 
+import Firebase
+
 struct User: Codable {
-    let name: String
-    let email: String
+    var name: String = ""
+    var email: String = ""
+    
+    init(document: DocumentSnapshot) {
+        
+        self.name = document.getString(by: "name")
+        self.email = document.getString(by: "email")
+    }
     
 }

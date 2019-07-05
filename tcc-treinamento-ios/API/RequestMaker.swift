@@ -68,12 +68,29 @@ class RequestMaker {
             }
         }
     }
+    
+    func fetchUserInformations(onSuccess: @escaping RequestResultCallback<User>, onFailed: @escaping RequestFailCallback<RequestError>) {
+        if let userUID = UserDefaults.standard.string(forKey: "userUID") {
+            self.db.collection("users").document(userUID).getDocument { (document, err) in
+                if let err = err {
+                    onFailed(.requestFailed)
+                } else {
+                    if let document = document {
+                        let user = User.init(document: document)
+                        
+                        onSuccess(user)
+                    }
+
+                }
+            }
+            
+        }
+    }
 
     func fetchPictures(onSuccess: @escaping RequestResultCallback<Pictures>, onFailed: @escaping RequestFailCallback<RequestError>) {
         if let userUID = UserDefaults.standard.string(forKey: "userUID") {
             self.db.collection("users").document(userUID).collection("pictures").getDocuments { (querySnapshot, err) in
                 if let err = err {
-                    print("Error getting documents: \(err)")
                     onFailed(.requestFailed)
                 } else {
                     let pictures = Pictures.init(querySnapshot: querySnapshot)
@@ -89,7 +106,6 @@ class RequestMaker {
         if let userUID = UserDefaults.standard.string(forKey: "userUID") {
             self.db.collection("users").document(userUID).collection("walls").getDocuments { (querySnapshot, err) in
                 if let err = err {
-                    print("Error getting documents: \(err)")
                     onFailed(.requestFailed)
                 } else {
                     let walls = Walls.init(querySnapshot: querySnapshot)
