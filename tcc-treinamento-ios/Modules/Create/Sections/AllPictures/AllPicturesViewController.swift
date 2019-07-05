@@ -36,8 +36,8 @@ class AllPicturesViewController: UIViewController {
         
         self.allPicturesPresenter.view = self
         
-        configScreen()
-        self.allPicturesCollectionView.allowsMultipleSelection = true
+        configInitialScreen()
+        
         self.allPicturesCollectionView.dataSource = self.allPicturesPresenter
         self.allPicturesCollectionView.delegate = self.allPicturesPresenter
     }
@@ -46,19 +46,9 @@ class AllPicturesViewController: UIViewController {
         self.isSelectMode = !self.isSelectMode
         
         if (self.isSelectMode) {
-            self.selectButton.setTitle("Cancelar", for: .normal)
-            self.footerView.isHidden = false
-            self.footerLabel.text = "Nenhum item selecionado"
+            configIsSelectMode()
         } else {
-            self.selectButton.setTitle("Selecionar", for: .normal)
-            self.footerView.isHidden = true
-            
-            if let selectedItems = allPicturesCollectionView.indexPathsForSelectedItems {
-            
-                for indexPath in selectedItems {
-                    allPicturesCollectionView.deselectItem(at: indexPath, animated: true)
-                }
-            }
+           configIsNotSelectMode()
         }
     }
     
@@ -66,10 +56,32 @@ class AllPicturesViewController: UIViewController {
         
     }
     
-    func configScreen() {
+    func configInitialScreen() {
         self.titleLabel.text = "SELECIONAR QUADROS"
         self.footerView.isHidden = true
+        self.allPicturesCollectionView.allowsSelection = false
         disableContinueButton()
+    }
+    
+    func configIsSelectMode() {
+        self.allPicturesCollectionView.allowsMultipleSelection = true
+        self.selectButton.setTitle("Cancelar", for: .normal)
+        self.footerView.isHidden = false
+        self.footerLabel.text = "Nenhum item selecionado"
+        disableContinueButton()
+    }
+    
+    func configIsNotSelectMode() {
+        self.allPicturesCollectionView.allowsSelection = false
+        self.selectButton.setTitle("Selecionar", for: .normal)
+        self.footerView.isHidden = true
+        
+        if let selectedItems = allPicturesCollectionView.indexPathsForSelectedItems {
+            
+            for indexPath in selectedItems {
+                allPicturesCollectionView.deselectItem(at: indexPath, animated: true)
+            }
+        }
     }
     
     func disableContinueButton() {
@@ -87,6 +99,7 @@ extension AllPicturesViewController {
 
     func reloadSelectedQuantity() {
         self.selectedQuantity = allPicturesCollectionView.indexPathsForSelectedItems?.count ?? 0
+        
         if (self.selectedQuantity > 0) {
             enableContinueButton()
         } else {
