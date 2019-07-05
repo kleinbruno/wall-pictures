@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2710452522CEFE0300CAB1C9 /* ConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710452422CEFE0300CAB1C9 /* ConfigurationViewController.swift */; };
 		272D05C922C5BF5900EFBE35 /* DesignableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D05C822C5BF5900EFBE35 /* DesignableTextField.swift */; };
 		2777F86B22BE6D1000ACFAFA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2777F86A22BE6D1000ACFAFA /* LoginViewController.swift */; };
 		2777F86F22BE896300ACFAFA /* AuthMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2777F86E22BE896300ACFAFA /* AuthMaker.swift */; };
@@ -41,6 +42,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2710452422CEFE0300CAB1C9 /* ConfigurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationViewController.swift; sourceTree = SOURCE_ROOT; };
 		272D05C822C5BF5900EFBE35 /* DesignableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableTextField.swift; sourceTree = "<group>"; };
 		2777F86A22BE6D1000ACFAFA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2777F86E22BE896300ACFAFA /* AuthMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthMaker.swift; sourceTree = "<group>"; };
@@ -258,6 +260,7 @@
 		4A526DDE22BE728000773FBD /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				2710452422CEFE0300CAB1C9 /* ConfigurationViewController.swift */,
 			);
 			path = Sections;
 			sourceTree = "<group>";
@@ -457,6 +460,7 @@
 				4A4B62E422C846ED008BABE9 /* PicturesPresenter.swift in Sources */,
 				8A74054122CA2CFE00350056 /* TabItemView.swift in Sources */,
 				8A24AAA622C7E17800BD8534 /* CreateWallViewController.swift in Sources */,
+				2710452522CEFE0300CAB1C9 /* ConfigurationViewController.swift in Sources */,
 				27BB5E4622BE5B1E009F57A3 /* UIViewExtensions.swift in Sources */,
 				8A24AAA822C8105B00BD8534 /* UIImageExtensions.swift in Sources */,
 				2777F87122BE8C5400ACFAFA /* Result.swift in Sources */,

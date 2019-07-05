@@ -160,7 +160,7 @@ class ViewController: UIViewController {
                 case .creations:
                     return MyCreationsViewController.instantiate(fromAppStoryboard: .MyCreations)
                 case .config:
-                    return UIViewController()
+                    return ConfigurationViewController.instantiate(fromAppStoryboard: .Configurations)
             }
         }
     }
