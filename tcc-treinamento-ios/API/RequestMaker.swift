@@ -53,12 +53,18 @@ class RequestMaker {
         }
     }
     
-    func addPicture(withImage image: String) {
-        if let userUID = UserDefaults.standard.string(forKey: "userUID") {
-            self.db.collection("users").document(userUID).collection("pictures").document().setData([
-                "image": image,
-                ]) { (error) in
-                print(error)
+    func uploadImage(with image: UIImage?, into: CollectionImageTypes, onSuccess: @escaping () -> Void, onFail: @escaping () -> Void) {
+        if let userUID = UserDefaults.standard.string(forKey: "userUID"),
+            let base64 = image?.toBase64(format: .jpeg(0.1)) {
+            
+            self.db.collection("users").document(userUID).collection(into.rawValue).document().setData([
+                "image": base64,
+            ]) { (error) in
+                if error != nil {
+                    onFail()
+                } else {
+                    onSuccess()
+                }
             }
         }
     }
@@ -78,6 +84,22 @@ class RequestMaker {
             
         }
     }
+    
+    func fetchWalls(onSuccess: @escaping RequestResultCallback<Walls>, onFailed: @escaping RequestFailCallback<RequestError>) {
+        if let userUID = UserDefaults.standard.string(forKey: "userUID") {
+            self.db.collection("users").document(userUID).collection("walls").getDocuments { (querySnapshot, err) in
+                if let err = err {
+                    print("Error getting documents: \(err)")
+                    onFailed(.requestFailed)
+                } else {
+                    let walls = Walls.init(querySnapshot: querySnapshot)
+                    
+                    onSuccess(walls)
+                }
+            }
+            
+        }
+    }
 
     func registerUser(withUID UID: String, withName name: String, withEmail email: String) {
         self.db.collection("users").document(UID).setData([
@@ -86,6 +108,3 @@ class RequestMaker {
             ])
     }
 }
-
-
-

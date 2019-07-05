@@ -26,9 +26,14 @@ class MyCreationsViewController: UIViewController {
         self.pictureCollectionView.dataSource = self.picturesPresenter
         
         self.picturesPresenter.fetchData()
+        self.wallsPresenter.fetchData()
     }
     
     func reloadPictures() {
         self.pictureCollectionView.reloadData()
+    }
+    
+    func reloadWalls() {
+        self.wallCollectionView.reloadData()
     }
 }
