@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		272D05C922C5BF5900EFBE35 /* DesignableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D05C822C5BF5900EFBE35 /* DesignableTextField.swift */; };
+		2765D89D22C9452A00898C92 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2765D89C22C9452A00898C92 /* User.swift */; };
 		2777F86B22BE6D1000ACFAFA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2777F86A22BE6D1000ACFAFA /* LoginViewController.swift */; };
 		2777F86F22BE896300ACFAFA /* AuthMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2777F86E22BE896300ACFAFA /* AuthMaker.swift */; };
 		2777F87122BE8C5400ACFAFA /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2777F87022BE8C5400ACFAFA /* Result.swift */; };
@@ -19,6 +20,9 @@
 		27BB5E4422BE5ABF009F57A3 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BB5E4322BE5ABF009F57A3 /* GradientView.swift */; };
 		27BB5E4622BE5B1E009F57A3 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BB5E4522BE5B1E009F57A3 /* UIViewExtensions.swift */; };
 		27BB5E4822BE6038009F57A3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27BB5E4722BE6038009F57A3 /* GoogleService-Info.plist */; };
+		27DFB06122C9684C0031D0AB /* Picture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DFB06022C9684C0031D0AB /* Picture.swift */; };
+		27DFB06322C9730B0031D0AB /* DocumentSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DFB06222C9730B0031D0AB /* DocumentSnapshot.swift */; };
+		27FA15E322C2F5E40020D169 /* RequestMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FA15E222C2F5E40020D169 /* RequestMaker.swift */; };
 		4A4B62CC22C7EA76008BABE9 /* WallsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4B62CB22C7EA76008BABE9 /* WallsCollectionViewCell.swift */; };
 		4A4B62CE22C7EDB8008BABE9 /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4B62CD22C7EDB8008BABE9 /* UIImageViewExtensions.swift */; };
 		4A4B62D222C804F8008BABE9 /* WallsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4B62D122C804F8008BABE9 /* WallsPresenter.swift */; };
@@ -44,6 +48,7 @@
 
 /* Begin PBXFileReference section */
 		272D05C822C5BF5900EFBE35 /* DesignableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableTextField.swift; sourceTree = "<group>"; };
+		2765D89C22C9452A00898C92 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		2777F86A22BE6D1000ACFAFA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2777F86E22BE896300ACFAFA /* AuthMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthMaker.swift; sourceTree = "<group>"; };
 		2777F87022BE8C5400ACFAFA /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
@@ -57,6 +62,9 @@
 		27BB5E4322BE5ABF009F57A3 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		27BB5E4522BE5B1E009F57A3 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		27BB5E4722BE6038009F57A3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		27DFB06022C9684C0031D0AB /* Picture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picture.swift; sourceTree = "<group>"; };
+		27DFB06222C9730B0031D0AB /* DocumentSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentSnapshot.swift; sourceTree = "<group>"; };
+		27FA15E222C2F5E40020D169 /* RequestMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestMaker.swift; sourceTree = "<group>"; };
 		4A4B62CB22C7EA76008BABE9 /* WallsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WallsCollectionViewCell.swift; path = "tcc-treinamento-ios/Components/WallsCollectionViewCell.swift"; sourceTree = SOURCE_ROOT; };
 		4A4B62CD22C7EDB8008BABE9 /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
 		4A4B62D122C804F8008BABE9 /* WallsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallsPresenter.swift; sourceTree = "<group>"; };
@@ -163,6 +171,7 @@
 			children = (
 				2777F86E22BE896300ACFAFA /* AuthMaker.swift */,
 				2777F87022BE8C5400ACFAFA /* Result.swift */,
+				27FA15E222C2F5E40020D169 /* RequestMaker.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -184,6 +193,7 @@
 				4A526DE622BEBEDD00773FBD /* UIViewControllerExtensions.swift */,
 				4A4B62CD22C7EDB8008BABE9 /* UIImageViewExtensions.swift */,
 				8A24AAA722C8105B00BD8534 /* UIImageExtensions.swift */,
+				27DFB06222C9730B0031D0AB /* DocumentSnapshot.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -191,6 +201,8 @@
 		27BB5E4222BE5A76009F57A3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2765D89C22C9452A00898C92 /* User.swift */,
+				27DFB06022C9684C0031D0AB /* Picture.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -461,14 +473,19 @@
 			files = (
 				4A526DE522BEB3CE00773FBD /* AppStoryboard.swift in Sources */,
 				4A526DE722BEBEDD00773FBD /* UIViewControllerExtensions.swift in Sources */,
+				27DFB06322C9730B0031D0AB /* DocumentSnapshot.swift in Sources */,
 				4A4B62E222C84561008BABE9 /* PicturesCollectionViewCell.swift in Sources */,
 				8AD1939F22CEEF8500A97250 /* TryOutViewController.swift in Sources */,
 				2777F86F22BE896300ACFAFA /* AuthMaker.swift in Sources */,
 				27BB5E2F22BE5279009F57A3 /* ViewController.swift in Sources */,
 				27BB5E2D22BE5279009F57A3 /* AppDelegate.swift in Sources */,
+				27FA15E322C2F5E40020D169 /* RequestMaker.swift in Sources */,
+				2765D89D22C9452A00898C92 /* User.swift in Sources */,
+				4A526DE322BE9BB500773FBD /* StoryboardManager.swift in Sources */,
 				4A4B62E022C84350008BABE9 /* MyCreationsViewController.swift in Sources */,
 				4A4B62CE22C7EDB8008BABE9 /* UIImageViewExtensions.swift in Sources */,
 				4A4B62D222C804F8008BABE9 /* WallsPresenter.swift in Sources */,
+				27DFB06122C9684C0031D0AB /* Picture.swift in Sources */,
 				4A526DE322BE9BB500773FBD /* StoryboardManager.swift in Sources */,
 				4A4B62E422C846ED008BABE9 /* PicturesPresenter.swift in Sources */,
 				8A74054122CA2CFE00350056 /* TabItemView.swift in Sources */,

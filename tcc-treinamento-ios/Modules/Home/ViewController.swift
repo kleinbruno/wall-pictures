@@ -14,25 +14,40 @@ class ViewController: UIViewController {
     @IBOutlet weak var configTab: TabItemView!
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var addModal: UIView!
+    @IBOutlet weak var addModalTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var buttonsBottomConstraint: NSLayoutConstraint!
+    
     var currentTab: TabItemView? = nil
     
     var currentViewController: UIViewController? = nil
-    var addModalVisible = false {
-        didSet {
-            addModal.isHidden = !addModalVisible
-        }
-    }
+    var addModalVisible = false
     
     @IBAction func handleAdd(_ sender: UIButton) {
         var rotation: CGAffineTransform = .identity
+        
+        self.addModal.isHidden = false
         
         if !addModalVisible {
             let quarter = CGFloat(Double.pi/4)
             rotation = CGAffineTransform(rotationAngle: quarter)
         }
         
-        UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 0.5, initialSpringVelocity: 5, options: [.curveEaseInOut], animations: {
+        let tabbarPadding: CGFloat = 80
+        var topConstraintValue: CGFloat = 0
+        var buttonsBottomConstraintValue: CGFloat = 60
+        
+        if self.addModalVisible {
+            topConstraintValue = UIScreen.main.bounds.height - tabbarPadding
+            buttonsBottomConstraintValue = -250
+        }
+        
+        self.addModalTopConstraint.constant = topConstraintValue
+        self.buttonsBottomConstraint.constant = buttonsBottomConstraintValue
+        
+        UIView.animate(withDuration: 0.7, delay: 0.0, usingSpringWithDamping: 1, initialSpringVelocity: 5, options: [], animations: {
             self.addButton.transform = rotation
+            self.addModal.alpha = self.addModalVisible ? 0 : 1
+            self.view.layoutIfNeeded()
         }, completion: { _ in
             self.addModalVisible = !self.addModalVisible
         })

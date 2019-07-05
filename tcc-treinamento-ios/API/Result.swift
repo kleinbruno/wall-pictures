@@ -8,11 +8,9 @@
 
 import Foundation
 
-import Firebase
-
 #if swift(>=6.0)
 #else
-enum AuthResult<Success, Failure> where Success : AuthDataResult, Failure : Error {
+enum Result<Success, Failure> where Failure : Error {
     
     /// A success, storing a `Success` value.
     case success(Success)
