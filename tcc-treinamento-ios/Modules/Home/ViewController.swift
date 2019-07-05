@@ -38,6 +38,10 @@ class ViewController: UIViewController {
         })
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        self.creationsTab.selected = true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let creations = TabItemEnum.creations
@@ -50,7 +54,6 @@ class ViewController: UIViewController {
         self.addTapGesture(to: config)
         
         setViewController(ofType: .creations)
-        self.creationsTab.selected = true
     }
     
     func setViewController(ofType type: TabItemEnum) {

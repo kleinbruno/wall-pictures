@@ -38,6 +38,8 @@
 		8A24AAA822C8105B00BD8534 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A24AAA722C8105B00BD8534 /* UIImageExtensions.swift */; };
 		8A74054122CA2CFE00350056 /* TabItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A74054022CA2CFE00350056 /* TabItemView.swift */; };
 		8A74054322CA2E3D00350056 /* TabItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A74054222CA2E3D00350056 /* TabItemView.xib */; };
+		8AD1939D22CEEEB400A97250 /* TryOut.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AD1939C22CEEEB400A97250 /* TryOut.storyboard */; };
+		8AD1939F22CEEF8500A97250 /* TryOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD1939E22CEEF8500A97250 /* TryOutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +78,8 @@
 		8A24AAA722C8105B00BD8534 /* UIImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
 		8A74054022CA2CFE00350056 /* TabItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemView.swift; sourceTree = "<group>"; };
 		8A74054222CA2E3D00350056 /* TabItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabItemView.xib; sourceTree = "<group>"; };
+		8AD1939C22CEEEB400A97250 /* TryOut.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TryOut.storyboard; sourceTree = "<group>"; };
+		8AD1939E22CEEF8500A97250 /* TryOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TryOutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +214,7 @@
 		4A526DD122BE700C00773FBD /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				8AC0092722CEEE760029CD2E /* TryOut */,
 				4A526DD422BE707400773FBD /* Home */,
 				2777F86822BE6C8B00ACFAFA /* Login */,
 				4A526DD222BE703200773FBD /* MyCreations */,
@@ -323,6 +328,15 @@
 			path = TabItemView;
 			sourceTree = "<group>";
 		};
+		8AC0092722CEEE760029CD2E /* TryOut */ = {
+			isa = PBXGroup;
+			children = (
+				8AD1939C22CEEEB400A97250 /* TryOut.storyboard */,
+				8AD1939E22CEEF8500A97250 /* TryOutViewController.swift */,
+			);
+			path = TryOut;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -390,6 +404,7 @@
 				4A526DD922BE721B00773FBD /* Create.storyboard in Resources */,
 				4A526DD722BE71F900773FBD /* Configurations.storyboard in Resources */,
 				27BB5E3422BE527C009F57A3 /* Assets.xcassets in Resources */,
+				8AD1939D22CEEEB400A97250 /* TryOut.storyboard in Resources */,
 				27BB5E3222BE5279009F57A3 /* Main.storyboard in Resources */,
 				8A74054322CA2E3D00350056 /* TabItemView.xib in Resources */,
 			);
@@ -447,6 +462,7 @@
 				4A526DE522BEB3CE00773FBD /* AppStoryboard.swift in Sources */,
 				4A526DE722BEBEDD00773FBD /* UIViewControllerExtensions.swift in Sources */,
 				4A4B62E222C84561008BABE9 /* PicturesCollectionViewCell.swift in Sources */,
+				8AD1939F22CEEF8500A97250 /* TryOutViewController.swift in Sources */,
 				2777F86F22BE896300ACFAFA /* AuthMaker.swift in Sources */,
 				27BB5E2F22BE5279009F57A3 /* ViewController.swift in Sources */,
 				27BB5E2D22BE5279009F57A3 /* AppDelegate.swift in Sources */,
