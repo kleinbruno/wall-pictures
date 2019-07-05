@@ -69,7 +69,7 @@ class LoginViewController: UIViewController {
             
             self.inputsMinConstraint.priority = UILayoutPriority(rawValue: 900)
                         
-            UIView.animate(withDuration: 1, animations: {
+            UIView.animate(withDuration: 0.5, animations: {
                 self.signUpButton.alpha = 1
                 self.loginButton.alpha = 0.5
                 self.name.alpha = 1
@@ -91,7 +91,7 @@ class LoginViewController: UIViewController {
             
             self.inputsMinConstraint.priority = UILayoutPriority(rawValue: 999)
             
-            UIView.animate(withDuration: 1, animations: {
+            UIView.animate(withDuration: 0.5, animations: {
                 self.loginButton.alpha = 1
                 self.signUpButton.alpha = 0.5
                 self.name.alpha = 0
@@ -109,8 +109,6 @@ class LoginViewController: UIViewController {
 
             self.authMaker.onLogin(email: email, password: password, onSuccess: { (user) in
                 
-                self.setUserDefault(withEmail: user.user.email)
-
                 self.goToHome()
                 
             }) { (error) in
@@ -126,8 +124,6 @@ class LoginViewController: UIViewController {
 
             self.authMaker.onRegister(name: name, email: email, password: password, onSuccess: { (user) in
                 
-                self.setUserDefault(withEmail: user.user.email)
-                
                 self.goToHome()
                 
             }) { (error) in
@@ -135,10 +131,6 @@ class LoginViewController: UIViewController {
                 self.errorMessage.text = error.message
             }
         }
-    }
-    
-    func setUserDefault(withEmail email: String?) {
-        UserDefaults.standard.set(email, forKey: "userEmail")
     }
     
     func goToHome() {
