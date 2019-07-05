@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2710452722CF06EE00CAB1C9 /* Wall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710452622CF06EE00CAB1C9 /* Wall.swift */; };
 		272D05C922C5BF5900EFBE35 /* DesignableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D05C822C5BF5900EFBE35 /* DesignableTextField.swift */; };
 		2765D89D22C9452A00898C92 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2765D89C22C9452A00898C92 /* User.swift */; };
 		2777F86B22BE6D1000ACFAFA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2777F86A22BE6D1000ACFAFA /* LoginViewController.swift */; };
@@ -47,6 +48,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2710452622CF06EE00CAB1C9 /* Wall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wall.swift; sourceTree = "<group>"; };
 		272D05C822C5BF5900EFBE35 /* DesignableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableTextField.swift; sourceTree = "<group>"; };
 		2765D89C22C9452A00898C92 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		2777F86A22BE6D1000ACFAFA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 			children = (
 				2765D89C22C9452A00898C92 /* User.swift */,
 				27DFB06022C9684C0031D0AB /* Picture.swift */,
+				2710452622CF06EE00CAB1C9 /* Wall.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -491,6 +494,7 @@
 				8A74054122CA2CFE00350056 /* TabItemView.swift in Sources */,
 				8A24AAA622C7E17800BD8534 /* CreateWallViewController.swift in Sources */,
 				27BB5E4622BE5B1E009F57A3 /* UIViewExtensions.swift in Sources */,
+				2710452722CF06EE00CAB1C9 /* Wall.swift in Sources */,
 				8A24AAA822C8105B00BD8534 /* UIImageExtensions.swift in Sources */,
 				2777F87122BE8C5400ACFAFA /* Result.swift in Sources */,
 				4A4B62CC22C7EA76008BABE9 /* WallsCollectionViewCell.swift in Sources */,
