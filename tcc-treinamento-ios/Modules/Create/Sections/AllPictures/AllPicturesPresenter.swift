@@ -38,7 +38,13 @@ extension AllPicturesPresenter: UICollectionViewDataSource {
             view.isSelectMode {
             
             creationCell.isSelected = !creationCell.isSelected
+            
+            setSelectedItensQuantity(isSelected: creationCell.isSelected)
         }
+    }
+    
+    func setSelectedItensQuantity(isSelected: Bool) {
+        self.view?.selectedQuantity += isSelected ? 1 : -1
     }
 }
 
