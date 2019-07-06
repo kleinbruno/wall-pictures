@@ -11,7 +11,7 @@ import UIKit
 class PicturesPresenter: NSObject {
     weak var view: MyCreationsViewController?
     
-    private var pictureList = [Picture]()
+    var pictureList = [Picture]()
     
     private let requestMaker = RequestMaker()
     

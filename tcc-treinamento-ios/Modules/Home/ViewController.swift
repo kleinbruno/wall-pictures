@@ -170,7 +170,7 @@ class ViewController: UIViewController {
         var viewController: UIViewController {
             switch self {
                 case .creations:
-                    return MyCreationsViewController.instantiate(fromAppStoryboard: .MyCreations)
+                    return MyCreationsNavigationController.instantiate(fromAppStoryboard: .MyCreations)
                 case .config:
                     return ConfigurationViewController.instantiate(fromAppStoryboard: .Configurations)
             }

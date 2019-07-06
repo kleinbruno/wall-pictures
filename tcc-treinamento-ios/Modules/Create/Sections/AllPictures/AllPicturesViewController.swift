@@ -17,7 +17,8 @@ class AllPicturesViewController: UIViewController {
     @IBOutlet weak var footerLabel: UILabel!
     @IBOutlet weak var continueButton: UIButton!
     
-    private let allPicturesPresenter = AllPicturesPresenter()
+    let allPicturesPresenter = AllPicturesPresenter()
+    
     public var isSelectMode: Bool = false
     public var selectedQuantity: Int = 0 {
         didSet {
@@ -53,8 +54,26 @@ class AllPicturesViewController: UIViewController {
     }
     
     @IBAction func continueButtonPress(_ sender: Any) {
+        let viewController = TryOutViewController.instantiate(fromAppStoryboard: .TryOut)
         
+        var selectedPictures: [Picture] = []
+        
+        if let selectedItems = allPicturesCollectionView.indexPathsForSelectedItems {
+            
+            for indexPath in selectedItems {
+                selectedPictures.append(self.allPicturesPresenter.pictureList[indexPath.row])
+            }
+        }
+        
+        viewController.pictures = selectedPictures
+        
+        self.navigationController?.show(viewController, sender: sender)
     }
+    
+    @IBAction func goBack(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     
     func configInitialScreen() {
         self.titleLabel.text = "SELECIONAR QUADROS"

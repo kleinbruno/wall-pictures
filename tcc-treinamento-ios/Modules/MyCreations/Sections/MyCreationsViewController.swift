@@ -15,7 +15,7 @@ class MyCreationsViewController: UIViewController {
     
     private let wallsPresenter = WallsPresenter()
     private let picturesPresenter = PicturesPresenter()
-        
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,6 +28,15 @@ class MyCreationsViewController: UIViewController {
         self.picturesPresenter.fetchData()
         self.wallsPresenter.fetchData()
     }
+    
+    @IBAction func onPressSeeAllPictures(_ sender: Any) {
+        let viewController = AllPicturesViewController.instantiate(fromAppStoryboard: .Create)
+        
+        viewController.allPicturesPresenter.pictureList = self.picturesPresenter.pictureList
+        
+        self.navigationController?.show(viewController, sender: sender)
+    }
+    
     
     func reloadPictures() {
         self.pictureCollectionView.reloadData()

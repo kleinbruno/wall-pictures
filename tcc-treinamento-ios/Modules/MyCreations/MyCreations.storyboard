@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TBp-q8-7sw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dHV-gS-g0t">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -11,6 +11,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--My Creations Navigation Controller-->
+        <scene sceneID="PN7-MP-qaQ">
+            <objects>
+                <navigationController storyboardIdentifier="MyCreationsNavigationController" navigationBarHidden="YES" id="dHV-gS-g0t" customClass="MyCreationsNavigationController" customModule="tcc_treinamento_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kla-3b-L6b">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="TBp-q8-7sw" kind="relationship" relationship="rootViewController" id="PXu-bW-bej"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s9w-g8-q0r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-822" y="143"/>
+        </scene>
         <!--criações-->
         <scene sceneID="cnb-hJ-ekW">
             <objects>
@@ -159,6 +175,9 @@
                                                                         <real key="value" value="9"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="onPressSeeAllPictures:" destination="TBp-q8-7sw" eventType="touchUpInside" id="qin-kG-RKi"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -258,6 +277,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dQo-9v-piF"/>
                     </view>
+                    <navigationItem key="navigationItem" id="ynW-Y0-38l"/>
                     <connections>
                         <outlet property="pictureCollectionView" destination="S1N-qN-GH2" id="kyI-4j-2gp"/>
                         <outlet property="wallCollectionView" destination="0As-6Q-PYB" id="Zr5-bs-TOZ"/>
