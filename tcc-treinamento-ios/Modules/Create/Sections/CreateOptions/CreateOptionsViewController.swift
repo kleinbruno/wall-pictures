@@ -12,6 +12,14 @@ import YPImagePicker
 class CreateOptionsViewController: UIViewController {
     public var pictures: [Picture] = []
     
+    @IBAction func imageARPress(_ sender: Any) {
+        let viewController = ARViewController.instantiate(fromAppStoryboard: .TryOut)
+        
+        viewController.pictures = self.pictures
+        
+        self.navigationController?.present(viewController, animated: true)
+    }
+    
     @IBAction func imageButtonPress(_ sender: UIButton) {
         let imagePicker = ImagePicker().getInstance(numberOfItens: 1)
         let viewController = TryOutViewController.instantiate(fromAppStoryboard: .TryOut)
