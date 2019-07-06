@@ -53,7 +53,7 @@ class RequestMaker {
         }
     }
     
-    func uploadImage(with image: UIImage?, into: CollectionImageTypes, onSuccess: @escaping () -> Void, onFail: @escaping () -> Void) {
+    func uploadImage(with image: UIImage?, into: CollectionImageTypes, onSuccess: (() -> Void)? = nil, onFail: (() -> Void)? = nil) {
         if let userUID = UserDefaults.standard.string(forKey: "userUID"),
             let base64 = image?.toBase64(format: .jpeg(0.1)) {
             
@@ -61,9 +61,9 @@ class RequestMaker {
                 "image": base64,
             ]) { (error) in
                 if error != nil {
-                    onFail()
-                } else {
-                    onSuccess()
+                    onFail?()
+                } else if onSuccess != nil {
+                    onSuccess?()
                 }
             }
         }

@@ -67,13 +67,12 @@ class AllPicturesViewController: UIViewController {
         
         viewController.pictures = selectedPictures
         
-        self.navigationController?.show(viewController, sender: sender)
+        self.navigationController?.present(viewController, animated: true)
     }
     
     @IBAction func goBack(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
-    
     
     func configInitialScreen() {
         self.titleLabel.text = "SELECIONAR QUADROS"

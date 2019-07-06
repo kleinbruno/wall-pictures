@@ -13,6 +13,8 @@ class TryOutViewController: UIViewController {
     @IBOutlet weak var wallView: UIView!
     @IBOutlet weak var collectionBackgroundView: UIView!
     
+    let requestMaker = RequestMaker()
+    
     let draggedViewIncreasedScale: CGFloat = 0.1
     let minSize: CGFloat = 40
     let perfectHorizontalPinch: CGFloat = 1000
@@ -21,6 +23,27 @@ class TryOutViewController: UIViewController {
     var panGestureEnabled = false
     
     var pictures: [Picture] = []
+    
+    @IBAction func goBack(_ sender: UIButton) {
+        self.dismiss(animated: true)
+    }
+    
+    @IBAction func takeScreenshot(_ sender: Any) {
+        let screenshot = self.wallView.takeScreenshot()
+        
+        let printView = UIView(frame: UIScreen.main.bounds)
+        printView.backgroundColor = .white
+        self.view.addSubview(printView)
+        
+        self.requestMaker.uploadImage(with: screenshot, into: .walls, onSuccess: {
+            UIView.animate(withDuration: 0.2, animations: {
+                printView.alpha = 0
+            }, completion: {
+                (Bool) in
+                printView.removeFromSuperview()
+            })
+        })
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
