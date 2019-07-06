@@ -33,6 +33,7 @@ class TryOutViewController: UIViewController, ColorPickerViewDelegate {
     var panGestureEnabled = false
     
     var pictures: [Picture] = []
+    var isColorBackground: Bool = false
     
     @IBAction func goBack(_ sender: UIButton) {
         self.dismiss(animated: true)
@@ -59,7 +60,9 @@ class TryOutViewController: UIViewController, ColorPickerViewDelegate {
         super.viewDidLoad()
         
         self.colorPicker?.delegate = self
-
+        self.colorPicker.indicatorDiameter = 10
+        self.colorPicker.isHidden = !isColorBackground
+        
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
         self.collectionView.dragDelegate = self
