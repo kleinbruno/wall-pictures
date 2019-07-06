@@ -33,10 +33,11 @@ class TryOutViewController: UIViewController {
         
         let printView = UIView(frame: UIScreen.main.bounds)
         printView.backgroundColor = .white
-        self.view.addSubview(printView)
         
         self.requestMaker.uploadImage(with: screenshot, into: .walls, onSuccess: {
-            UIView.animate(withDuration: 0.2, animations: {
+            self.view.addSubview(printView)
+            
+            UIView.animate(withDuration: 0.5, animations: {
                 printView.alpha = 0
             }, completion: {
                 (Bool) in
@@ -47,6 +48,8 @@ class TryOutViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        self.collectionView.contentInsetAdjustmentBehavior = .never
         
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
@@ -61,7 +64,7 @@ class TryOutViewController: UIViewController {
         let panGesture = UIPanGestureRecognizer(target: self, action: #selector(handlePan(recognizer:)))
         let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress(recognizer:)))
         let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(handlePinch(recognizer:)))
-        longPressGesture.minimumPressDuration = 0
+        longPressGesture.minimumPressDuration = 0.5
         longPressGesture.delegate = self
         panGesture.delegate = self
         view.addGestureRecognizer(panGesture)
@@ -90,8 +93,11 @@ class TryOutViewController: UIViewController {
         switch recognizer.state {
         case .began:
             panGestureEnabled = true
+            recognizerView.layer.borderWidth = 1
+            recognizerView.layer.borderColor = UIColor.yellow.cgColor
         case .ended:
             panGestureEnabled = false
+            recognizerView.layer.borderWidth = 0
         default:
             break
         }
@@ -102,57 +108,59 @@ class TryOutViewController: UIViewController {
             return
         }
         
-        var directionValue: CGFloat = 0
-        
-        let firstTouch = recognizer.location(ofTouch: 0, in: recognizerView)
-        let secondTouch = recognizer.location(ofTouch: 1, in: recognizerView)
-        
-        if firstTouch.x == secondTouch.x {
-            directionValue = perfectHorizontalPinch
-        } else if firstTouch.y == secondTouch.y {
-            directionValue = perfectVerticalPinch
-        } else {
-            directionValue = calcDirectionBetween(locationOne: firstTouch, locationTwo: secondTouch)
+         if recognizer.numberOfTouches > 1 {
+            var directionValue: CGFloat = 0
+            
+            let firstTouch = recognizer.location(ofTouch: 0, in: recognizerView)
+            let secondTouch = recognizer.location(ofTouch: 1, in: recognizerView)
+            
+            if firstTouch.x == secondTouch.x {
+                directionValue = perfectHorizontalPinch
+            } else if firstTouch.y == secondTouch.y {
+                directionValue = perfectVerticalPinch
+            } else {
+                directionValue = calcDirectionBetween(locationOne: firstTouch, locationTwo: secondTouch)
+            }
+            
+            if directionValue < 0 {
+                directionValue *= -1
+            }
+            
+            let viewFrame = recognizerView.frame
+            
+            var nextWidth = viewFrame.width
+            var nextHeight = viewFrame.height
+            
+            let direction = getDirection(directionValue)
+            
+            switch direction {
+            case .horizontal:
+                nextWidth = nextWidth * recognizer.scale
+            case .vertical:
+                nextHeight = nextHeight * recognizer.scale
+            case .diagonal:
+                nextWidth = nextWidth * recognizer.scale
+                nextHeight = nextHeight * recognizer.scale
+            }
+            
+            let viewOrigin = viewFrame.origin
+            
+            if nextWidth < minSize {
+                nextWidth = minSize
+            }
+            
+            if nextHeight < minSize {
+                nextHeight = minSize
+            }
+            
+            let widthDiff = (nextWidth - viewFrame.width)/2
+            let heightDiff = (nextHeight - viewFrame.height)/2
+            
+            recognizerView.frame = CGRect(x: viewOrigin.x - widthDiff, y: viewOrigin.y - heightDiff, width: nextWidth, height: nextHeight)
+            self.applyShadow(to: recognizerView)
+            recognizer.scale = 1.0
         }
-        
-        if directionValue < 0 {
-            directionValue *= -1
-        }
-        
-        let viewFrame = recognizerView.frame
-        
-        var nextWidth = viewFrame.width
-        var nextHeight = viewFrame.height
-        
-        let direction = getDirection(directionValue)
-        
-        switch direction {
-        case .horizontal:
-            nextWidth = nextWidth * recognizer.scale
-        case .vertical:
-            nextHeight = nextHeight * recognizer.scale
-        case .diagonal:
-            nextWidth = nextWidth * recognizer.scale
-            nextHeight = nextHeight * recognizer.scale
-        }
-        
-        let viewOrigin = viewFrame.origin
-        
-        if nextWidth < minSize {
-            nextWidth = minSize
-        }
-        
-        if nextHeight < minSize {
-            nextHeight = minSize
-        }
-        
-        let widthDiff = (nextWidth - viewFrame.width)/2
-        let heightDiff = (nextHeight - viewFrame.height)/2
-        
-        recognizerView.frame = CGRect(x: viewOrigin.x - widthDiff, y: viewOrigin.y - heightDiff, width: nextWidth, height: nextHeight)
-        self.applyShadow(to: recognizerView)
-        recognizer.scale = 1.0
-    }
+     }
     
     private func getDirection(_ value: CGFloat) -> Direction {
         if value < 0.5 {
