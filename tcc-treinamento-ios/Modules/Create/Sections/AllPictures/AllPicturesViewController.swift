@@ -41,6 +41,10 @@ class AllPicturesViewController: UIViewController {
         
         self.allPicturesCollectionView.dataSource = self.allPicturesPresenter
         self.allPicturesCollectionView.delegate = self.allPicturesPresenter
+        
+        if self.allPicturesPresenter.pictureList.isEmpty {
+           self.allPicturesPresenter.fetchData()
+        }
     }
     
     @IBAction func selectButtonPress(_ sender: Any) {
@@ -111,6 +115,10 @@ class AllPicturesViewController: UIViewController {
     func enableContinueButton() {
         self.continueButton.isEnabled = true
         self.continueButton.alpha = 1
+    }
+    
+    func reloadData() {
+        self.allPicturesCollectionView.reloadData()
     }
 }
 

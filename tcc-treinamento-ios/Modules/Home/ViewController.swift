@@ -22,7 +22,44 @@ class ViewController: UIViewController {
     var currentViewController: UIViewController? = nil
     var addModalVisible = false
     
+    var imagePicker: ImagePicker!
+    
+    let requestMaker = RequestMaker()
+    
     @IBAction func handleAdd(_ sender: UIButton) {
+        self.toggleModal()
+    }
+    
+    @IBAction func onPressSelectImage(_ sender: UIButton) {
+        self.imagePicker.present(from: sender)
+    }
+    
+    @IBAction func onPressSelectPicture(_ sender: UIButton) {
+        self.goToAllPictures()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.creationsTab.selected = true
+        self.configAddButton()
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let creations = TabItemEnum.creations
+        let config = TabItemEnum.config
+        
+        self.creationsTab.config(label: creations.label, image: UIImage(named: creations.image))
+        self.addTapGesture(to: creations)
+
+        self.configTab.config(label: config.label, image: UIImage(named: config.image))
+        self.addTapGesture(to: config)
+        
+        setViewController(ofType: .creations)
+        
+        self.imagePicker = ImagePicker(presentationController: self, delegate: self)
+    }
+    
+    func toggleModal() {
         var rotation: CGAffineTransform = .identity
         
         self.addModal.isHidden = false
@@ -51,25 +88,6 @@ class ViewController: UIViewController {
         }, completion: { _ in
             self.addModalVisible = !self.addModalVisible
         })
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        self.creationsTab.selected = true
-        self.configAddButton()
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        let creations = TabItemEnum.creations
-        let config = TabItemEnum.config
-        
-        self.creationsTab.config(label: creations.label, image: UIImage(named: creations.image))
-        self.addTapGesture(to: creations)
-
-        self.configTab.config(label: config.label, image: UIImage(named: config.image))
-        self.addTapGesture(to: config)
-        
-        setViewController(ofType: .creations)
     }
     
     func setViewController(ofType type: TabItemEnum) {
@@ -144,6 +162,20 @@ class ViewController: UIViewController {
                 return nil
         }
     }
+
+    func goToAllPictures() {
+        let viewController = AllPicturesViewController.instantiate(fromAppStoryboard: .Create)
+            
+        self.navigationController?.show(viewController, sender: nil)
+        
+        self.toggleModal()
+    }
+    
+    func uploadImage(image: UIImage?) {
+        requestMaker.uploadImage(with: image, into: .pictures, onSuccess: {
+            self.goToAllPictures()            
+        }) {}
+    }
     
     enum TabItemEnum {
         case creations
@@ -179,3 +211,9 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: UIGestureRecognizerDelegate {}
+
+extension ViewController: ImagePickerDelegate {
+    func didSelect(image: UIImage?) {
+        self.uploadImage(image: image)
+    }
+}
