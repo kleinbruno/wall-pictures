@@ -34,7 +34,7 @@ class MyCreationsViewController: UIViewController {
         
         viewController.allPicturesPresenter.pictureList = self.picturesPresenter.pictureList
         
-        self.navigationController!.show(viewController, sender: sender)
+        self.navigationController?.show(viewController, sender: sender)
     }
     
     

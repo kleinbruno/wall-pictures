@@ -242,12 +242,12 @@
 		4A526DD122BE700C00773FBD /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				8AC0092722CEEE760029CD2E /* TryOut */,
+				4A526DD522BE70AC00773FBD /* Configurations */,
+				4A526DD322BE704C00773FBD /* Create */,
 				4A526DD422BE707400773FBD /* Home */,
 				2777F86822BE6C8B00ACFAFA /* Login */,
 				4A526DD222BE703200773FBD /* MyCreations */,
-				4A526DD322BE704C00773FBD /* Create */,
-				4A526DD522BE70AC00773FBD /* Configurations */,
+				8AC0092722CEEE760029CD2E /* TryOut */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
