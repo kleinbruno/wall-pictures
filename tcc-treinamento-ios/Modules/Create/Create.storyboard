@@ -292,6 +292,9 @@
                                                         <real key="value" value="15"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="imageARPress:" destination="AhI-D3-k7f" eventType="touchUpInside" id="QFP-7l-YXE"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>

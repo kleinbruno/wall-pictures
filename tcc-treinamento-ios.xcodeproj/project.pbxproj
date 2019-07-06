@@ -52,6 +52,8 @@
 		7A599981ECE159588DB6F5D1 /* Pods_tcc_treinamento_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79990C3ACB70F21CE477D5A6 /* Pods_tcc_treinamento_ios.framework */; };
 		8A24AAA322C7DC4400BD8534 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A24AAA222C7DC4400BD8534 /* ImagePicker.swift */; };
 		8A24AAA822C8105B00BD8534 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A24AAA722C8105B00BD8534 /* UIImageExtensions.swift */; };
+		8A5BDEAB22D09CB100F785A4 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5BDEAA22D09CB100F785A4 /* ARViewController.swift */; };
+		8A5BDEAD22D09DEB00F785A4 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5BDEAC22D09DEB00F785A4 /* Grid.swift */; };
 		8A74054122CA2CFE00350056 /* TabItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A74054022CA2CFE00350056 /* TabItemView.swift */; };
 		8A74054322CA2E3D00350056 /* TabItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A74054222CA2E3D00350056 /* TabItemView.xib */; };
 		8AD1939D22CEEEB400A97250 /* TryOut.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AD1939C22CEEEB400A97250 /* TryOut.storyboard */; };
@@ -109,6 +111,8 @@
 		79990C3ACB70F21CE477D5A6 /* Pods_tcc_treinamento_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tcc_treinamento_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A24AAA222C7DC4400BD8534 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		8A24AAA722C8105B00BD8534 /* UIImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
+		8A5BDEAA22D09CB100F785A4 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
+		8A5BDEAC22D09DEB00F785A4 /* Grid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Grid.swift; path = ../../../../../../../Downloads/Assets/Grid.swift; sourceTree = "<group>"; };
 		8A74054022CA2CFE00350056 /* TabItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemView.swift; sourceTree = "<group>"; };
 		8A74054222CA2E3D00350056 /* TabItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabItemView.xib; sourceTree = "<group>"; };
 		8AD1939C22CEEEB400A97250 /* TryOut.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TryOut.storyboard; sourceTree = "<group>"; };
@@ -394,6 +398,15 @@
 			path = CreateOptions;
 			sourceTree = "<group>";
 		};
+		8A5BDEA922D09C9700F785A4 /* AR */ = {
+			isa = PBXGroup;
+			children = (
+				8A5BDEAC22D09DEB00F785A4 /* Grid.swift */,
+				8A5BDEAA22D09CB100F785A4 /* ARViewController.swift */,
+			);
+			path = AR;
+			sourceTree = "<group>";
+		};
 		8A74053F22CA2CED00350056 /* TabItemView */ = {
 			isa = PBXGroup;
 			children = (
@@ -406,6 +419,7 @@
 		8AC0092722CEEE760029CD2E /* TryOut */ = {
 			isa = PBXGroup;
 			children = (
+				8A5BDEA922D09C9700F785A4 /* AR */,
 				8AD1939C22CEEEB400A97250 /* TryOut.storyboard */,
 				8AD1939E22CEEF8500A97250 /* TryOutViewController.swift */,
 			);
@@ -547,7 +561,9 @@
 				27DFB06322C9730B0031D0AB /* DocumentSnapshot.swift in Sources */,
 				4A4B62E222C84561008BABE9 /* PicturesCollectionViewCell.swift in Sources */,
 				8AD1939F22CEEF8500A97250 /* TryOutViewController.swift in Sources */,
+				8A5BDEAD22D09DEB00F785A4 /* Grid.swift in Sources */,
 				2777F86F22BE896300ACFAFA /* AuthMaker.swift in Sources */,
+				8A5BDEAB22D09CB100F785A4 /* ARViewController.swift in Sources */,
 				27334EBC22D06BD700F529BF /* AllWallsPresenter.swift in Sources */,
 				4A8B263722CAD7EE007628F7 /* AllPicturesCollectionViewCell.swift in Sources */,
 				4AAFAE2222D0450900AC7632 /* CreateOptionsViewController.swift in Sources */,
