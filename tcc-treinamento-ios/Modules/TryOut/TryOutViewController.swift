@@ -10,15 +10,6 @@ import UIKit
 import CULColorPicker
 
 class TryOutViewController: UIViewController, ColorPickerViewDelegate {
-    func colorPickerWillBeginDragging(_ colorPicker: ColorPickerView) {
-        
-    }
-    
-    func colorPickerDidEndDagging(_ colorPicker: ColorPickerView) {
-        
-    }
-    
-    
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var wallView: UIView!
     @IBOutlet weak var collectionBackgroundView: UIView!
@@ -73,6 +64,12 @@ class TryOutViewController: UIViewController, ColorPickerViewDelegate {
     func colorPickerDidSelectColor(_ colorPicker: ColorPickerView) {
         // Can get the selected color from the color picker
         wallView.backgroundColor = colorPicker.selectedColor
+    }
+    
+    func colorPickerWillBeginDragging(_ colorPicker: ColorPickerView) {
+    }
+    
+    func colorPickerDidEndDagging(_ colorPicker: ColorPickerView) {
     }
     
     func configColorPicker() {
