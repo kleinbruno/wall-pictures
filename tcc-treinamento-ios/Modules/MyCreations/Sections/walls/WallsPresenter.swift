@@ -11,7 +11,7 @@ import UIKit
 class WallsPresenter: NSObject {
     weak var view: MyCreationsViewController?
     
-    private var wallList = [Wall]()
+    var wallList = [Wall]()
     
     private let requestMaker = RequestMaker()
     

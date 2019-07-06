@@ -29,6 +29,15 @@ class MyCreationsViewController: UIViewController {
         self.wallsPresenter.fetchData()
     }
     
+    @IBAction func onPressAllWalls(_ sender: UIButton) {
+        let viewController = AllWallsViewController.instantiate(fromAppStoryboard: .MyCreations)
+        
+        viewController.presenter.wallList = self.wallsPresenter.wallList
+        
+        self.navigationController?.show(viewController, sender: sender)
+    }
+    
+    
     @IBAction func onPressSeeAllPictures(_ sender: Any) {
         let viewController = AllPicturesViewController.instantiate(fromAppStoryboard: .Create)
         

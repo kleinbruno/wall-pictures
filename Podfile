@@ -12,4 +12,5 @@ target 'tcc-treinamento-ios' do
   pod 'Firebase/Firestore'
   pod 'IQKeyboardManagerSwift'
   pod 'YPImagePicker'
+  pod 'CULColorPicker'
 end

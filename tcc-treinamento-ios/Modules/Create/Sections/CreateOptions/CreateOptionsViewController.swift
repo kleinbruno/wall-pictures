@@ -39,6 +39,7 @@ class CreateOptionsViewController: UIViewController {
         let viewController = TryOutViewController.instantiate(fromAppStoryboard: .TryOut)
 
         viewController.pictures = self.pictures
+        viewController.isColorBackground = true
     
         self.navigationController?.present(viewController, animated: true)
     }
