@@ -27,7 +27,9 @@ class MyCreationsViewController: UIViewController {
         
         self.wallCollectionView.dataSource = self.wallsPresenter
         self.pictureCollectionView.dataSource = self.picturesPresenter
-        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         self.picturesPresenter.fetchData()
         self.wallsPresenter.fetchData()
     }
