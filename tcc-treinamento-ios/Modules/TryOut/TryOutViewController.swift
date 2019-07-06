@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import CULColorPicker
 
-class TryOutViewController: UIViewController {
+class TryOutViewController: UIViewController, ColorPickerViewDelegate {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var wallView: UIView!
     @IBOutlet weak var collectionBackgroundView: UIView!
-    
+    @IBOutlet weak var colorPicker: ColorPickerView!
     let requestMaker = RequestMaker()
     
     let draggedViewIncreasedScale: CGFloat = 0.1
@@ -23,6 +24,7 @@ class TryOutViewController: UIViewController {
     var panGestureEnabled = false
     
     var pictures: [Picture] = []
+    var isColorBackground: Bool = false
     
     @IBAction func goBack(_ sender: UIButton) {
         self.dismiss(animated: true)
@@ -51,6 +53,8 @@ class TryOutViewController: UIViewController {
 
         self.collectionView.contentInsetAdjustmentBehavior = .never
         
+        configColorPicker()
+        
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
         self.collectionView.dragDelegate = self
@@ -58,6 +62,23 @@ class TryOutViewController: UIViewController {
         
         let dropInteraction = UIDropInteraction(delegate: self)
         self.wallView.addInteraction(dropInteraction)
+    }
+    
+    func colorPickerDidSelectColor(_ colorPicker: ColorPickerView) {
+        // Can get the selected color from the color picker
+        wallView.backgroundColor = colorPicker.selectedColor
+    }
+    
+    func colorPickerWillBeginDragging(_ colorPicker: ColorPickerView) {
+    }
+    
+    func colorPickerDidEndDagging(_ colorPicker: ColorPickerView) {
+    }
+    
+    func configColorPicker() {
+        self.colorPicker?.delegate = self
+        self.colorPicker.indicatorDiameter = 10
+        self.colorPicker.isHidden = !isColorBackground
     }
     
     func addGestures(to view: UIView) {
