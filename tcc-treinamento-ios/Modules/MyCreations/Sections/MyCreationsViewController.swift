@@ -13,6 +13,9 @@ class MyCreationsViewController: UIViewController {
     @IBOutlet weak var wallCollectionView: UICollectionView!
     @IBOutlet weak var pictureCollectionView: UICollectionView!
     
+    @IBOutlet weak var isLoadingWalls: UIActivityIndicatorView!
+    @IBOutlet weak var isLoadingPictures: UIActivityIndicatorView!
+    
     private let wallsPresenter = WallsPresenter()
     private let picturesPresenter = PicturesPresenter()
 
@@ -48,10 +51,12 @@ class MyCreationsViewController: UIViewController {
     
     
     func reloadPictures() {
+        self.isLoadingPictures.isHidden = true
         self.pictureCollectionView.reloadData()
     }
     
     func reloadWalls() {
+        self.isLoadingWalls.isHidden = true
         self.wallCollectionView.reloadData()
     }
 }
