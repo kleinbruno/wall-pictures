@@ -18,7 +18,6 @@ class AllPicturesViewController: UIViewController {
     @IBOutlet weak var continueButton: UIButton!
     
     let allPicturesPresenter = AllPicturesPresenter()
-    private let createOptions = "create-options"
     
     public var isSelectMode: Bool = false
     public var selectedQuantity: Int = 0 {
