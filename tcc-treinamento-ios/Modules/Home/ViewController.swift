@@ -112,24 +112,20 @@ class ViewController: UIViewController {
     }
     
     func setViewController(ofType type: TabItemEnum) {
-        let selectedView = getView(ofType: type)
-        
-        if selectedView != self.currentTab {
-            if let currentController = self.currentViewController {
-                currentController.willMove(toParent: nil)
-                currentController.view.removeFromSuperview()
-                currentController.removeFromParent()
-            }
-            
-            let viewController = type.viewController
-            addChild(viewController)
-            
-            viewController.view.frame = self.contentView.bounds
-            contentView.addSubview(viewController.view)
-            
-            viewController.didMove(toParent: self)
-            self.currentViewController = viewController
+        if let currentController = self.currentViewController {
+            currentController.willMove(toParent: nil)
+            currentController.view.removeFromSuperview()
+            currentController.removeFromParent()
         }
+        
+        let viewController = type.viewController
+        addChild(viewController)
+        
+        viewController.view.frame = self.contentView.bounds
+        contentView.addSubview(viewController.view)
+        
+        viewController.didMove(toParent: self)
+        self.currentViewController = viewController
         
     }
     
@@ -186,7 +182,7 @@ class ViewController: UIViewController {
 
     func goToAllPictures() {
         let viewController = AllPicturesViewController.instantiate(fromAppStoryboard: .Create)
-            
+        
         self.navigationController?.show(viewController, sender: nil)
         
         self.toggleModal()
