@@ -23,6 +23,27 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                                 <color key="backgroundColor" name="secondary_dark"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gu8-Nc-obI">
+                                <rect key="frame" x="30" y="74" width="41" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Voltar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="goBack:" destination="mRg-xS-MlT" eventType="touchUpInside" id="Tx0-Nw-Gx2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lye-9U-tBb">
+                                <rect key="frame" x="290" y="74" width="94" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Salvar parede">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="takeScreenshot:" destination="mRg-xS-MlT" eventType="touchUpInside" id="CwE-Ii-hSS"/>
+                                </connections>
+                            </button>
                             <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qqe-Tg-4as">
                                 <rect key="frame" x="0.0" y="689.5" width="414" height="172.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -31,7 +52,7 @@
                                 <rect key="frame" x="0.0" y="689.5" width="414" height="172.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="scrollIndicatorInsets" minX="5" minY="5" maxX="5" maxY="5"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="5" id="0Qn-kY-rjn">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="5" id="0Qn-kY-rjn">
                                     <size key="itemSize" width="0.0" height="0.0"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -67,15 +88,19 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="dAO-e5-dcJ" firstAttribute="bottom" secondItem="sXy-7N-tc8" secondAttribute="bottom" id="6hn-Dv-hAp"/>
+                            <constraint firstItem="dAO-e5-dcJ" firstAttribute="trailing" secondItem="lye-9U-tBb" secondAttribute="trailing" constant="30" id="79w-n1-lvD"/>
                             <constraint firstItem="sXy-7N-tc8" firstAttribute="leading" secondItem="dAO-e5-dcJ" secondAttribute="leading" id="8Rj-jo-Zja"/>
                             <constraint firstItem="qqe-Tg-4as" firstAttribute="height" secondItem="sXy-7N-tc8" secondAttribute="height" multiplier="0.2" id="Bvm-D3-2pp"/>
                             <constraint firstItem="sXy-7N-tc8" firstAttribute="top" secondItem="fnL-8a-BeZ" secondAttribute="top" id="GM9-2D-sNl"/>
+                            <constraint firstItem="gu8-Nc-obI" firstAttribute="top" secondItem="dAO-e5-dcJ" secondAttribute="top" constant="30" id="GqV-Hi-G1v"/>
                             <constraint firstItem="6j4-br-f3D" firstAttribute="trailing" secondItem="dAO-e5-dcJ" secondAttribute="trailing" id="IOf-Wt-1pZ"/>
                             <constraint firstItem="6j4-br-f3D" firstAttribute="leading" secondItem="dAO-e5-dcJ" secondAttribute="leading" id="KJd-xR-Xyd"/>
                             <constraint firstItem="dAO-e5-dcJ" firstAttribute="bottom" secondItem="qqe-Tg-4as" secondAttribute="bottom" id="Nbi-1p-ruc"/>
                             <constraint firstItem="qqe-Tg-4as" firstAttribute="trailing" secondItem="dAO-e5-dcJ" secondAttribute="trailing" id="OO5-9U-Nb8"/>
                             <constraint firstItem="6j4-br-f3D" firstAttribute="height" secondItem="qqe-Tg-4as" secondAttribute="height" id="Ozs-09-zkd"/>
                             <constraint firstItem="qqe-Tg-4as" firstAttribute="leading" secondItem="dAO-e5-dcJ" secondAttribute="leading" id="PxC-FI-uxu"/>
+                            <constraint firstItem="gu8-Nc-obI" firstAttribute="leading" secondItem="dAO-e5-dcJ" secondAttribute="leading" constant="30" id="Zhr-78-ns9"/>
+                            <constraint firstItem="lye-9U-tBb" firstAttribute="top" secondItem="dAO-e5-dcJ" secondAttribute="top" constant="30" id="po3-eh-saQ"/>
                             <constraint firstItem="dAO-e5-dcJ" firstAttribute="trailing" secondItem="sXy-7N-tc8" secondAttribute="trailing" id="sjf-69-20m"/>
                             <constraint firstItem="qqe-Tg-4as" firstAttribute="bottom" secondItem="6j4-br-f3D" secondAttribute="bottom" id="uEc-et-IHa"/>
                         </constraints>
