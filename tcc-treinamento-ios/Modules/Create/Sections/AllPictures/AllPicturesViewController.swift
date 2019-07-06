@@ -58,20 +58,18 @@ class AllPicturesViewController: UIViewController {
     }
     
     @IBAction func continueButtonPress(_ sender: Any) {
-        let viewController = TryOutViewController.instantiate(fromAppStoryboard: .TryOut)
-        
+         let viewController = CreateOptionsViewController.instantiate(fromAppStoryboard: .Create)
         var selectedPictures: [Picture] = []
         
         if let selectedItems = allPicturesCollectionView.indexPathsForSelectedItems {
             
-            for indexPath in selectedItems {
-                selectedPictures.append(self.allPicturesPresenter.pictureList[indexPath.row])
+            for indexPath in selectedItems { selectedPictures.append(self.allPicturesPresenter.pictureList[indexPath.row])
             }
         }
         
         viewController.pictures = selectedPictures
-        
-        self.navigationController?.present(viewController, animated: true)
+
+        self.navigationController?.show(viewController, sender: sender)
     }
     
     @IBAction func goBack(_ sender: Any) {
