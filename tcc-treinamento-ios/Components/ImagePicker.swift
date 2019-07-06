@@ -1,94 +1,46 @@
 //
-//  ImagePicker.swift
+//  ImagePicker2.swift
 //  tcc-treinamento-ios
 //
-//  Created by Francisco Mossi on 22/06/19.
+//  Created by Francisco Mossi on 06/07/19.
 //  Copyright © 2019 CWI software. All rights reserved.
 //
 
 import UIKit
+import YPImagePicker
 
-public protocol ImagePickerDelegate: class {
-    func didSelect(image: UIImage?)
-}
-
-class ImagePicker: NSObject {
+class ImagePicker {
     
-    private let pickerController: UIImagePickerController
-    private weak var presentationController: UIViewController?
-    private weak var delegate: ImagePickerDelegate?
-    
-    public init(presentationController: UIViewController, delegate: ImagePickerDelegate) {
-        self.pickerController = UIImagePickerController()
-        
-        super.init()
-        
-        self.presentationController = presentationController
-        self.delegate = delegate
-        
-        self.pickerController.delegate = self
-        self.pickerController.allowsEditing = false
-        self.pickerController.mediaTypes = ["public.image"]
+    func getInstance(numberOfItens: Int) -> YPImagePicker {
+        var config = YPImagePickerConfiguration()
+        config.wordings.libraryTitle = "Galeria"
+        config.wordings.cameraTitle = "Câmera"
+        config.wordings.next = "OK"
+        config.wordings.cancel = "Cancelar"
+        config.wordings.done = "OK"
+        config.isScrollToChangeModesEnabled = true
+        config.onlySquareImagesFromCamera = true
+        config.usesFrontCamera = true
+        config.showsPhotoFilters = true
+        config.shouldSaveNewPicturesToAlbum = true
+        config.startOnScreen = YPPickerScreen.photo
+        config.screens = [.library, .photo]
+        config.showsCrop = .none
+        config.targetImageSize = YPImageSize.original
+        config.overlayView = UIView()
+        config.hidesStatusBar = true
+        config.hidesBottomBar = false
+        config.preferredStatusBarStyle = UIStatusBarStyle.default
+        config.library.options = nil
+        config.library.onlySquare = false
+        config.library.minWidthForItem = nil
+        config.library.mediaType = .photo
+        config.library.maxNumberOfItems = numberOfItens
+        config.library.minNumberOfItems = 1
+        config.library.numberOfItemsInRow = 4
+        config.library.spacingBetweenItems = 1.0
+        config.library.skipSelectionsGallery = false
+        return YPImagePicker(configuration: config)
     }
-    
-    private func action(for type: UIImagePickerController.SourceType, title: String) -> UIAlertAction? {
-        guard UIImagePickerController.isSourceTypeAvailable(type) else {
-            return nil
-        }
-        
-        return UIAlertAction(title: title, style: .default) { [unowned self] _ in
-            self.pickerController.sourceType = type
-            self.presentationController?.present(self.pickerController, animated: true)
-        }
-    }
-    
-    public func present(from sourceView: UIView) {
-        
-        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        
-        if let action = self.action(for: .camera, title: "Take photo") {
-            alertController.addAction(action)
-        }
-        if let action = self.action(for: .savedPhotosAlbum, title: "Camera roll") {
-            alertController.addAction(action)
-        }
-        if let action = self.action(for: .photoLibrary, title: "Photo library") {
-            alertController.addAction(action)
-        }
-        
-        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        
-        if UIDevice.current.userInterfaceIdiom == .pad {
-            alertController.popoverPresentationController?.sourceView = sourceView
-            alertController.popoverPresentationController?.sourceRect = sourceView.bounds
-            alertController.popoverPresentationController?.permittedArrowDirections = [.down, .up]
-        }
-        
-        self.presentationController?.present(alertController, animated: true)
-    }
-    
-    private func pickerController(_ controller: UIImagePickerController, didSelect image: UIImage?) {
-        controller.dismiss(animated: true, completion: nil)
-        
-        self.delegate?.didSelect(image: image)
-    }
-}
-
-extension ImagePicker: UIImagePickerControllerDelegate {
-    
-    public func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        self.pickerController(picker, didSelect: nil)
-    }
-    
-    public func imagePickerController(_ picker: UIImagePickerController,
-                                      didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
-        guard let image = info[.originalImage] as? UIImage else {
-            return self.pickerController(picker, didSelect: nil)
-        }
-        self.pickerController(picker, didSelect: image)
-    }
-}
-
-extension ImagePicker: UINavigationControllerDelegate {
     
 }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import YPImagePicker
 
 class ViewController: UIViewController {
     @IBOutlet weak var contentView: UIView!
@@ -31,7 +32,29 @@ class ViewController: UIViewController {
     }
     
     @IBAction func onPressSelectImage(_ sender: UIButton) {
-        self.imagePicker.present(from: sender)
+        let imagePicker = ImagePicker().getInstance(numberOfItens: 5)
+        
+        imagePicker.didFinishPicking() {
+            (items: [YPMediaItem], cancelled) in
+            for item in items {
+                switch item {
+                case .photo(let photo):
+                    self.uploadImage(image: photo.image)
+                    break
+                default:
+                    break
+                }
+            }
+        
+            
+            imagePicker.dismiss(animated: true) {
+                if !cancelled {
+                    self.goToAllPictures()
+                }
+            }
+        }
+        
+        present(imagePicker, animated: true, completion: nil)
     }
     
     @IBAction func onPressSelectPicture(_ sender: UIButton) {
@@ -55,8 +78,6 @@ class ViewController: UIViewController {
         self.addTapGesture(to: config)
         
         setViewController(ofType: .creations)
-        
-        self.imagePicker = ImagePicker(presentationController: self, delegate: self)
     }
     
     func toggleModal() {
@@ -172,9 +193,7 @@ class ViewController: UIViewController {
     }
     
     func uploadImage(image: UIImage?) {
-        requestMaker.uploadImage(with: image, into: .pictures, onSuccess: {
-            self.goToAllPictures()            
-        }) {}
+        requestMaker.uploadImage(with: image, into: .pictures)
     }
     
     enum TabItemEnum {
@@ -211,9 +230,3 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: UIGestureRecognizerDelegate {}
-
-extension ViewController: ImagePickerDelegate {
-    func didSelect(image: UIImage?) {
-        self.uploadImage(image: image)
-    }
-}

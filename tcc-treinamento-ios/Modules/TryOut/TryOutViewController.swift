@@ -23,6 +23,7 @@ class TryOutViewController: UIViewController {
     var panGestureEnabled = false
     
     var pictures: [Picture] = []
+    var backgroundImage: UIImage? = nil
     
     @IBAction func goBack(_ sender: UIButton) {
         self.dismiss(animated: true)
@@ -55,6 +56,11 @@ class TryOutViewController: UIViewController {
         
         let dropInteraction = UIDropInteraction(delegate: self)
         self.wallView.addInteraction(dropInteraction)
+        
+        if let image = self.backgroundImage {
+            let imageView = UIImageView(image: image)
+            imageView.fixInView(self.wallView)
+        }
     }
     
     func addGestures(to view: UIView) {
