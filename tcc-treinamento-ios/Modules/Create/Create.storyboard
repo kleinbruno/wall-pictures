@@ -203,10 +203,10 @@
             </objects>
             <point key="canvasLocation" x="648" y="116"/>
         </scene>
-        <!--View Controller-->
+        <!--Create Options View Controller-->
         <scene sceneID="P0n-Cp-p3c">
             <objects>
-                <viewController id="AhI-D3-k7f" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CreateOptionsViewController" id="AhI-D3-k7f" customClass="CreateOptionsViewController" customModule="tcc_treinamento_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tzS-jg-Ftc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -244,6 +244,9 @@
                                                         <real key="value" value="15"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="colorButtonPress:" destination="AhI-D3-k7f" eventType="touchUpInside" id="2nz-Ts-QEb"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TQ0-li-I8q">
                                                 <rect key="frame" x="87" y="227" width="200" height="30"/>

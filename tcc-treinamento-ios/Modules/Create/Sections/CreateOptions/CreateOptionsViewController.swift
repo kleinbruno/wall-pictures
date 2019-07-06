@@ -9,20 +9,13 @@
 import UIKit
 
 class CreateOptionsViewController: UIViewController {
-    var pictures: [Picture] = []
+    public var pictures: [Picture] = []
     
-//    let viewController = TryOutViewController.instantiate(fromAppStoryboard: .TryOut)
-//
-//    var selectedPictures: [Picture] = []
-//
-//    if let selectedItems = allPicturesCollectionView.indexPathsForSelectedItems {
-//
-//        for indexPath in selectedItems {
-//            selectedPictures.append(self.allPicturesPresenter.pictureList[indexPath.row])
-//        }
-//    }
-//
-//    viewController.pictures = selectedPictures
-//
-//    self.navigationController?.show(viewController, sender: sender)
+    @IBAction func colorButtonPress(_ sender: Any) {
+        let viewController = TryOutViewController.instantiate(fromAppStoryboard: .TryOut)
+
+        viewController.pictures = self.pictures
+    
+        self.navigationController?.show(viewController, sender: sender)
+    }
 }

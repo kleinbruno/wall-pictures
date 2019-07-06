@@ -18,6 +18,7 @@ class AllPicturesViewController: UIViewController {
     @IBOutlet weak var continueButton: UIButton!
     
     let allPicturesPresenter = AllPicturesPresenter()
+    private let createOptions = "create-options"
     
     public var isSelectMode: Bool = false
     public var selectedQuantity: Int = 0 {
@@ -54,19 +55,17 @@ class AllPicturesViewController: UIViewController {
     }
     
     @IBAction func continueButtonPress(_ sender: Any) {
-        let viewController = TryOutViewController.instantiate(fromAppStoryboard: .TryOut)
-        
+         let viewController = CreateOptionsViewController.instantiate(fromAppStoryboard: .Create)
         var selectedPictures: [Picture] = []
         
         if let selectedItems = allPicturesCollectionView.indexPathsForSelectedItems {
             
-            for indexPath in selectedItems {
-                selectedPictures.append(self.allPicturesPresenter.pictureList[indexPath.row])
+            for indexPath in selectedItems { selectedPictures.append(self.allPicturesPresenter.pictureList[indexPath.row])
             }
         }
         
         viewController.pictures = selectedPictures
-        
+
         self.navigationController?.show(viewController, sender: sender)
     }
     
