@@ -76,11 +76,11 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IWY-ch-Z1l" customClass="ColorPickerView" customModule="CULColorPicker">
-                                <rect key="frame" x="344" y="619.5" width="50" height="50"/>
+                                <rect key="frame" x="329" y="604.5" width="70" height="70"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="7DU-Xw-A8p"/>
-                                    <constraint firstAttribute="height" constant="50" id="xwd-Wi-A7C"/>
+                                    <constraint firstAttribute="width" constant="70" id="7DU-Xw-A8p"/>
+                                    <constraint firstAttribute="height" constant="70" id="xwd-Wi-A7C"/>
                                 </constraints>
                             </view>
                             <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qqe-Tg-4as">
@@ -129,7 +129,7 @@
                             <constraint firstItem="dAO-e5-dcJ" firstAttribute="bottom" secondItem="sXy-7N-tc8" secondAttribute="bottom" id="6hn-Dv-hAp"/>
                             <constraint firstItem="dAO-e5-dcJ" firstAttribute="trailing" secondItem="lye-9U-tBb" secondAttribute="trailing" constant="30" id="79w-n1-lvD"/>
                             <constraint firstItem="sXy-7N-tc8" firstAttribute="leading" secondItem="dAO-e5-dcJ" secondAttribute="leading" id="8Rj-jo-Zja"/>
-                            <constraint firstItem="dAO-e5-dcJ" firstAttribute="trailing" secondItem="IWY-ch-Z1l" secondAttribute="trailing" constant="20" id="98x-UJ-jJt"/>
+                            <constraint firstItem="dAO-e5-dcJ" firstAttribute="trailing" secondItem="IWY-ch-Z1l" secondAttribute="trailing" constant="15" id="98x-UJ-jJt"/>
                             <constraint firstItem="qqe-Tg-4as" firstAttribute="height" secondItem="sXy-7N-tc8" secondAttribute="height" multiplier="0.2" id="Bvm-D3-2pp"/>
                             <constraint firstItem="sXy-7N-tc8" firstAttribute="top" secondItem="fnL-8a-BeZ" secondAttribute="top" id="GM9-2D-sNl"/>
                             <constraint firstItem="gu8-Nc-obI" firstAttribute="top" secondItem="dAO-e5-dcJ" secondAttribute="top" constant="30" id="GqV-Hi-G1v"/>
@@ -140,7 +140,7 @@
                             <constraint firstItem="6j4-br-f3D" firstAttribute="height" secondItem="qqe-Tg-4as" secondAttribute="height" id="Ozs-09-zkd"/>
                             <constraint firstItem="qqe-Tg-4as" firstAttribute="leading" secondItem="dAO-e5-dcJ" secondAttribute="leading" id="PxC-FI-uxu"/>
                             <constraint firstItem="gu8-Nc-obI" firstAttribute="leading" secondItem="dAO-e5-dcJ" secondAttribute="leading" constant="30" id="Zhr-78-ns9"/>
-                            <constraint firstItem="qqe-Tg-4as" firstAttribute="top" secondItem="IWY-ch-Z1l" secondAttribute="bottom" constant="20" id="cu1-aU-g3L"/>
+                            <constraint firstItem="qqe-Tg-4as" firstAttribute="top" secondItem="IWY-ch-Z1l" secondAttribute="bottom" constant="15" id="cu1-aU-g3L"/>
                             <constraint firstItem="lye-9U-tBb" firstAttribute="top" secondItem="dAO-e5-dcJ" secondAttribute="top" constant="30" id="po3-eh-saQ"/>
                             <constraint firstItem="dAO-e5-dcJ" firstAttribute="trailing" secondItem="sXy-7N-tc8" secondAttribute="trailing" id="sjf-69-20m"/>
                             <constraint firstItem="qqe-Tg-4as" firstAttribute="bottom" secondItem="6j4-br-f3D" secondAttribute="bottom" id="uEc-et-IHa"/>

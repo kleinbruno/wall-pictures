@@ -59,9 +59,7 @@ class TryOutViewController: UIViewController, ColorPickerViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.colorPicker?.delegate = self
-        self.colorPicker.indicatorDiameter = 10
-        self.colorPicker.isHidden = !isColorBackground
+        configColorPicker()
         
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
@@ -75,6 +73,12 @@ class TryOutViewController: UIViewController, ColorPickerViewDelegate {
     func colorPickerDidSelectColor(_ colorPicker: ColorPickerView) {
         // Can get the selected color from the color picker
         wallView.backgroundColor = colorPicker.selectedColor
+    }
+    
+    func configColorPicker() {
+        self.colorPicker?.delegate = self
+        self.colorPicker.indicatorDiameter = 10
+        self.colorPicker.isHidden = !isColorBackground
     }
     
     func addGestures(to view: UIView) {
