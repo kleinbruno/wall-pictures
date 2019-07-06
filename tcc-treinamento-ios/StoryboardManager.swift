@@ -16,7 +16,7 @@ class StoryboardManager {
         var root : UIViewController?
         
         if let userUID = UserDefaults.standard.string(forKey: "userUID"), !userUID.isEmpty {
-            root = ViewController.instantiate(fromAppStoryboard: .Main)
+            root = MainNavigationController.instantiate(fromAppStoryboard: .Main)
         } else {
             root = LoginViewController.instantiate(fromAppStoryboard: .Login)
         }

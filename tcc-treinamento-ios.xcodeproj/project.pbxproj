@@ -11,6 +11,7 @@
 		2710452722CF06EE00CAB1C9 /* Wall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710452622CF06EE00CAB1C9 /* Wall.swift */; };
 		272D05C922C5BF5900EFBE35 /* DesignableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D05C822C5BF5900EFBE35 /* DesignableTextField.swift */; };
 		27334EB722D0345A00F529BF /* MyCreationsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27334EB622D0345A00F529BF /* MyCreationsNavigationController.swift */; };
+		27334EB922D04D1600F529BF /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27334EB822D04D1600F529BF /* MainNavigationController.swift */; };
 		2765D89D22C9452A00898C92 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2765D89C22C9452A00898C92 /* User.swift */; };
 		2777F86B22BE6D1000ACFAFA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2777F86A22BE6D1000ACFAFA /* LoginViewController.swift */; };
 		2777F86F22BE896300ACFAFA /* AuthMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2777F86E22BE896300ACFAFA /* AuthMaker.swift */; };
@@ -58,6 +59,7 @@
 		2710452622CF06EE00CAB1C9 /* Wall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wall.swift; sourceTree = "<group>"; };
 		272D05C822C5BF5900EFBE35 /* DesignableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableTextField.swift; sourceTree = "<group>"; };
 		27334EB622D0345A00F529BF /* MyCreationsNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCreationsNavigationController.swift; sourceTree = "<group>"; };
+		27334EB822D04D1600F529BF /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		2765D89C22C9452A00898C92 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		2777F86A22BE6D1000ACFAFA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2777F86E22BE896300ACFAFA /* AuthMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthMaker.swift; sourceTree = "<group>"; };
@@ -275,6 +277,7 @@
 			children = (
 				27BB5E2E22BE5279009F57A3 /* ViewController.swift */,
 				27BB5E3022BE5279009F57A3 /* Main.storyboard */,
+				27334EB822D04D1600F529BF /* MainNavigationController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -533,6 +536,7 @@
 				8A24AAA622C7E17800BD8534 /* CreateWallViewController.swift in Sources */,
 				2710452522CEFE0300CAB1C9 /* ConfigurationViewController.swift in Sources */,
 				27BB5E4622BE5B1E009F57A3 /* UIViewExtensions.swift in Sources */,
+				27334EB922D04D1600F529BF /* MainNavigationController.swift in Sources */,
 				4A8B263C22CADA1C007628F7 /* AllPicturesViewController.swift in Sources */,
 				2710452722CF06EE00CAB1C9 /* Wall.swift in Sources */,
 				8A24AAA822C8105B00BD8534 /* UIImageExtensions.swift in Sources */,

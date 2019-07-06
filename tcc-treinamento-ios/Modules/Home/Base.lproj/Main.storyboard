@@ -11,19 +11,19 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
+        <!--Main Navigation Controller-->
         <scene sceneID="8qx-c3-oUb">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XPM-CJ-Zmw" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationController id="p7u-Ct-DlM" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="MainNavigationController" navigationBarHidden="YES" id="p7u-Ct-DlM" customClass="MainNavigationController" customModule="tcc_treinamento_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="r0y-qj-3ZZ">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
                         <segue destination="w9k-t6-Kzh" kind="relationship" relationship="rootViewController" id="Abd-NB-DdB"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XPM-CJ-Zmw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2804" y="-226"/>
         </scene>
@@ -60,6 +60,9 @@
                                                 <real key="value" value="25"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="onPressSelectPicture:" destination="w9k-t6-Kzh" eventType="touchUpInside" id="aey-I7-Sog"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Znh-ko-rc2">
                                         <rect key="frame" x="80" y="672" width="254" height="50"/>
@@ -76,6 +79,9 @@
                                                 <real key="value" value="25"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="onPressSelectImage:" destination="w9k-t6-Kzh" eventType="touchUpInside" id="JEM-Pv-TVJ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
