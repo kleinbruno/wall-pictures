@@ -18,8 +18,17 @@ class ARViewController: UIViewController {
     var grids = [Grid]()
     var pictures = [Picture]()
     var image: UIImage? = nil
+    let requestMaker = RequestMaker()
     
-
+    @IBAction func takeScreenshot(_ sender: Any) {
+        let screenshot = self.sceneView.takeScreenshot()
+        
+        let printView = UIView(frame: UIScreen.main.bounds)
+        printView.backgroundColor = .white
+        
+        self.requestMaker.uploadImage(with: screenshot, into: .walls)
+    }
+    
     @IBAction func goBack(_ sender: Any) {
         self.dismiss(animated: true)
     }
