@@ -10,18 +10,20 @@ import UIKit
 
 class AllPicturesPresenter: NSObject {
     weak var view: AllPicturesViewController?
+    
+    var pictureList = [Picture]()
 }
 
 extension AllPicturesPresenter: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 30 //pegar o .length dos quadros q o user tem
+        return pictureList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "allPictures", for: indexPath)
         
         if let creationCell = cell as? AllPicturesCollectionViewCell {
-            creationCell.configCell()
+            creationCell.configCell(with: pictureList[indexPath.item])
         }
         
         return cell

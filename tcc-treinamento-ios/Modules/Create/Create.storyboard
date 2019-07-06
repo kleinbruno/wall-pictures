@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="b1h-i5-Fmy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FTg-UY-oxF">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -11,49 +11,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--criar-->
-        <scene sceneID="zZs-b5-M6R">
-            <objects>
-                <viewController title="criar" id="nIj-tI-GiP" customClass="CreateWallViewController" customModule="tcc_treinamento_ios" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="WcV-Th-tJu">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s7u-Sy-Geg">
-                                <rect key="frame" x="164" y="433" width="87" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Add Painting"/>
-                                <connections>
-                                    <action selector="addView:" destination="nIj-tI-GiP" eventType="touchUpInside" id="bf7-4g-sy7"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CnY-Hi-Gm1">
-                                <rect key="frame" x="153" y="571" width="109" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Set background"/>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1ea-RM-a7e">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="1ea-RM-a7e" firstAttribute="top" secondItem="pZ5-KQ-laE" secondAttribute="top" id="0w1-1J-WzL"/>
-                            <constraint firstItem="pZ5-KQ-laE" firstAttribute="trailing" secondItem="1ea-RM-a7e" secondAttribute="trailing" id="Lke-Yz-oGz"/>
-                            <constraint firstItem="pZ5-KQ-laE" firstAttribute="bottom" secondItem="1ea-RM-a7e" secondAttribute="bottom" id="g3q-co-DxR"/>
-                            <constraint firstItem="1ea-RM-a7e" firstAttribute="leading" secondItem="pZ5-KQ-laE" secondAttribute="leading" id="jQY-sc-5vZ"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="pZ5-KQ-laE"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wcr-eR-mEH" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-561" y="116"/>
-        </scene>
         <!--All Pictures View Controller-->
         <scene sceneID="oIN-7j-0tv">
             <objects>
-                <viewController id="FTg-UY-oxF" customClass="AllPicturesViewController" customModule="tcc_treinamento_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AllPicturesViewController" id="FTg-UY-oxF" customClass="AllPicturesViewController" customModule="tcc_treinamento_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Waa-ov-scx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -66,6 +27,9 @@
                                         <state key="normal" title="Voltar">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="goBack:" destination="FTg-UY-oxF" eventType="touchUpInside" id="eaB-sa-cj6"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -237,25 +201,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aag-Sc-0li" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1008.6956521739131" y="115.84821428571428"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Zxy-Fx-jfi">
-            <objects>
-                <navigationController navigationBarHidden="YES" id="b1h-i5-Fmy" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eXJ-Ng-hzv">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RPg-Nf-FEQ">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </toolbar>
-                    <connections>
-                        <segue destination="FTg-UY-oxF" kind="relationship" relationship="rootViewController" id="HrV-fW-jtr"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NcU-iE-SNI" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="258" y="116"/>
+            <point key="canvasLocation" x="648" y="116"/>
         </scene>
     </scenes>
     <resources>
