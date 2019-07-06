@@ -16,6 +16,6 @@ class CreateOptionsViewController: UIViewController {
 
         viewController.pictures = self.pictures
     
-        self.navigationController?.show(viewController, sender: sender)
+        self.navigationController?.present(viewController, animated: true)
     }
 }
