@@ -238,7 +238,14 @@ extension TryOutViewController: UIDropInteractionDelegate {
         if let cellIndex = session.items[0].localObject as? IndexPath {
             if let cell = self.collectionView.cellForItem(at: cellIndex) as? PicturesCollectionViewCell {
                 
-                let pictureView = PictureView(frame: .init(origin: .init(x: dropLocation.x - 150, y: dropLocation.y - 150), size: .init(width: 300, height: 300)))
+                let imageSize = 200 as CGFloat
+                let image = cell.imageView!.image!
+                let imageWidth = image.size.width
+                let imageProportion = image.size.height/imageWidth
+                
+                let imageHeight = imageSize * imageProportion
+                
+                let pictureView = PictureView(frame: .init(origin: .init(x: dropLocation.x - imageSize/2, y: dropLocation.y - imageHeight/2), size: .init(width: imageSize, height: imageHeight)))
                 
                 let picture = pictureView.getPicture(with: cell.imageView!.image!)
                 self.addGestures(to: picture)
