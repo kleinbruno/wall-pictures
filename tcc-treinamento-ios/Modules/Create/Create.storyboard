@@ -263,6 +263,9 @@
                                                         <real key="value" value="15"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="imageButtonPress:" destination="AhI-D3-k7f" eventType="touchUpInside" id="Dtl-kM-KAz"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DK8-5N-X3O">
                                                 <rect key="frame" x="87" y="301" width="200" height="30"/>

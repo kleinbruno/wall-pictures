@@ -24,6 +24,7 @@ class TryOutViewController: UIViewController, ColorPickerViewDelegate {
     var panGestureEnabled = false
     
     var pictures: [Picture] = []
+    var backgroundImage: UIImage? = nil
     var isColorBackground: Bool = false
     
     @IBAction func goBack(_ sender: UIButton) {
@@ -62,6 +63,11 @@ class TryOutViewController: UIViewController, ColorPickerViewDelegate {
         
         let dropInteraction = UIDropInteraction(delegate: self)
         self.wallView.addInteraction(dropInteraction)
+        
+        if let image = self.backgroundImage {
+            let imageView = UIImageView(image: image)
+            imageView.fixInView(self.wallView)
+        }
     }
     
     func colorPickerDidSelectColor(_ colorPicker: ColorPickerView) {

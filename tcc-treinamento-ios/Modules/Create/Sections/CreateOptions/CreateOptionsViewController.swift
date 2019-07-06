@@ -7,9 +7,33 @@
 //
 
 import UIKit
+import YPImagePicker
 
 class CreateOptionsViewController: UIViewController {
     public var pictures: [Picture] = []
+    
+    @IBAction func imageButtonPress(_ sender: UIButton) {
+        let imagePicker = ImagePicker().getInstance(numberOfItens: 1)
+        let viewController = TryOutViewController.instantiate(fromAppStoryboard: .TryOut)
+        
+        imagePicker.didFinishPicking() {
+            (items: [YPMediaItem], cancelled) in
+                if let photo = items.singlePhoto {
+                    let image = photo.modifiedImage ?? photo.originalImage
+                    
+                    viewController.pictures = self.pictures
+                    viewController.backgroundImage = image
+                }
+                
+            imagePicker.dismiss(animated: true) {
+                if !cancelled {
+                    self.navigationController?.present(viewController, animated: true)                    
+                }
+            }
+        }
+            
+        self.present(imagePicker, animated: true)
+    }
     
     @IBAction func colorButtonPress(_ sender: Any) {
         let viewController = TryOutViewController.instantiate(fromAppStoryboard: .TryOut)
