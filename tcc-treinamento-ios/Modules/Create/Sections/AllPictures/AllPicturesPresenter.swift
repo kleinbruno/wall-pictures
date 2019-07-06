@@ -12,6 +12,20 @@ class AllPicturesPresenter: NSObject {
     weak var view: AllPicturesViewController?
     
     var pictureList = [Picture]()
+    
+    private let requestMaker = RequestMaker()
+    
+    func fetchData() {
+        self.requestMaker.fetchPictures(onSuccess: { (pictures) in
+            self.pictureList = pictures.pictures
+            
+            DispatchQueue.main.async {
+                self.view?.reloadData()
+            }
+        }) { (error) in
+            print(error)
+        }
+    }
 }
 
 extension AllPicturesPresenter: UICollectionViewDataSource {

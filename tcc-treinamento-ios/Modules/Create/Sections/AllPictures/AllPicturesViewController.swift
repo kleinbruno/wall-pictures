@@ -41,6 +41,10 @@ class AllPicturesViewController: UIViewController {
         
         self.allPicturesCollectionView.dataSource = self.allPicturesPresenter
         self.allPicturesCollectionView.delegate = self.allPicturesPresenter
+        
+        if self.allPicturesPresenter.pictureList.isEmpty {
+           self.allPicturesPresenter.fetchData()
+        }
     }
     
     @IBAction func selectButtonPress(_ sender: Any) {
@@ -71,7 +75,6 @@ class AllPicturesViewController: UIViewController {
     @IBAction func goBack(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
-    
     
     func configInitialScreen() {
         self.titleLabel.text = "SELECIONAR QUADROS"
@@ -109,6 +112,10 @@ class AllPicturesViewController: UIViewController {
     func enableContinueButton() {
         self.continueButton.isEnabled = true
         self.continueButton.alpha = 1
+    }
+    
+    func reloadData() {
+        self.allPicturesCollectionView.reloadData()
     }
 }
 

@@ -9,17 +9,17 @@
 import Foundation
 import Nuke
 
+extension UIImage {
+    static let wall = UIImage(named: "default_wall")!
+}
+
 extension UIImageView {
     
     func loadImage(from urlString: String) {
         if let url = URL(string: urlString) {
-            // simplão
-             Nuke.loadImage(with: url, into: self)
+            let options = ImageLoadingOptions(placeholder: .wall, transition: .fadeIn(duration: 0.3), failureImage: .wall)
             
-            // bonitão
-//            let options = ImageLoadingOptions(placeholder: .pikachu, transition: .fadeIn(duration: 0.3), failureImage: .pikachu)
-            
-//            Nuke.loadImage(with: url, options: options, into: self)
+            Nuke.loadImage(with: url, options: options, into: self)
         }
     }
         
