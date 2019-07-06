@@ -62,7 +62,7 @@ class RequestMaker {
             ]) { (error) in
                 if error != nil {
                     onFail?()
-                } else if onSuccess != nil {
+                } else {
                     onSuccess?()
                 }
             }
