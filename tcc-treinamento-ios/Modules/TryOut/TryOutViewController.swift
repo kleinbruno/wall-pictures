@@ -7,12 +7,22 @@
 //
 
 import UIKit
+import CULColorPicker
 
-class TryOutViewController: UIViewController {
+class TryOutViewController: UIViewController, ColorPickerViewDelegate {
+    func colorPickerWillBeginDragging(_ colorPicker: ColorPickerView) {
+        
+    }
+    
+    func colorPickerDidEndDagging(_ colorPicker: ColorPickerView) {
+        
+    }
+    
+    
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var wallView: UIView!
     @IBOutlet weak var collectionBackgroundView: UIView!
-    
+    @IBOutlet weak var colorPicker: ColorPickerView!
     let requestMaker = RequestMaker()
     
     let draggedViewIncreasedScale: CGFloat = 0.1
@@ -48,6 +58,8 @@ class TryOutViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.colorPicker?.delegate = self
+
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
         self.collectionView.dragDelegate = self
@@ -55,6 +67,11 @@ class TryOutViewController: UIViewController {
         
         let dropInteraction = UIDropInteraction(delegate: self)
         self.wallView.addInteraction(dropInteraction)
+    }
+    
+    func colorPickerDidSelectColor(_ colorPicker: ColorPickerView) {
+        // Can get the selected color from the color picker
+        wallView.backgroundColor = colorPicker.selectedColor
     }
     
     func addGestures(to view: UIView) {

@@ -44,6 +44,14 @@
                                     <action selector="takeScreenshot:" destination="mRg-xS-MlT" eventType="touchUpInside" id="CwE-Ii-hSS"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IWY-ch-Z1l" customClass="ColorPickerView" customModule="CULColorPicker">
+                                <rect key="frame" x="157" y="94" width="100" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="dP6-GK-y7D"/>
+                                    <constraint firstAttribute="width" constant="100" id="xBo-hh-od0"/>
+                                </constraints>
+                            </view>
                             <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qqe-Tg-4as">
                                 <rect key="frame" x="0.0" y="689.5" width="414" height="172.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -90,6 +98,7 @@
                             <constraint firstItem="dAO-e5-dcJ" firstAttribute="bottom" secondItem="sXy-7N-tc8" secondAttribute="bottom" id="6hn-Dv-hAp"/>
                             <constraint firstItem="dAO-e5-dcJ" firstAttribute="trailing" secondItem="lye-9U-tBb" secondAttribute="trailing" constant="30" id="79w-n1-lvD"/>
                             <constraint firstItem="sXy-7N-tc8" firstAttribute="leading" secondItem="dAO-e5-dcJ" secondAttribute="leading" id="8Rj-jo-Zja"/>
+                            <constraint firstItem="IWY-ch-Z1l" firstAttribute="top" secondItem="dAO-e5-dcJ" secondAttribute="top" constant="50" id="A4N-zw-ZHt"/>
                             <constraint firstItem="qqe-Tg-4as" firstAttribute="height" secondItem="sXy-7N-tc8" secondAttribute="height" multiplier="0.2" id="Bvm-D3-2pp"/>
                             <constraint firstItem="sXy-7N-tc8" firstAttribute="top" secondItem="fnL-8a-BeZ" secondAttribute="top" id="GM9-2D-sNl"/>
                             <constraint firstItem="gu8-Nc-obI" firstAttribute="top" secondItem="dAO-e5-dcJ" secondAttribute="top" constant="30" id="GqV-Hi-G1v"/>
@@ -100,6 +109,7 @@
                             <constraint firstItem="6j4-br-f3D" firstAttribute="height" secondItem="qqe-Tg-4as" secondAttribute="height" id="Ozs-09-zkd"/>
                             <constraint firstItem="qqe-Tg-4as" firstAttribute="leading" secondItem="dAO-e5-dcJ" secondAttribute="leading" id="PxC-FI-uxu"/>
                             <constraint firstItem="gu8-Nc-obI" firstAttribute="leading" secondItem="dAO-e5-dcJ" secondAttribute="leading" constant="30" id="Zhr-78-ns9"/>
+                            <constraint firstItem="IWY-ch-Z1l" firstAttribute="centerX" secondItem="sXy-7N-tc8" secondAttribute="centerX" id="i4h-xT-gJQ"/>
                             <constraint firstItem="lye-9U-tBb" firstAttribute="top" secondItem="dAO-e5-dcJ" secondAttribute="top" constant="30" id="po3-eh-saQ"/>
                             <constraint firstItem="dAO-e5-dcJ" firstAttribute="trailing" secondItem="sXy-7N-tc8" secondAttribute="trailing" id="sjf-69-20m"/>
                             <constraint firstItem="qqe-Tg-4as" firstAttribute="bottom" secondItem="6j4-br-f3D" secondAttribute="bottom" id="uEc-et-IHa"/>
@@ -109,12 +119,13 @@
                     <connections>
                         <outlet property="collectionBackgroundView" destination="qqe-Tg-4as" id="vvC-Rq-xxO"/>
                         <outlet property="collectionView" destination="6j4-br-f3D" id="bTm-ob-25f"/>
+                        <outlet property="colorPicker" destination="IWY-ch-Z1l" id="fUn-At-XPY"/>
                         <outlet property="wallView" destination="sXy-7N-tc8" id="iQq-kE-CHf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KYp-jJ-Jm4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-165" y="128"/>
+            <point key="canvasLocation" x="-165.21739130434784" y="127.90178571428571"/>
         </scene>
     </scenes>
     <resources>
