@@ -139,6 +139,10 @@
                                                             </collectionViewCell>
                                                         </cells>
                                                     </collectionView>
+                                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="nAs-36-6eH">
+                                                        <rect key="frame" x="0.0" y="29.5" width="414" height="259"/>
+                                                        <color key="tintColor" name="button_background"/>
+                                                    </activityIndicatorView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -148,6 +152,7 @@
                                                     <constraint firstAttribute="bottom" secondItem="0As-6Q-PYB" secondAttribute="bottom" id="KWQ-4s-bwa"/>
                                                     <constraint firstItem="2Sz-oJ-gg8" firstAttribute="top" secondItem="7yp-LK-9qh" secondAttribute="top" constant="30" id="VfT-BR-KHi"/>
                                                     <constraint firstItem="0As-6Q-PYB" firstAttribute="top" secondItem="2Sz-oJ-gg8" secondAttribute="bottom" constant="10" id="as6-9g-9oK"/>
+                                                    <constraint firstItem="nAs-36-6eH" firstAttribute="centerY" secondItem="0As-6Q-PYB" secondAttribute="centerY" id="hAV-en-5ZZ"/>
                                                     <constraint firstItem="2Sz-oJ-gg8" firstAttribute="leading" secondItem="7yp-LK-9qh" secondAttribute="leading" constant="20" id="hnD-Qv-3sD"/>
                                                 </constraints>
                                             </view>
@@ -219,6 +224,9 @@
                                                             </collectionViewCell>
                                                         </cells>
                                                     </collectionView>
+                                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="IHt-8I-58y">
+                                                        <rect key="frame" x="197" y="149.5" width="20" height="20"/>
+                                                    </activityIndicatorView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -226,7 +234,9 @@
                                                     <constraint firstAttribute="trailing" secondItem="S1N-qN-GH2" secondAttribute="trailing" id="F32-2b-dlB"/>
                                                     <constraint firstItem="S1N-qN-GH2" firstAttribute="top" secondItem="nyc-2q-Zwh" secondAttribute="bottom" constant="10" id="FXd-8R-rQe"/>
                                                     <constraint firstItem="S1N-qN-GH2" firstAttribute="leading" secondItem="h7Y-IL-xO0" secondAttribute="leading" id="WFc-sf-Xs4"/>
+                                                    <constraint firstItem="IHt-8I-58y" firstAttribute="centerY" secondItem="S1N-qN-GH2" secondAttribute="centerY" id="Wyy-HL-snR"/>
                                                     <constraint firstItem="nyc-2q-Zwh" firstAttribute="leading" secondItem="h7Y-IL-xO0" secondAttribute="leading" constant="20" id="c8N-Di-SCG"/>
+                                                    <constraint firstItem="IHt-8I-58y" firstAttribute="centerX" secondItem="S1N-qN-GH2" secondAttribute="centerX" id="dcT-JL-1s5"/>
                                                     <constraint firstAttribute="trailing" secondItem="nyc-2q-Zwh" secondAttribute="trailing" constant="20" id="txg-19-Opz"/>
                                                     <constraint firstAttribute="bottom" secondItem="S1N-qN-GH2" secondAttribute="bottom" id="zQA-xG-7aK"/>
                                                 </constraints>
@@ -273,6 +283,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="nAs-36-6eH" firstAttribute="centerX" secondItem="dQo-9v-piF" secondAttribute="centerX" id="89W-gE-8z6"/>
                             <constraint firstItem="bTL-3W-GaN" firstAttribute="bottom" secondItem="dQo-9v-piF" secondAttribute="bottom" constant="15" id="TNk-Ni-BNG"/>
                             <constraint firstItem="bTL-3W-GaN" firstAttribute="top" secondItem="KKm-c8-5wg" secondAttribute="top" id="YS8-l5-fJY"/>
                             <constraint firstItem="bTL-3W-GaN" firstAttribute="leading" secondItem="KKm-c8-5wg" secondAttribute="leading" id="hSr-2T-Nt2"/>
@@ -282,6 +293,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="ynW-Y0-38l"/>
                     <connections>
+                        <outlet property="isLoadingPictures" destination="IHt-8I-58y" id="Qd7-XV-iuk"/>
+                        <outlet property="isLoadingWalls" destination="nAs-36-6eH" id="B0s-zE-Cju"/>
                         <outlet property="pictureCollectionView" destination="S1N-qN-GH2" id="kyI-4j-2gp"/>
                         <outlet property="wallCollectionView" destination="0As-6Q-PYB" id="Zr5-bs-TOZ"/>
                         <segue destination="v7i-vJ-ckm" kind="show" id="LL1-6c-Flg"/>
