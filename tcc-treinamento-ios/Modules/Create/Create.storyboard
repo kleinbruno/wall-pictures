@@ -23,8 +23,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="119.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LqJ-VT-AGO">
-                                        <rect key="frame" x="8" y="61.5" width="41" height="30"/>
-                                        <state key="normal" title="Voltar">
+                                        <rect key="frame" x="8" y="44" width="60" height="30"/>
+                                        <state key="normal" title="〈 Voltar">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -35,7 +35,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="LqJ-VT-AGO" firstAttribute="leading" secondItem="KHT-A7-6zp" secondAttribute="leadingMargin" id="4J5-8Z-NPa"/>
-                                    <constraint firstAttribute="bottomMargin" secondItem="LqJ-VT-AGO" secondAttribute="bottom" constant="20" id="tma-5f-ykx"/>
+                                    <constraint firstItem="LqJ-VT-AGO" firstAttribute="top" secondItem="KHT-A7-6zp" secondAttribute="top" constant="44" id="8Dx-Dr-ya2"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="startColor">
@@ -214,6 +214,16 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="87L-Dv-2el" customClass="GradientButton" customModule="tcc_treinamento_ios" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U6A-tg-Uya">
+                                        <rect key="frame" x="8" y="44" width="60" height="30"/>
+                                        <state key="normal" title="〈 Voltar">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="goBack:" destination="AhI-D3-k7f" eventType="touchUpInside" id="GI0-Md-roh"/>
+                                            <action selector="goBack:" destination="FTg-UY-oxF" eventType="touchUpInside" id="uTM-uH-pad"/>
+                                        </connections>
+                                    </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="44" translatesAutoresizingMaskIntoConstraints="NO" id="Qtb-B0-BWQ">
                                         <rect key="frame" x="20" y="265.5" width="374" height="331"/>
                                         <subviews>
@@ -289,7 +299,9 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="Qtb-B0-BWQ" secondAttribute="trailing" constant="20" id="2uv-fb-ASZ"/>
+                                    <constraint firstItem="U6A-tg-Uya" firstAttribute="top" secondItem="87L-Dv-2el" secondAttribute="top" constant="44" id="8cI-re-8fb"/>
                                     <constraint firstItem="Qtb-B0-BWQ" firstAttribute="leading" secondItem="87L-Dv-2el" secondAttribute="leading" constant="20" id="C5r-gw-SH5"/>
+                                    <constraint firstItem="U6A-tg-Uya" firstAttribute="leading" secondItem="87L-Dv-2el" secondAttribute="leadingMargin" id="JxJ-jH-Wjn"/>
                                     <constraint firstItem="Qtb-B0-BWQ" firstAttribute="centerY" secondItem="87L-Dv-2el" secondAttribute="centerY" id="cqk-lO-HnE"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
