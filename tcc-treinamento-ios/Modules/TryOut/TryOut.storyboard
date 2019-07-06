@@ -88,6 +88,31 @@
                                     <action selector="goBack:" destination="zpS-ko-fPs" eventType="touchUpInside" id="AIL-sN-Jgi"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qmr-PX-eem">
+                                <rect key="frame" x="274" y="74" width="110" height="30"/>
+                                <color key="backgroundColor" name="primary"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="T07-eR-Mnw"/>
+                                    <constraint firstAttribute="width" constant="110" id="cIQ-3F-daO"/>
+                                </constraints>
+                                <state key="normal" title="Salvar parede">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="takeScreenshot:" destination="zpS-ko-fPs" eventType="touchUpInside" id="rqH-MN-6Cy"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -97,7 +122,9 @@
                             <constraint firstItem="eVN-mx-A23" firstAttribute="trailing" secondItem="wx5-Fj-hkq" secondAttribute="trailing" id="DWf-gg-ne8"/>
                             <constraint firstItem="tZQ-kF-jwK" firstAttribute="trailing" secondItem="eVN-mx-A23" secondAttribute="trailing" id="GOv-bE-L5W"/>
                             <constraint firstItem="jeZ-QA-4bJ" firstAttribute="top" secondItem="eVN-mx-A23" secondAttribute="top" constant="30" id="Kf7-Eb-fGa"/>
+                            <constraint firstItem="qmr-PX-eem" firstAttribute="top" secondItem="eVN-mx-A23" secondAttribute="top" constant="30" id="Vfa-Ud-z8b"/>
                             <constraint firstItem="eVN-mx-A23" firstAttribute="bottom" secondItem="tZQ-kF-jwK" secondAttribute="bottom" id="dWu-0L-6zp"/>
+                            <constraint firstItem="eVN-mx-A23" firstAttribute="trailing" secondItem="qmr-PX-eem" secondAttribute="trailing" constant="30" id="eHL-fk-baX"/>
                             <constraint firstItem="wx5-Fj-hkq" firstAttribute="top" secondItem="eVN-mx-A23" secondAttribute="top" id="eUb-3Z-A5G"/>
                             <constraint firstItem="wx5-Fj-hkq" firstAttribute="leading" secondItem="eVN-mx-A23" secondAttribute="leading" id="ff9-Dp-OGw"/>
                             <constraint firstItem="eVN-mx-A23" firstAttribute="bottom" secondItem="wx5-Fj-hkq" secondAttribute="bottom" id="fwV-zb-1S2"/>
@@ -115,7 +142,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Da3-qr-7uG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1817.3913043478262" y="113.83928571428571"/>
+            <point key="canvasLocation" x="-997" y="128"/>
         </scene>
         <!--Try Out View Controller-->
         <scene sceneID="AkT-9W-rLb">
