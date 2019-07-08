@@ -112,7 +112,7 @@
 		8A24AAA222C7DC4400BD8534 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		8A24AAA722C8105B00BD8534 /* UIImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
 		8A5BDEAA22D09CB100F785A4 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
-		8A5BDEAC22D09DEB00F785A4 /* Grid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Grid.swift; path = ../../../../../../../Downloads/Assets/Grid.swift; sourceTree = "<group>"; };
+		8A5BDEAC22D09DEB00F785A4 /* Grid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
 		8A74054022CA2CFE00350056 /* TabItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemView.swift; sourceTree = "<group>"; };
 		8A74054222CA2E3D00350056 /* TabItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabItemView.xib; sourceTree = "<group>"; };
 		8AD1939C22CEEEB400A97250 /* TryOut.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TryOut.storyboard; sourceTree = "<group>"; };
